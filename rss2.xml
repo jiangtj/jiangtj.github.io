@@ -1,535 +1,300 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"
-  xmlns:atom="http://www.w3.org/2005/Atom"
-  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dnocm ☀</title>
     <link>https://jiangtj.com/</link>
-    
-    <atom:link href="https://jiangtj.com/rss2.xml" rel="self" type="application/rss+xml"/>
-    
     <description>何须更问浮生事，只此浮生是梦中</description>
-    <pubDate>Sat, 17 Feb 2024 04:33:19 GMT</pubDate>
-    <generator>http://hexo.io/</generator>
-    
+    <copyright>All rights reserved 2026, Mr.J</copyright>
+    <lastBuildDate>Sat, 17 Feb 2024 04:33:19 GMT</lastBuildDate>
+    <generator>Hexo</generator>
+    <atom:link href="https://jiangtj.com/rss2.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Spring 6.1 新的 Web 客户端 RestClient</title>
       <link>https://jiangtj.com/articles/durian/spring-restclient/</link>
-      <guid>https://jiangtj.com/articles/durian/spring-restclient/</guid>
-      <pubDate>Sat, 17 Feb 2024 04:33:19 GMT</pubDate>
-      
-      <description>&lt;p&gt;在 Spring 6.1 中，添加了一个新的同步 web 客户端 RestClient，提供更现代化的 fluent API，所以我们能在 spring mvc 里获得与 webflux 一样的 web 请求的编码体验（再加上 project loom 的支持，webflux 还有存在的意义么？）&lt;/p&gt;
-&lt;h1 id=&quot;创建-RestClient&quot; class=&quot;article-heading&quot;&gt;&lt;a href=&quot;#创建-RestClient&quot; class=&quot;headerlink&quot; title=&quot;创建 RestClient&quot;&gt;&lt;/a&gt;创建 RestClient&lt;a class=&quot;article-anchor&quot; href=&quot;#创建-RestClient&quot; aria-hidden=&quot;true&quot;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;RestClient 可以用过 &lt;code&gt;create()&lt;/code&gt; 方法直接简单的创建，也可以通过 &lt;code&gt;builder()&lt;/code&gt; 构建。在 &lt;code&gt;builder()&lt;/code&gt; 中，我们可以传入一些配置或者默认参数，这对于我们统一请求规范有很大的帮助&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;&lt;span class=&quot;hljs-type&quot;&gt;RestClient&lt;/span&gt; &lt;span class=&quot;hljs-variable&quot;&gt;defaultClient&lt;/span&gt; &lt;span class=&quot;hljs-operator&quot;&gt;=&lt;/span&gt; RestClient.create();&lt;br&gt;&lt;br&gt;&lt;span class=&quot;hljs-type&quot;&gt;RestClient&lt;/span&gt; &lt;span class=&quot;hljs-variable&quot;&gt;customClient&lt;/span&gt; &lt;span class=&quot;hljs-operator&quot;&gt;=&lt;/span&gt; RestClient.builder()&lt;br&gt;  .requestFactory(&lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;hljs-title class_&quot;&gt;HttpComponentsClientHttpRequestFactory&lt;/span&gt;())&lt;br&gt;  .messageConverters(converters -&amp;gt; converters.add(&lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;hljs-title class_&quot;&gt;MyCustomMessageConverter&lt;/span&gt;()))&lt;br&gt;  .baseUrl(&lt;span class=&quot;hljs-string&quot;&gt;&amp;quot;https://example.com&amp;quot;&lt;/span&gt;)&lt;br&gt;  .defaultUriVariables(Map.of(&lt;span class=&quot;hljs-string&quot;&gt;&amp;quot;variable&amp;quot;&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;))&lt;br&gt;  .defaultHeader(&lt;span class=&quot;hljs-string&quot;&gt;&amp;quot;My-Header&amp;quot;&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&amp;quot;Foo&amp;quot;&lt;/span&gt;)&lt;br&gt;  .requestInterceptor(myCustomInterceptor)&lt;br&gt;  .requestInitializer(myCustomInitializer)&lt;br&gt;  .build();&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</description>
-      
-      
-      
-      
+      <description>
+        <![CDATA[<p>在 Spring 6.1 中，添加了一个新的同步 web 客户端 RestClient，提供更现代化的 fluent API，所以我们能在 spring mvc 里获得与 webflux 一样的 web 请求的编码体验（再加上 project loom 的支持，webflux 还有存在的意义么？）</p>
+<h1 id="创建-RestClient"><a href="#创建-RestClient" class="headerlink" title="创建 RestClient"></a>创建 RestClient</h1><p>RestClient 可以用过 <code>create()</code> 方法直接简单的创建，也可以通过 <code>builder()</code> 构建。在 <code>builder()</code> 中，我们可以传入一些配置或者默认参数，这对于我们统一请求规范有很大的帮助</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">RestClient</span> <span class="hljs-variable">defaultClient</span> <span class="hljs-operator">=</span> RestClient.create();<br><br><span class="hljs-type">RestClient</span> <span class="hljs-variable">customClient</span> <span class="hljs-operator">=</span> RestClient.builder()<br>  .requestFactory(<span class="hljs-keyword">new</span> <span class="hljs-title class_">HttpComponentsClientHttpRequestFactory</span>())<br>  .messageConverters(converters -&gt; converters.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">MyCustomMessageConverter</span>()))<br>  .baseUrl(<span class="hljs-string">&quot;https://example.com&quot;</span>)<br>  .defaultUriVariables(Map.of(<span class="hljs-string">&quot;variable&quot;</span>, <span class="hljs-string">&quot;foo&quot;</span>))<br>  .defaultHeader(<span class="hljs-string">&quot;My-Header&quot;</span>, <span class="hljs-string">&quot;Foo&quot;</span>)<br>  .requestInterceptor(myCustomInterceptor)<br>  .requestInitializer(myCustomInitializer)<br>  .build();<br></code></pre></td></tr></table></figure>]]>
+      </description>
+      <author>Mr.J</author>
       <category domain="https://jiangtj.com/categories/%E5%90%8E%E7%AB%AF/">后端</category>
-      
-      
       <category domain="https://jiangtj.com/tags/Spring/">Spring</category>
-      
-      
-      <comments>https://jiangtj.com/articles/durian/spring-restclient/#disqus_thread</comments>
-      
+      <pubDate>Sat, 17 Feb 2024 04:33:19 GMT</pubDate>
     </item>
-    
     <item>
       <title>通过 GitHub Action 发布你的 jar 包</title>
       <link>https://jiangtj.com/articles/durian/maven-publish-action/</link>
-      <guid>https://jiangtj.com/articles/durian/maven-publish-action/</guid>
-      <pubDate>Fri, 16 Feb 2024 07:59:15 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;继上篇内容&lt;a href=&quot;https://jiangtj.com/articles/durian/maven-publish/&quot;&gt;《在 Maven Central 发布你的jar包》&lt;/a&gt;，本篇将介绍如何通过 GitHub Action 自动发布你的 jar</description>
-          
-        
-      
-      
-      
-      
+      <description>
+        <![CDATA[<p>继上篇内容<a href="https://jiangtj.com/articles/durian/maven-publish/">《在 Maven Central 发布你的jar包》</a>，本篇将介绍如何通过 GitHub Action 自动发布你的 jar]]>
+      </description>
+      <author>Mr.J</author>
       <category domain="https://jiangtj.com/categories/%E5%90%8E%E7%AB%AF/">后端</category>
-      
-      
       <category domain="https://jiangtj.com/tags/Maven/">Maven</category>
-      
-      
-      <comments>https://jiangtj.com/articles/durian/maven-publish-action/#disqus_thread</comments>
-      
+      <pubDate>Fri, 16 Feb 2024 07:59:15 GMT</pubDate>
     </item>
-    
     <item>
       <title>在 Maven Central 发布你的jar包</title>
       <link>https://jiangtj.com/articles/durian/maven-publish/</link>
-      <guid>https://jiangtj.com/articles/durian/maven-publish/</guid>
-      <pubDate>Wed, 14 Feb 2024 14:09:10 GMT</pubDate>
-      
-      <description>&lt;blockquote&gt;
-&lt;p&gt;在2024年2月1日，sonatype 终于放弃了原本的maven-central的注册方式，将提交issue注册改成了通过dns验证域名即可，这对于我们这些可能只想存个工具类的人来说，就方便太多了。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&quot;注册命名空间&quot; class=&quot;article-heading&quot;&gt;&lt;a href=&quot;#注册命名空间&quot; class=&quot;headerlink&quot; title=&quot;注册命名空间&quot;&gt;&lt;/a&gt;注册命名空间&lt;a class=&quot;article-anchor&quot; href=&quot;#注册命名空间&quot; aria-hidden=&quot;true&quot;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;首先，在&lt;a href=&quot;https://central.sonatype.com/&quot;&gt;maven central&lt;/a&gt;注册一个账号，推荐使用GitHub直接登录，这样的好处是你可以直接得到一个验证通过的Namespace&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&quot;https://github.com/jiangtj/blog/assets/15902347/d26c0f80-0146-42e6-bcb5-7e69c8637a93&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
-&lt;p&gt;点击 Add Namespace 按钮可以添加一个Namespace&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&quot;https://github.com/jiangtj/blog/assets/15902347/994f3744-8b28-4321-be7f-ff162a760166&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
-&lt;p&gt;然后在你的域名解析商那上添加一个TXT记录，比如上面的例子，主机记录为&lt;code&gt;testmvn&lt;/code&gt;，记录值为&lt;code&gt;提供的token&lt;/code&gt;，这样就可以得到一个和GitHub一样的Namespace了。&lt;/p&gt;</description>
-      
-      
-      
-      
+      <description>
+        <![CDATA[<blockquote>
+<p>在2024年2月1日，sonatype 终于放弃了原本的maven-central的注册方式，将提交issue注册改成了通过dns验证域名即可，这对于我们这些可能只想存个工具类的人来说，就方便太多了。</p>
+</blockquote>
+<h1 id="注册命名空间"><a href="#注册命名空间" class="headerlink" title="注册命名空间"></a>注册命名空间</h1><p>首先，在<a href="https://central.sonatype.com/">maven central</a>注册一个账号，推荐使用GitHub直接登录，这样的好处是你可以直接得到一个验证通过的Namespace</p>
+<p><img src="https://github.com/jiangtj/blog/assets/15902347/d26c0f80-0146-42e6-bcb5-7e69c8637a93" alt="image"></p>
+<p>点击 Add Namespace 按钮可以添加一个Namespace</p>
+<p><img src="https://github.com/jiangtj/blog/assets/15902347/994f3744-8b28-4321-be7f-ff162a760166" alt="image"></p>
+<p>然后在你的域名解析商那上添加一个TXT记录，比如上面的例子，主机记录为<code>testmvn</code>，记录值为<code>提供的token</code>，这样就可以得到一个和GitHub一样的Namespace了。</p>]]>
+      </description>
+      <author>Mr.J</author>
       <category domain="https://jiangtj.com/categories/%E5%90%8E%E7%AB%AF/">后端</category>
-      
-      
       <category domain="https://jiangtj.com/tags/Maven/">Maven</category>
-      
-      
-      <comments>https://jiangtj.com/articles/durian/maven-publish/#disqus_thread</comments>
-      
+      <pubDate>Wed, 14 Feb 2024 14:09:10 GMT</pubDate>
     </item>
-    
     <item>
       <title>为 Spring Boot 应用添加 GraphQL</title>
       <link>https://jiangtj.com/articles/durian/spring-graphql/</link>
-      <guid>https://jiangtj.com/articles/durian/spring-graphql/</guid>
-      <pubDate>Wed, 16 Aug 2023 01:50:35 GMT</pubDate>
-      
-      <description>&lt;p&gt;GraphQL 已经出现很久了，最近我在看 Spring 文档时，看到了相关的介绍（我记得以前是没的，不知道什么时候的新特性），就试了试，先来一段AI的介绍。如果你仅想看怎么实现，跳过下面这段&lt;/p&gt;
-&lt;h1 id=&quot;来着-Codeium-AI-的介绍&quot; class=&quot;article-heading&quot;&gt;&lt;a href=&quot;#来着-Codeium-AI-的介绍&quot; class=&quot;headerlink&quot; title=&quot;来着 Codeium AI 的介绍&quot;&gt;&lt;/a&gt;来着 Codeium AI 的介绍&lt;a class=&quot;article-anchor&quot; href=&quot;#来着-Codeium-AI-的介绍&quot; aria-hidden=&quot;true&quot;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;GraphQL是一种用于API开发的查询语言和运行时环境。它由Facebook开发并于2015年开源。GraphQL的主要目标是提供一种更高效、灵活和易于使用的方式来获取和操作数据。与传统的RESTful API相比，GraphQL允许客户端精确地指定需要的数据，并减少了不必要的网络传输和数据处理。&lt;/p&gt;</description>
-      
-      
-      
-      
+      <description>
+        <![CDATA[<p>GraphQL 已经出现很久了，最近我在看 Spring 文档时，看到了相关的介绍（我记得以前是没的，不知道什么时候的新特性），就试了试，先来一段AI的介绍。如果你仅想看怎么实现，跳过下面这段</p>
+<h1 id="来着-Codeium-AI-的介绍"><a href="#来着-Codeium-AI-的介绍" class="headerlink" title="来着 Codeium AI 的介绍"></a>来着 Codeium AI 的介绍</h1><p>GraphQL是一种用于API开发的查询语言和运行时环境。它由Facebook开发并于2015年开源。GraphQL的主要目标是提供一种更高效、灵活和易于使用的方式来获取和操作数据。与传统的RESTful API相比，GraphQL允许客户端精确地指定需要的数据，并减少了不必要的网络传输和数据处理。</p>]]>
+      </description>
+      <author>Mr.J</author>
       <category domain="https://jiangtj.com/categories/%E5%90%8E%E7%AB%AF/">后端</category>
-      
-      
       <category domain="https://jiangtj.com/tags/Spring/">Spring</category>
-      
-      
-      <comments>https://jiangtj.com/articles/durian/spring-graphql/#disqus_thread</comments>
-      
+      <pubDate>Wed, 16 Aug 2023 01:50:35 GMT</pubDate>
     </item>
-    
     <item>
       <title>GitHub Action 构建原生 Spring Boot 应用</title>
       <link>https://jiangtj.com/articles/durian/spring-native-action/</link>
-      <guid>https://jiangtj.com/articles/durian/spring-native-action/</guid>
-      <pubDate>Sat, 20 May 2023 06:18:29 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;原生构建是非常消耗系统资源的，你可以看到编译过程中，cpu与内存都接近100%，所以能用免费的CI，那必须是要用的&lt;/p&gt;
-&lt;h1 id=&quot;创建一个-Action&quot; class=&quot;article-heading&quot;&gt;&lt;a href=&quot;#创建一个-Action&quot;</description>
-          
-        
-      
-      
-      
-      
+      <description>
+        <![CDATA[<p>原生构建是非常消耗系统资源的，你可以看到编译过程中，cpu与内存都接近100%，所以能用免费的CI，那必须是要用的</p>
+<h1 id="创建一个-Action"><a href="#创建一个-Action" class="headerlink" title="创建一个]]>
+      </description>
+      <author>Mr.J</author>
       <category domain="https://jiangtj.com/categories/%E5%90%8E%E7%AB%AF/">后端</category>
-      
-      
       <category domain="https://jiangtj.com/tags/Spring-Native/">Spring Native</category>
-      
       <category domain="https://jiangtj.com/tags/GitHub-Action/">GitHub Action</category>
-      
-      
-      <comments>https://jiangtj.com/articles/durian/spring-native-action/#disqus_thread</comments>
-      
+      <pubDate>Sat, 20 May 2023 06:18:29 GMT</pubDate>
     </item>
-    
     <item>
       <title>Spring Boot 自定义 Endpoint</title>
       <link>https://jiangtj.com/articles/durian/custom-endpoint/</link>
-      <guid>https://jiangtj.com/articles/durian/custom-endpoint/</guid>
-      <pubDate>Tue, 11 Apr 2023 12:13:14 GMT</pubDate>
-      
-      <description>&lt;h1 id=&quot;介绍&quot; class=&quot;article-heading&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;a class=&quot;article-anchor&quot; href=&quot;#介绍&quot; aria-hidden=&quot;true&quot;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;下面是AI的介绍，如果你很了解可以直接跳到第二部分&lt;/p&gt;
-&lt;p&gt;在 Spring Boot 中，Endpoint 是一种可以暴露应用程序内部信息的机制。Endpoint 可以提供应用程序的健康状况、内存使用情况、线程信息、日志等等信息。通过访问这些 Endpoint，我们可以更加方便地了解应用程序的运行情况，进行问题排查和监控。&lt;/p&gt;
-&lt;p&gt;Spring Boot 提供了一些内置的 Endpoint，比如 &amp;#x2F;health、&amp;#x2F;metrics 等等，同时也支持自定义 Endpoint。我们可以通过在应用程序中添加 Spring Boot Actuator 依赖来启用这些内置的 Endpoint，也可以通过编写自定义 Endpoint 来扩展应用程序的监控能力。&lt;/p&gt;
-&lt;p&gt;一般来说，Endpoint 都是通过 HTTP 协议暴露出来的，可以通过浏览器、curl 命令等方式进行访问。同时，Spring Boot 还支持将 Endpoint 信息输出到控制台、JMX 等地方，方便我们查看。&lt;/p&gt;
-&lt;p&gt;在访问 Endpoint 时，我们需要提供正确的访问路径和身份验证信息（如果启用了身份验证）。Spring Boot 提供了许多安全措施来保护 Endpoint 的访问，比如只允许特定 IP 地址访问、启用 HTTPS 等等。&lt;/p&gt;
-&lt;p&gt;总之，Endpoint 是 Spring Boot 中非常重要的一个功能，可以帮助我们更加方便地监控和管理应用程序。如果您还没有使用过 Endpoint，建议您尝试一下，相信会有不错的体验。&lt;/p&gt;</description>
-      
-      
-      
-      
+      <description>
+        <![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>下面是AI的介绍，如果你很了解可以直接跳到第二部分</p>
+<p>在 Spring Boot 中，Endpoint 是一种可以暴露应用程序内部信息的机制。Endpoint 可以提供应用程序的健康状况、内存使用情况、线程信息、日志等等信息。通过访问这些 Endpoint，我们可以更加方便地了解应用程序的运行情况，进行问题排查和监控。</p>
+<p>Spring Boot 提供了一些内置的 Endpoint，比如 &#x2F;health、&#x2F;metrics 等等，同时也支持自定义 Endpoint。我们可以通过在应用程序中添加 Spring Boot Actuator 依赖来启用这些内置的 Endpoint，也可以通过编写自定义 Endpoint 来扩展应用程序的监控能力。</p>
+<p>一般来说，Endpoint 都是通过 HTTP 协议暴露出来的，可以通过浏览器、curl 命令等方式进行访问。同时，Spring Boot 还支持将 Endpoint 信息输出到控制台、JMX 等地方，方便我们查看。</p>
+<p>在访问 Endpoint 时，我们需要提供正确的访问路径和身份验证信息（如果启用了身份验证）。Spring Boot 提供了许多安全措施来保护 Endpoint 的访问，比如只允许特定 IP 地址访问、启用 HTTPS 等等。</p>
+<p>总之，Endpoint 是 Spring Boot 中非常重要的一个功能，可以帮助我们更加方便地监控和管理应用程序。如果您还没有使用过 Endpoint，建议您尝试一下，相信会有不错的体验。</p>]]>
+      </description>
+      <author>Mr.J</author>
       <category domain="https://jiangtj.com/categories/%E5%90%8E%E7%AB%AF/">后端</category>
-      
-      
       <category domain="https://jiangtj.com/tags/Spring/">Spring</category>
-      
-      
-      <comments>https://jiangtj.com/articles/durian/custom-endpoint/#disqus_thread</comments>
-      
+      <pubDate>Tue, 11 Apr 2023 12:13:14 GMT</pubDate>
     </item>
-    
     <item>
       <title>Spring Cloud 平台搭建(四)：Spring Boot Admin</title>
       <link>https://jiangtj.com/articles/durian/cloud-4/</link>
-      <guid>https://jiangtj.com/articles/durian/cloud-4/</guid>
-      <pubDate>Fri, 07 Apr 2023 06:21:38 GMT</pubDate>
-      
-      <description>&lt;blockquote&gt;
-&lt;p&gt;源码：&lt;a href=&quot;https://github.com/jiangtj/jc-platform&quot;&gt;J Cloud Platform&lt;/a&gt;，期待你们的star ٩(๑❛ᴗ❛๑)۶&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Spring Boot Admin 是简单，同时功能也比较全面的监控服务，所以对于快速搭建微服务框架来说，是最佳的。比如 ELK Stack 能更好的处理日志，以及一些运行数据，但是，他需要配置，同时，对于少量的微服务显得笨重，而且后期加难度也不大。&lt;/p&gt;
-&lt;p&gt;老规矩，先让AI介绍下概念，这是换成了Notion AI，我也不知道为啥我bing用不了了。。。&lt;/p&gt;
-&lt;h1 id=&quot;概念&quot; class=&quot;article-heading&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;a class=&quot;article-anchor&quot; href=&quot;#概念&quot; aria-hidden=&quot;true&quot;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Spring Boot Admin是一个开源的第三方监控工具，可以用于管理和监控Spring Boot应用程序。它提供了一个简单易用的Web用户界面，让开发者可以轻松地查看应用程序的运行状况、性能指标、日志信息等。&lt;/p&gt;</description>
-      
-      
-      
-      
+      <description>
+        <![CDATA[<blockquote>
+<p>源码：<a href="https://github.com/jiangtj/jc-platform">J Cloud Platform</a>，期待你们的star ٩(๑❛ᴗ❛๑)۶</p>
+</blockquote>
+<p>Spring Boot Admin 是简单，同时功能也比较全面的监控服务，所以对于快速搭建微服务框架来说，是最佳的。比如 ELK Stack 能更好的处理日志，以及一些运行数据，但是，他需要配置，同时，对于少量的微服务显得笨重，而且后期加难度也不大。</p>
+<p>老规矩，先让AI介绍下概念，这是换成了Notion AI，我也不知道为啥我bing用不了了。。。</p>
+<h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>Spring Boot Admin是一个开源的第三方监控工具，可以用于管理和监控Spring Boot应用程序。它提供了一个简单易用的Web用户界面，让开发者可以轻松地查看应用程序的运行状况、性能指标、日志信息等。</p>]]>
+      </description>
+      <author>Mr.J</author>
       <category domain="https://jiangtj.com/categories/%E5%90%8E%E7%AB%AF/">后端</category>
-      
-      
       <category domain="https://jiangtj.com/tags/Spring-Cloud-%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA/">Spring Cloud 平台搭建</category>
-      
-      
-      <comments>https://jiangtj.com/articles/durian/cloud-4/#disqus_thread</comments>
-      
+      <pubDate>Fri, 07 Apr 2023 06:21:38 GMT</pubDate>
     </item>
-    
     <item>
       <title>Spring Cloud 平台搭建(三)：更换 Spring Cloud Tencent</title>
       <link>https://jiangtj.com/articles/durian/cloud-3/</link>
-      <guid>https://jiangtj.com/articles/durian/cloud-3/</guid>
-      <pubDate>Wed, 29 Mar 2023 16:00:00 GMT</pubDate>
-      
-      <description>&lt;blockquote&gt;
-&lt;p&gt;配套源码：&lt;a href=&quot;https://github.com/jiangtj/jc-platform&quot;&gt;J Cloud Platform&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Spring Cloud Tencent 与 Spring Cloud Alibaba 的差别如下&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 配置中心 支持配置属性更新回调&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 配置中心 支持 import，但仍必须配置bootsrap.yaml&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 控制台 内存占用小于nacos，对于我来说，开发电脑配置不太够，能好些&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 集成类似于阿里Sentinel的功能&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 默认占用常用端口，比如8080、8090&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;各有优劣，不过我更倾向于腾讯，所以做了替换&lt;/p&gt;</description>
-      
-      
-      
-      
+      <description>
+        <![CDATA[<blockquote>
+<p>配套源码：<a href="https://github.com/jiangtj/jc-platform">J Cloud Platform</a></p>
+</blockquote>
+<p>Spring Cloud Tencent 与 Spring Cloud Alibaba 的差别如下</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 配置中心 支持配置属性更新回调</li>
+<li><input disabled="" type="checkbox"> 配置中心 支持 import，但仍必须配置bootsrap.yaml</li>
+<li><input checked="" disabled="" type="checkbox"> 控制台 内存占用小于nacos，对于我来说，开发电脑配置不太够，能好些</li>
+<li><input checked="" disabled="" type="checkbox"> 集成类似于阿里Sentinel的功能</li>
+<li><input disabled="" type="checkbox"> 默认占用常用端口，比如8080、8090</li>
+</ul>
+<p>各有优劣，不过我更倾向于腾讯，所以做了替换</p>]]>
+      </description>
+      <author>Mr.J</author>
       <category domain="https://jiangtj.com/categories/%E5%90%8E%E7%AB%AF/">后端</category>
-      
-      
       <category domain="https://jiangtj.com/tags/Spring-Cloud-%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA/">Spring Cloud 平台搭建</category>
-      
-      
-      <comments>https://jiangtj.com/articles/durian/cloud-3/#disqus_thread</comments>
-      
+      <pubDate>Wed, 29 Mar 2023 16:00:00 GMT</pubDate>
     </item>
-    
     <item>
       <title>GraalVM 构建 Spring Native 应用</title>
       <link>https://jiangtj.com/articles/durian/spring-native/</link>
-      <guid>https://jiangtj.com/articles/durian/spring-native/</guid>
-      <pubDate>Tue, 28 Mar 2023 01:33:31 GMT</pubDate>
-      
       <description>Win 平台下构建 Spring Native 应用</description>
-      
-      
-      
-      
+      <author>Mr.J</author>
       <category domain="https://jiangtj.com/categories/%E5%90%8E%E7%AB%AF/">后端</category>
-      
-      
       <category domain="https://jiangtj.com/tags/Spring-Native/">Spring Native</category>
-      
       <category domain="https://jiangtj.com/tags/GraalVM/">GraalVM</category>
-      
-      
-      <comments>https://jiangtj.com/articles/durian/spring-native/#disqus_thread</comments>
-      
+      <pubDate>Tue, 28 Mar 2023 01:33:31 GMT</pubDate>
     </item>
-    
     <item>
       <title>Spring Cloud 平台搭建(二)：统一异常处理 RFC 7807</title>
       <link>https://jiangtj.com/articles/durian/cloud-2/</link>
-      <guid>https://jiangtj.com/articles/durian/cloud-2/</guid>
-      <pubDate>Wed, 22 Mar 2023 02:59:02 GMT</pubDate>
-      
-      <description>&lt;p&gt;兄弟们，上强度啦，你们觉得微服务搭建过程什么最重要？说实话，我也不清楚，但是我知道，规范一定是最重要的那部分之一&lt;/p&gt;
-&lt;h1 id=&quot;RFC-7807-定义&quot; class=&quot;article-heading&quot;&gt;&lt;a href=&quot;#RFC-7807-定义&quot; class=&quot;headerlink&quot; title=&quot;RFC 7807 定义&quot;&gt;&lt;/a&gt;RFC 7807 定义&lt;a class=&quot;article-anchor&quot; href=&quot;#RFC-7807-定义&quot; aria-hidden=&quot;true&quot;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;微服务规范最重要的就是服务间的调用，目前来说绝大多数都是restful接口，请求成功直接会返回业务数据，失败的话，一般都是抛出运行时异常，并统一捕获转化为对应的http状态码以及描述错误Json内容，这部分一般都是自定义的，但最近我看到了Spring最新官方文档其中Error Responses部分&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&quot;https://raw.githubusercontent.com/jiangtj/picgo-repo/master/img-a20230323142900.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;是的，错误部分也有了一个规范，它包含五个部分&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;type: 问题描述文档地址，如果不存在，则”about:blank”&lt;/li&gt;
-&lt;li&gt;title: 简短的描述问题&lt;/li&gt;
-&lt;li&gt;status: http 状态码，比如400、401、500等&lt;/li&gt;
-&lt;li&gt;detail: 详细说明发生问题的原因&lt;/li&gt;
-&lt;li&gt;instance: 问题发生的URL地址&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这个和我原本自定义的错误内容差不多，所以，在这次搭建过程中，就使用了规范的定义，接下来就介绍我的开源项目&lt;a href=&quot;https://github.com/jiangtj/jc-platform&quot;&gt;J Cloud Platform&lt;/a&gt;中&lt;code&gt;micro-common&lt;/code&gt;模块&lt;/p&gt;</description>
-      
-      
-      
-      
+      <description>
+        <![CDATA[<p>兄弟们，上强度啦，你们觉得微服务搭建过程什么最重要？说实话，我也不清楚，但是我知道，规范一定是最重要的那部分之一</p>
+<h1 id="RFC-7807-定义"><a href="#RFC-7807-定义" class="headerlink" title="RFC 7807 定义"></a>RFC 7807 定义</h1><p>微服务规范最重要的就是服务间的调用，目前来说绝大多数都是restful接口，请求成功直接会返回业务数据，失败的话，一般都是抛出运行时异常，并统一捕获转化为对应的http状态码以及描述错误Json内容，这部分一般都是自定义的，但最近我看到了Spring最新官方文档其中Error Responses部分</p>
+<p><img src="https://raw.githubusercontent.com/jiangtj/picgo-repo/master/img-a20230323142900.png"></p>
+<p>是的，错误部分也有了一个规范，它包含五个部分</p>
+<ul>
+<li>type: 问题描述文档地址，如果不存在，则”about:blank”</li>
+<li>title: 简短的描述问题</li>
+<li>status: http 状态码，比如400、401、500等</li>
+<li>detail: 详细说明发生问题的原因</li>
+<li>instance: 问题发生的URL地址</li>
+</ul>
+<p>这个和我原本自定义的错误内容差不多，所以，在这次搭建过程中，就使用了规范的定义，接下来就介绍我的开源项目<a href="https://github.com/jiangtj/jc-platform">J Cloud Platform</a>中<code>micro-common</code>模块</p>]]>
+      </description>
+      <author>Mr.J</author>
       <category domain="https://jiangtj.com/categories/%E5%90%8E%E7%AB%AF/">后端</category>
-      
-      
       <category domain="https://jiangtj.com/tags/Spring-Cloud-%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA/">Spring Cloud 平台搭建</category>
-      
-      
-      <comments>https://jiangtj.com/articles/durian/cloud-2/#disqus_thread</comments>
-      
+      <pubDate>Wed, 22 Mar 2023 02:59:02 GMT</pubDate>
     </item>
-    
     <item>
       <title>Spring Cloud 平台搭建(一)：服务注册与配置中心Nacos</title>
       <link>https://jiangtj.com/articles/durian/cloud-1/</link>
-      <guid>https://jiangtj.com/articles/durian/cloud-1/</guid>
-      <pubDate>Tue, 21 Mar 2023 13:35:15 GMT</pubDate>
-      
-      <description>&lt;h1 id=&quot;Nacos-是什么？&quot; class=&quot;article-heading&quot;&gt;&lt;a href=&quot;#Nacos-是什么？&quot; class=&quot;headerlink&quot; title=&quot;Nacos 是什么？&quot;&gt;&lt;/a&gt;Nacos 是什么？&lt;a class=&quot;article-anchor&quot; href=&quot;#Nacos-是什么？&quot; aria-hidden=&quot;true&quot;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Nacos 是一个易用的动态服务发现、配置和服务管理平台，可以帮助你在云原生时代，轻松构建、交付、管理自己的微服务平台，快速复用和组合业务服务，快速交付商业创新的价值。&lt;/p&gt;
-&lt;p&gt;Nacos 是阿里巴巴开源的一个项目，它的名字来源于Na ming and Co nfiguration S ervice。nacos提供了以下几个核心功能：&lt;/p&gt;
-&lt;p&gt;Nacos 提供了以下主要功能：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;动态服务发现&lt;/strong&gt;：Nacos 可以让你注册和发现各种类型的微服务，包括 HTTP、RPC 和 WebSocket 等，并提供负载均衡、流量控制和故障转移等能力。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;动态配置管理&lt;/strong&gt;：Nacos 可以让你集中管理应用的配置信息，并支持配置变更推送、版本控制和灰度发布等功能。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;动态 DNS 服务&lt;/strong&gt;：Nacos 可以让你基于权重路由请求到不同的后端集群，并支持域名解析、健康检查和故障隔离等功能。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;服务及其元数据管理&lt;/strong&gt;：Nacos 可以让你存储和查询微服务及其元数据信息，并支持元数据驱动的开发模式。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;为什么要使用-Nacos？&quot; class=&quot;article-heading&quot;&gt;&lt;a href=&quot;#为什么要使用-Nacos？&quot; class=&quot;headerlink&quot; title=&quot;为什么要使用 Nacos？&quot;&gt;&lt;/a&gt;为什么要使用 Nacos？&lt;a class=&quot;article-anchor&quot; href=&quot;#为什么要使用-Nacos？&quot; aria-hidden=&quot;true&quot;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;在微服务架构中，我们需要解决以下几个问题：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;如何发现和调用其他微服务？&lt;/li&gt;
-&lt;li&gt;如何管理微服务之间的依赖关系？&lt;/li&gt;
-&lt;li&gt;如何动态调整微服务的配置？&lt;/li&gt;
-&lt;li&gt;如何保证微服务之间的高可用性和弹性？&lt;/li&gt;
-&lt;li&gt;如何实现微服务之间的分布式事务？&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这些问题都需要一个强大而灵活的中间件来支撑。而 Nacos 正是这样一个中间件，它可以为我们提供一站式的解决方案。&lt;/p&gt;</description>
-      
-      
-      
-      
+      <description>
+        <![CDATA[<h1 id="Nacos-是什么？"><a href="#Nacos-是什么？" class="headerlink" title="Nacos 是什么？"></a>Nacos 是什么？</h1><p>Nacos 是一个易用的动态服务发现、配置和服务管理平台，可以帮助你在云原生时代，轻松构建、交付、管理自己的微服务平台，快速复用和组合业务服务，快速交付商业创新的价值。</p>
+<p>Nacos 是阿里巴巴开源的一个项目，它的名字来源于Na ming and Co nfiguration S ervice。nacos提供了以下几个核心功能：</p>
+<p>Nacos 提供了以下主要功能：</p>
+<ul>
+<li><strong>动态服务发现</strong>：Nacos 可以让你注册和发现各种类型的微服务，包括 HTTP、RPC 和 WebSocket 等，并提供负载均衡、流量控制和故障转移等能力。</li>
+<li><strong>动态配置管理</strong>：Nacos 可以让你集中管理应用的配置信息，并支持配置变更推送、版本控制和灰度发布等功能。</li>
+<li><strong>动态 DNS 服务</strong>：Nacos 可以让你基于权重路由请求到不同的后端集群，并支持域名解析、健康检查和故障隔离等功能。</li>
+<li><strong>服务及其元数据管理</strong>：Nacos 可以让你存储和查询微服务及其元数据信息，并支持元数据驱动的开发模式。</li>
+</ul>
+<h1 id="为什么要使用-Nacos？"><a href="#为什么要使用-Nacos？" class="headerlink" title="为什么要使用 Nacos？"></a>为什么要使用 Nacos？</h1><p>在微服务架构中，我们需要解决以下几个问题：</p>
+<ul>
+<li>如何发现和调用其他微服务？</li>
+<li>如何管理微服务之间的依赖关系？</li>
+<li>如何动态调整微服务的配置？</li>
+<li>如何保证微服务之间的高可用性和弹性？</li>
+<li>如何实现微服务之间的分布式事务？</li>
+</ul>
+<p>这些问题都需要一个强大而灵活的中间件来支撑。而 Nacos 正是这样一个中间件，它可以为我们提供一站式的解决方案。</p>]]>
+      </description>
+      <author>Mr.J</author>
       <category domain="https://jiangtj.com/categories/%E5%90%8E%E7%AB%AF/">后端</category>
-      
-      
       <category domain="https://jiangtj.com/tags/Spring-Cloud-%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA/">Spring Cloud 平台搭建</category>
-      
-      
-      <comments>https://jiangtj.com/articles/durian/cloud-1/#disqus_thread</comments>
-      
+      <pubDate>Tue, 21 Mar 2023 13:35:15 GMT</pubDate>
     </item>
-    
     <item>
       <title>Spring Cloud 平台搭建(序)：聊一聊与做些准备</title>
       <link>https://jiangtj.com/articles/durian/cloud-0/</link>
-      <guid>https://jiangtj.com/articles/durian/cloud-0/</guid>
-      <pubDate>Tue, 21 Mar 2023 06:32:15 GMT</pubDate>
-      
-      <description>&lt;h1 id=&quot;开场白&quot; class=&quot;article-heading&quot;&gt;&lt;a href=&quot;#开场白&quot; class=&quot;headerlink&quot; title=&quot;开场白&quot;&gt;&lt;/a&gt;开场白&lt;a class=&quot;article-anchor&quot; href=&quot;#开场白&quot; aria-hidden=&quot;true&quot;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;学技术的我相信绝大部分都是理科生，和一样，写博客会很为难，不知道怎么开场，但救星来了，那就是ChatGPT，当然，我这里不是（需要填手机号，然后提示不提供服务，哎），是new bing生成的，让我们欣赏下AI吧&lt;/p&gt;
-&lt;p&gt;你好，欢迎来到我的博客。今天我想和大家聊一聊spring cloud，这是一个基于spring boot的微服务框架，它提供了一系列的组件和工具，让我们可以快速地开发和部署分布式系统。&lt;/p&gt;
-&lt;p&gt;什么是微服务呢？简单地说，就是把一个大型的单体应用拆分成多个小的、独立的、可复用的服务，每个服务负责一个特定的功能或业务领域，它们之间通过轻量级的通信协议进行交互。这样做有什么好处呢？主要有以下几点：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;可扩展性：当某个服务需要扩容或缩容时，我们只需要对该服务进行操作，而不影响其他服务。&lt;/li&gt;
-&lt;li&gt;灵活性：当某个服务需要更新或替换时，我们只需要对该服务进行操作，而不影响其他服务。&lt;/li&gt;
-&lt;li&gt;容错性：当某个服务出现故障时，我们可以快速地恢复或切换到备用方案，而不影响其他服务。&lt;/li&gt;
-&lt;li&gt;解耦性：每个服务都有自己的数据存储和业务逻辑，它们之间通过定义好的接口进行交互，这样可以降低耦合度和依赖性。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;当然，微服务也有一些挑战和问题，比如：&lt;/p&gt;</description>
-      
-      
-      
-      
+      <description>
+        <![CDATA[<h1 id="开场白"><a href="#开场白" class="headerlink" title="开场白"></a>开场白</h1><p>学技术的我相信绝大部分都是理科生，和一样，写博客会很为难，不知道怎么开场，但救星来了，那就是ChatGPT，当然，我这里不是（需要填手机号，然后提示不提供服务，哎），是new bing生成的，让我们欣赏下AI吧</p>
+<p>你好，欢迎来到我的博客。今天我想和大家聊一聊spring cloud，这是一个基于spring boot的微服务框架，它提供了一系列的组件和工具，让我们可以快速地开发和部署分布式系统。</p>
+<p>什么是微服务呢？简单地说，就是把一个大型的单体应用拆分成多个小的、独立的、可复用的服务，每个服务负责一个特定的功能或业务领域，它们之间通过轻量级的通信协议进行交互。这样做有什么好处呢？主要有以下几点：</p>
+<ul>
+<li>可扩展性：当某个服务需要扩容或缩容时，我们只需要对该服务进行操作，而不影响其他服务。</li>
+<li>灵活性：当某个服务需要更新或替换时，我们只需要对该服务进行操作，而不影响其他服务。</li>
+<li>容错性：当某个服务出现故障时，我们可以快速地恢复或切换到备用方案，而不影响其他服务。</li>
+<li>解耦性：每个服务都有自己的数据存储和业务逻辑，它们之间通过定义好的接口进行交互，这样可以降低耦合度和依赖性。</li>
+</ul>
+<p>当然，微服务也有一些挑战和问题，比如：</p>]]>
+      </description>
+      <author>Mr.J</author>
       <category domain="https://jiangtj.com/categories/%E5%90%8E%E7%AB%AF/">后端</category>
-      
-      
       <category domain="https://jiangtj.com/tags/Spring-Cloud-%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA/">Spring Cloud 平台搭建</category>
-      
-      
-      <comments>https://jiangtj.com/articles/durian/cloud-0/#disqus_thread</comments>
-      
+      <pubDate>Tue, 21 Mar 2023 06:32:15 GMT</pubDate>
     </item>
-    
     <item>
       <title>在 Docker 中使用 Hexo</title>
       <link>https://jiangtj.com/articles/cherry/docker-dev/</link>
-      <guid>https://jiangtj.com/articles/cherry/docker-dev/</guid>
+      <description>
+        <![CDATA[<p>在项目的根目录创建一个 <code>compose-dev.yaml</code> 定义docker compose用于生成开发环境，由于博客不需要额外的数据库等，所以很简单</p>
+<figure class="highlight]]>
+      </description>
+      <author>Mr.J</author>
       <pubDate>Thu, 09 Mar 2023 00:09:49 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;在项目的根目录创建一个 &lt;code&gt;compose-dev.yaml&lt;/code&gt; 定义docker compose用于生成开发环境，由于博客不需要额外的数据库等，所以很简单&lt;/p&gt;
-&lt;figure class=&quot;highlight</description>
-          
-        
-      
-      
-      
-      
-      
-      
-      <comments>https://jiangtj.com/articles/cherry/docker-dev/#disqus_thread</comments>
-      
     </item>
-    
     <item>
       <title>使用 Helm 管理开发环境</title>
       <link>https://jiangtj.com/articles/cherry/helm-for-dev/</link>
-      <guid>https://jiangtj.com/articles/cherry/helm-for-dev/</guid>
-      <pubDate>Thu, 23 Feb 2023 03:25:11 GMT</pubDate>
-      
       <description>helm来管理开发环境会不会比docker更方便呢</description>
-      
-      
-      
-      
+      <author>Mr.J</author>
       <category domain="https://jiangtj.com/categories/%E8%BF%90%E7%BB%B4/">运维</category>
-      
-      
-      
-      <comments>https://jiangtj.com/articles/cherry/helm-for-dev/#disqus_thread</comments>
-      
+      <pubDate>Thu, 23 Feb 2023 03:25:11 GMT</pubDate>
     </item>
-    
     <item>
       <title>linux 代理</title>
       <link>https://jiangtj.com/articles/cherry/linux-proxy/</link>
-      <guid>https://jiangtj.com/articles/cherry/linux-proxy/</guid>
-      <pubDate>Tue, 21 Feb 2023 08:32:26 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;env&quot; class=&quot;article-heading&quot;&gt;&lt;a href=&quot;#env&quot; class=&quot;headerlink&quot; title=&quot;env&quot;&gt;&lt;/a&gt;env&lt;a class=&quot;article-anchor&quot; href=&quot;#env&quot;</description>
-          
-        
-      
-      
-      
-      
+      <description>
+        <![CDATA[<h1 id="env"><a href="#env" class="headerlink" title="env"></a>env</h1><figure class="highlight bash"><table><tr><td]]>
+      </description>
+      <author>Mr.J</author>
       <category domain="https://jiangtj.com/categories/%E8%BF%90%E7%BB%B4/">运维</category>
-      
-      
-      
-      <comments>https://jiangtj.com/articles/cherry/linux-proxy/#disqus_thread</comments>
-      
+      <pubDate>Tue, 21 Feb 2023 08:32:26 GMT</pubDate>
     </item>
-    
     <item>
-      <title>为 Spring WebFlux 提供 &#39;ApplicationEventPublisher&#39;</title>
+      <title>为 Spring WebFlux 提供 'ApplicationEventPublisher'</title>
       <link>https://jiangtj.com/articles/cherry/webflux-event/</link>
-      <guid>https://jiangtj.com/articles/cherry/webflux-event/</guid>
-      <pubDate>Fri, 24 Sep 2021 08:15:07 GMT</pubDate>
-      
-      <description>&lt;p&gt;在 Spring 中提供了 ApplicationEventPublisher，用于发布事件，这在一些场景下十分有用，比如，当我创建一个货物，而另一个服务监听货物的创建并为其创建库存。所以在Spring MVC中很实用，我也常常用它来解耦，但是当我切换为 WebFlux 时，就尴尬了。因为 ApplicationEventPublisher 是同步操作，它并不支持响应式，即流操作。&lt;/p&gt;
-&lt;p&gt;所以，我在 WebFlux 中实现一个类似的发布订阅模式，以替代 ApplicationEventPublisher&lt;/p&gt;</description>
-      
-      
-      
-      
+      <description>
+        <![CDATA[<p>在 Spring 中提供了 ApplicationEventPublisher，用于发布事件，这在一些场景下十分有用，比如，当我创建一个货物，而另一个服务监听货物的创建并为其创建库存。所以在Spring MVC中很实用，我也常常用它来解耦，但是当我切换为 WebFlux 时，就尴尬了。因为 ApplicationEventPublisher 是同步操作，它并不支持响应式，即流操作。</p>
+<p>所以，我在 WebFlux 中实现一个类似的发布订阅模式，以替代 ApplicationEventPublisher</p>]]>
+      </description>
+      <author>Mr.J</author>
       <category domain="https://jiangtj.com/categories/%E5%90%8E%E7%AB%AF/">后端</category>
-      
-      
       <category domain="https://jiangtj.com/tags/WebFlux/">WebFlux</category>
-      
       <category domain="https://jiangtj.com/tags/Event/">Event</category>
-      
-      
-      <comments>https://jiangtj.com/articles/cherry/webflux-event/#disqus_thread</comments>
-      
+      <pubDate>Fri, 24 Sep 2021 08:15:07 GMT</pubDate>
     </item>
-    
     <item>
       <title>WinGet Windows官方的包管理工具</title>
       <link>https://jiangtj.com/articles/cherry/winget/</link>
-      <guid>https://jiangtj.com/articles/cherry/winget/</guid>
-      <pubDate>Thu, 01 Jul 2021 12:54:09 GMT</pubDate>
-      
       <description>当你重装电脑的时候，这或许能让你最快进入状态</description>
-      
-      
-      
-      
+      <author>Mr.J</author>
       <category domain="https://jiangtj.com/categories/%E5%B7%A5%E5%85%B7/">工具</category>
-      
-      
-      
-      <comments>https://jiangtj.com/articles/cherry/winget/#disqus_thread</comments>
-      
+      <pubDate>Thu, 01 Jul 2021 12:54:09 GMT</pubDate>
     </item>
-    
     <item>
       <title>R2DBC-传统数据库也能响应式编程</title>
       <link>https://jiangtj.com/articles/cherry/r2dbc/</link>
-      <guid>https://jiangtj.com/articles/cherry/r2dbc/</guid>
-      <pubDate>Tue, 20 Apr 2021 08:44:55 GMT</pubDate>
-      
-      <description>&lt;p&gt;R2DBC 是 Reactive Relational Database Connectivity （关系型数据库的响应式连接） 的缩写，最近在项目中尝试 Webflux，被迫，使用 R2DBC 进行数据库操作（我还是更喜欢关系型数据库而不是文档型）。当然在实际使用后，发现这个框架虽然有些不足，但这才是我喜欢的DB框架&lt;/p&gt;
-&lt;p&gt;这里零散的记录下我遇到的一些问题，或者钟爱的一些特性，或者自己写的小工具&lt;/p&gt;</description>
-      
-      
-      
-      
+      <description>
+        <![CDATA[<p>R2DBC 是 Reactive Relational Database Connectivity （关系型数据库的响应式连接） 的缩写，最近在项目中尝试 Webflux，被迫，使用 R2DBC 进行数据库操作（我还是更喜欢关系型数据库而不是文档型）。当然在实际使用后，发现这个框架虽然有些不足，但这才是我喜欢的DB框架</p>
+<p>这里零散的记录下我遇到的一些问题，或者钟爱的一些特性，或者自己写的小工具</p>]]>
+      </description>
+      <author>Mr.J</author>
       <category domain="https://jiangtj.com/categories/%E5%90%8E%E7%AB%AF/">后端</category>
-      
-      
       <category domain="https://jiangtj.com/tags/Webflux/">Webflux</category>
-      
       <category domain="https://jiangtj.com/tags/R2DBC/">R2DBC</category>
-      
-      
-      <comments>https://jiangtj.com/articles/cherry/r2dbc/#disqus_thread</comments>
-      
+      <pubDate>Tue, 20 Apr 2021 08:44:55 GMT</pubDate>
     </item>
-    
     <item>
       <title>Spring Boot 2.4 新的配置文件处理方式</title>
       <link>https://jiangtj.com/articles/cherry/spring-boot-2-4-config/</link>
-      <guid>https://jiangtj.com/articles/cherry/spring-boot-2-4-config/</guid>
+      <description>
+        <![CDATA[<p>配置文件是 Spring Boot 的一个核心特性，自正式版发布以来，几乎未改动过，而在2.4中，Spring 官方调整了配置文件的处理逻辑</p>
+<ul>
+<li>外部配置文件优先于内部 Profile 配置</li>
+<li>重命名 <code>spring.profiles</code> 为 <code>spring.config.activate.on-profile</code></li>
+<li>新增 Profile 组</li>
+</ul>]]>
+      </description>
+      <author>Mr.J</author>
       <pubDate>Tue, 16 Mar 2021 05:38:27 GMT</pubDate>
-      
-      <description>&lt;p&gt;配置文件是 Spring Boot 的一个核心特性，自正式版发布以来，几乎未改动过，而在2.4中，Spring 官方调整了配置文件的处理逻辑&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;外部配置文件优先于内部 Profile 配置&lt;/li&gt;
-&lt;li&gt;重命名 &lt;code&gt;spring.profiles&lt;/code&gt; 为 &lt;code&gt;spring.config.activate.on-profile&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;新增 Profile 组&lt;/li&gt;
-&lt;/ul&gt;</description>
-      
-      
-      
-      
-      
-      
-      <comments>https://jiangtj.com/articles/cherry/spring-boot-2-4-config/#disqus_thread</comments>
-      
     </item>
-    
     <item>
       <title>NPM 包代理</title>
       <link>https://jiangtj.com/articles/cherry/npm-pack-proxy/</link>
-      <guid>https://jiangtj.com/articles/cherry/npm-pack-proxy/</guid>
+      <description>
+        <![CDATA[<p>在国外，最简单的是安装，在国内，最难得就是安装，太难了</p>
+<p>下面是一份我正在用的<code>.yarnrc</code>的配置</p>
+<figure class="highlight plaintext"><table><tr><td]]>
+      </description>
+      <author>Mr.J</author>
       <pubDate>Fri, 29 Jan 2021 07:57:56 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;在国外，最简单的是安装，在国内，最难得就是安装，太难了&lt;/p&gt;
-&lt;p&gt;下面是一份我正在用的&lt;code&gt;.yarnrc&lt;/code&gt;的配置&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</description>
-          
-        
-      
-      
-      
-      
-      
-      
-      <comments>https://jiangtj.com/articles/cherry/npm-pack-proxy/#disqus_thread</comments>
-      
     </item>
-    
   </channel>
 </rss>
