@@ -107,7 +107,7 @@
     
     <div class="site-state-item site-state-posts">
       <a href="/archives/">
-        <span class="site-state-item-count">79</span>
+        <span class="site-state-item-count">89</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -116,7 +116,7 @@
     
     <div class="site-state-item site-state-categories">
       <a href="/categories/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span>
       </a>
     </div>
@@ -125,7 +125,7 @@
     
     <div class="site-state-item site-state-tags">
       <a href="/tags/">
-        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-count">55</span>
         <span class="site-state-item-name">标签</span>
       </a>
     </div>
@@ -160,7 +160,7 @@
       
       <h1 class="post-title">
         
-        <a href="/articles/durian/spring-restclient/">Spring 6.1 新的 Web 客户端 RestClient</a>
+        <a href="/articles/n/08_%E7%BB%88%E7%AB%A0_%E7%AC%AC%E5%85%AB%E4%BB%BD%E6%A1%A3%E6%A1%88/">《雪盲》· 第八份档案</a>
         
       </h1>
       
@@ -174,7 +174,7 @@
       <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
     </span>
     <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2024-02-17 12:33:19">2024-02-17</time>
+    <time title="创建时间：2026-10-17 18:00:08">2026-10-17</time>
   </span>
   
 
@@ -187,7 +187,7 @@
       <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
     </span>
     <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
+    <span><a href="/categories/%E5%B0%8F%E8%AF%B4/" rel="index"><span>小说</span></a></span>  </span>
   
 
   
@@ -199,11 +199,33 @@
 
     <div class="post-body">
       
-      <p>在 Spring 6.1 中，添加了一个新的同步 web 客户端 RestClient，提供更现代化的 fluent API，所以我们能在 spring mvc 里获得与 webflux 一样的 web 请求的编码体验（再加上 project loom 的支持，webflux 还有存在的意义么？）</p>
-<h1 id="创建-RestClient"><a href="#创建-RestClient" class="headerlink" title="创建 RestClient"></a>创建 RestClient</h1><p>RestClient 可以用过 <code>create()</code> 方法直接简单的创建，也可以通过 <code>builder()</code> 构建。在 <code>builder()</code> 中，我们可以传入一些配置或者默认参数，这对于我们统一请求规范有很大的帮助</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">RestClient</span> <span class="hljs-variable">defaultClient</span> <span class="hljs-operator">=</span> RestClient.create();<br><br><span class="hljs-type">RestClient</span> <span class="hljs-variable">customClient</span> <span class="hljs-operator">=</span> RestClient.builder()<br>  .requestFactory(<span class="hljs-keyword">new</span> <span class="hljs-title class_">HttpComponentsClientHttpRequestFactory</span>())<br>  .messageConverters(converters -&gt; converters.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">MyCustomMessageConverter</span>()))<br>  .baseUrl(<span class="hljs-string">&quot;https://example.com&quot;</span>)<br>  .defaultUriVariables(Map.of(<span class="hljs-string">&quot;variable&quot;</span>, <span class="hljs-string">&quot;foo&quot;</span>))<br>  .defaultHeader(<span class="hljs-string">&quot;My-Header&quot;</span>, <span class="hljs-string">&quot;Foo&quot;</span>)<br>  .requestInterceptor(myCustomInterceptor)<br>  .requestInitializer(myCustomInitializer)<br>  .build();<br></code></pre></td></tr></table></figure>      
+      <h2 id="终章-·-第八份档案"><a href="#终章-·-第八份档案" class="headerlink" title="终章 · 第八份档案"></a>终章 · 第八份档案</h2><h3 id="【档案·八】"><a href="#【档案·八】" class="headerlink" title="【档案·八】"></a>【档案·八】</h3><p>你有过一个女儿。</p>
+<p>她叫黎小满。小满，是节气里那个小满。</p>
+<p>她出生那天是五月二十一号。你当时在苏州，谈一单生意。你妻子打电话来，说生了，是个女孩。你说好，然后挂了电话。</p>
+<p>你第二天下午才回去。</p>
+<p>你记得你推开门的时候，她躺在摇篮里，睁着眼睛。她看着你。她那时候三天大，眼睛还没睁开。你说她是睁着眼的——你记错了。你记错了很多年，后来你把这件事写进你的册子里，写的是”她睁着眼睛看着我”。</p>
+<p>你三十岁那年，你开始做这行。</p>
+<p>你的规矩很简单：<strong>只收恶人的把柄，只卖安全。</strong></p>
+<p>你从来不出面。</p>
+<p>你从来不留名。</p>
+<p>你三十九岁那年，你的女儿十七岁了。</p>
+<p>她在国外读书。她学的是艺术史。她写信给你，说她想去看看那些被抢走的东西。</p>
+<p>你把信放在抽屉里。</p>
+<p>你四十岁那年，冬天，她回来了。</p>
+<p>她从机场出来，给你打电话。她说：爸，我明天到家。</p>
+<p>你说：好。</p>
+<p><strong>你没有去接她。</strong></p>
+<p>因为那天晚上，有一单生意。</p>
+<p>那单生意的客户，是一位很有身份的人。他要出境。他需要一条安全的路。你给他安排了一条安全的路。</p>
+<p>你给了他一个时间表。</p>
+<p>表上有一行，写着：<strong>二十二日，二十三时四十分，××机场，T3航站楼，出港。</strong></p>
+<p>你把表给了他。</p>
+<p>你在那张表上，写了两行字。</p>
+<p>第一行是他的。</p>
+<p>第二行是——</p>
+<p><strong>你写的是你女儿的时间。</strong></p>      
 <div class="read-more-btn">
-  <a href="/articles/durian/spring-restclient/" rel="contents">
+  <a href="/articles/n/08_%E7%BB%88%E7%AB%A0_%E7%AC%AC%E5%85%AB%E4%BB%BD%E6%A1%A3%E6%A1%88/" rel="contents">
     阅读全文 &raquo;
   </a>
 </div>
@@ -231,7 +253,7 @@
       
       <h1 class="post-title">
         
-        <a href="/articles/durian/maven-publish-action/">通过 GitHub Action 发布你的 jar 包</a>
+        <a href="/articles/n/07_%E5%8D%95%E5%85%83%E4%B8%83_%E8%A2%AB%E6%91%86%E6%88%90%E6%89%8B%E6%9C%AF%E5%A7%BF%E5%8A%BF%E7%9A%84%E5%B0%B8%E4%BD%93/">《雪盲》· 被摆成手术姿势的尸体</a>
         
       </h1>
       
@@ -245,7 +267,7 @@
       <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
     </span>
     <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2024-02-16 15:59:15">2024-02-16</time>
+    <time title="创建时间：2026-10-17 18:00:07">2026-10-17</time>
   </span>
   
 
@@ -258,7 +280,7 @@
       <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
     </span>
     <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
+    <span><a href="/categories/%E5%B0%8F%E8%AF%B4/" rel="index"><span>小说</span></a></span>  </span>
   
 
   
@@ -270,21 +292,40 @@
 
     <div class="post-body">
       
-      <p>继上篇内容<a href="https://jiangtj.com/articles/durian/maven-publish/">《在 Maven Central 发布你的jar包》</a>，本篇将介绍如何通过 GitHub Action 自动发布你的 jar 包。</p>
-<h1 id="创建-GitHub-Action"><a href="#创建-GitHub-Action" class="headerlink" title="创建 GitHub Action"></a>创建 GitHub Action</h1><p>添加以下 action 到你的 .github&#x2F;workflows 目录下</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">name:</span> <span class="hljs-string">Publish</span> <span class="hljs-string">to</span> <span class="hljs-string">Maven</span> <span class="hljs-string">Central</span><br><span class="hljs-attr">on:</span><br>  <span class="hljs-attr">push:</span> <br>    <span class="hljs-attr">tags:</span> <br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;v*.*.*&quot;</span><br><span class="hljs-attr">jobs:</span><br>  <span class="hljs-attr">build:</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span><br>    <span class="hljs-attr">steps:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Checkout</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v3</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Set</span> <span class="hljs-string">up</span> <span class="hljs-string">Apache</span> <span class="hljs-string">Maven</span> <span class="hljs-string">Central</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-java@v4</span><br>        <span class="hljs-attr">with:</span> <span class="hljs-comment"># running setup-java again overwrites the settings.xml</span><br>          <span class="hljs-attr">java-version:</span> <span class="hljs-string">&#x27;17&#x27;</span><br>          <span class="hljs-attr">distribution:</span> <span class="hljs-string">&#x27;temurin&#x27;</span><br>          <span class="hljs-attr">cache:</span> <span class="hljs-string">maven</span><br>          <span class="hljs-attr">server-id:</span> <span class="hljs-string">central</span> <span class="hljs-comment"># Value of the distributionManagement/repository/id field of the pom.xml</span><br>          <span class="hljs-attr">server-username:</span> <span class="hljs-string">MAVEN_USERNAME</span> <span class="hljs-comment"># env variable for username in deploy</span><br>          <span class="hljs-attr">server-password:</span> <span class="hljs-string">MAVEN_CENTRAL_TOKEN</span> <span class="hljs-comment"># env variable for token in deploy</span><br>          <span class="hljs-attr">gpg-private-key:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.MAVEN_GPG_PRIVATE_KEY</span> <span class="hljs-string">&#125;&#125;</span> <span class="hljs-comment"># Value of the GPG private key to import</span><br>          <span class="hljs-attr">gpg-passphrase:</span> <span class="hljs-string">MAVEN_GPG_PASSPHRASE</span> <span class="hljs-comment"># env variable for GPG private key passphrase</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Publish</span> <span class="hljs-string">to</span> <span class="hljs-string">Apache</span> <span class="hljs-string">Maven</span> <span class="hljs-string">Central</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">mvn</span> <span class="hljs-string">deploy</span><br>        <span class="hljs-attr">env:</span><br>          <span class="hljs-attr">MAVEN_USERNAME:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.MAVEN_USERNAME</span> <span class="hljs-string">&#125;&#125;</span><br>          <span class="hljs-attr">MAVEN_CENTRAL_TOKEN:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.MAVEN_CENTRAL_TOKEN</span> <span class="hljs-string">&#125;&#125;</span><br>          <span class="hljs-attr">MAVEN_GPG_PASSPHRASE:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.MAVEN_GPG_PASSPHRASE</span> <span class="hljs-string">&#125;&#125;</span><br></code></pre></td></tr></table></figure>
-
-<h1 id="修改-pom-文件"><a href="#修改-pom-文件" class="headerlink" title="修改 pom 文件"></a>修改 pom 文件</h1><p>Maven GPG Plugin 可能会报以下错误 <code>Inappropriate ioctl for device</code> 或者 <code>gpg: signing failed: No such file or directory</code>，所以需要在 <code>configuration</code> 中添加以下内容:</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">configuration</span>&gt;</span><br>  <span class="hljs-comment">&lt;!-- Prevent gpg from using pinentry programs --&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">gpgArguments</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">arg</span>&gt;</span>--pinentry-mode<span class="hljs-tag">&lt;/<span class="hljs-name">arg</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">arg</span>&gt;</span>loopback<span class="hljs-tag">&lt;/<span class="hljs-name">arg</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">gpgArguments</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">configuration</span>&gt;</span><br></code></pre></td></tr></table></figure>
-
-<h1 id="添加-GitHub-Action-密钥"><a href="#添加-GitHub-Action-密钥" class="headerlink" title="添加 GitHub Action 密钥"></a>添加 GitHub Action 密钥</h1><p>在 GitHub 仓库的 Settings -&gt; Secrets 中添加以下内容：</p>
-<ol>
-<li>MAVEN_GPG_PRIVATE_KEY: 通过命令行获取<code>gpg --armor --export-secret-keys YOUR_ID</code></li>
-<li>MAVEN_GPG_PASSPHRASE: 当前GPG私钥的密码</li>
-<li>MAVEN_USERNAME: maven central 用户名</li>
-<li>MAVEN_CENTRAL_TOKEN: maven central 的 token</li>
-</ol>
-<p>然后发布新的release版本，GitHub Action 会自动发布你的 jar 包到 Maven Central。</p>
+      <h2 id="单元七-·-被摆成手术姿势的尸体"><a href="#单元七-·-被摆成手术姿势的尸体" class="headerlink" title="单元七 · 被摆成手术姿势的尸体"></a>单元七 · 被摆成手术姿势的尸体</h2><h3 id="【档案·七】"><a href="#【档案·七】" class="headerlink" title="【档案·七】"></a>【档案·七】</h3><p>你三十一岁那年，在一个叫”临时医疗点”的地方，做了一次决定。</p>
+<p>那里有十二个伤员，三个医生，两箱血。</p>
+<p>你只有两箱血。</p>
+<p>你把血给了六个人。剩下的六个人，你给了止痛药，然后把他们抬到走廊尽头。</p>
+<p>走廊尽头没有暖气。</p>
+<p>你在他们的手背上，用记号笔画了一道线。</p>
+<p><strong>一条线，意思是”暂时观察”。</strong></p>
+<p><strong>两条线，意思是”放弃”。</strong></p>
+<p>你画了六条线。</p>
+<p>有三个人当场就哭了。有一个没有哭。他握着你的手，说：医生，我还有孩子。</p>
+<p>你说：我知道。</p>
+<p>然后你把手抽出来，走了。</p>
+<p>第二天早上，那三个人里活下来了一个。他是那个握你手的人。</p>
+<p>他活下来，是因为你分给别人的血出了错——一袋血破了。</p>
+<p>你后来给那个人的病历上写：<strong>因资源受限，未能及时供血。</strong></p>
+<p>你写得很好。像一份合格的记录。</p>
+<p>你三十四岁那年，你回国了。</p>
+<p>你开始在另一条线上工作。</p>
+<p>你不再决定谁死。你决定<strong>谁先</strong>。</p>
+<p>你成了那个把名字往前挪的人。</p>
+<p>你挪过很多名字。有的挪到前面，那个人就活了。有的挪到前面，那个人就死了——<strong>因为他不是来等器官的，他是来给器官的。</strong></p>
+<p>你把这件事做成了一门生意。</p>
+<p>你的客户是些很有钱的人。他们需要一样东西，而你恰好能从名单上找到它。</p>
+<p>你只失手过一次。</p>
+<p>那一次，你把一个女孩挪到了第一位。</p>
+<p>她十七岁。</p>
+<p>她进手术室的时候，还醒着。</p>
+<p>你记得她看了你一眼。</p>
+<p>你想了很多年，那一眼到底是什么意思。</p>      
+<div class="read-more-btn">
+  <a href="/articles/n/07_%E5%8D%95%E5%85%83%E4%B8%83_%E8%A2%AB%E6%91%86%E6%88%90%E6%89%8B%E6%9C%AF%E5%A7%BF%E5%8A%BF%E7%9A%84%E5%B0%B8%E4%BD%93/" rel="contents">
+    阅读全文 &raquo;
+  </a>
+</div>
       
     </div>
 
@@ -309,7 +350,7 @@
       
       <h1 class="post-title">
         
-        <a href="/articles/durian/maven-publish/">在 Maven Central 发布你的jar包</a>
+        <a href="/articles/n/06_%E5%8D%95%E5%85%83%E5%85%AD_%E5%A5%B9%E8%87%AA%E5%B7%B1%E8%AE%BE%E4%B8%8B%E7%9A%84%E6%AD%BB%E4%BA%A1%E9%A2%84%E5%91%8A/">《雪盲》· 她自己设下的死亡预告</a>
         
       </h1>
       
@@ -323,7 +364,7 @@
       <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
     </span>
     <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2024-02-14 22:09:10">2024-02-14</time>
+    <time title="创建时间：2026-10-17 18:00:06">2026-10-17</time>
   </span>
   
 
@@ -336,7 +377,7 @@
       <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
     </span>
     <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
+    <span><a href="/categories/%E5%B0%8F%E8%AF%B4/" rel="index"><span>小说</span></a></span>  </span>
   
 
   
@@ -348,16 +389,313 @@
 
     <div class="post-body">
       
-      <blockquote>
-<p>在2024年2月1日，sonatype 终于放弃了原本的maven-central的注册方式，将提交issue注册改成了通过dns验证域名即可，这对于我们这些可能只想存个工具类的人来说，就方便太多了。</p>
+      <h2 id="单元六-·-她自己设下的死亡预告"><a href="#单元六-·-她自己设下的死亡预告" class="headerlink" title="单元六 · 她自己设下的死亡预告"></a>单元六 · 她自己设下的死亡预告</h2><h3 id="【档案·六】"><a href="#【档案·六】" class="headerlink" title="【档案·六】"></a>【档案·六】</h3><p>你十五岁那年，第一次进入了不该进的地方。</p>
+<p>那是一个医院的数据库。你只是想看看自己的病历——你母亲说你小时候得过一场病，她记不清是什么病了，她只记得”很严重”。你想知道自己到底差点死于什么。</p>
+<p>你找到了。那是一个很普通的名字，很普通的一行记录。</p>
+<p>然后你没有退出。</p>
+<p>你往下翻。</p>
+<p>你看见了别人的病历。很多很多。他们的名字、年龄、住址、化验单、影像片。他们全都是真的。他们全都很痛。</p>
+<p>你在里面坐了一夜。</p>
+<p>你十七岁那年，你第一次拿这个换钱。</p>
+<p>有人找到你，说要查一个人的病史。你说可以。他给了你五千。</p>
+<p>你十八岁那年，你已经接了很多活。</p>
+<p>你二十二岁那年，你开始接一种活：<strong>改病历。</strong></p>
+<p>不是为了钱。是为了更多人付钱。</p>
+<p>你把一份病历上的”能治”改成”不能治”。你把一份病历上的”有救”改成”已放弃”。你把一份病历上的”患者清醒”改成”昏迷”。</p>
+<p>这些病历会流向哪儿，你不管。</p>
+<p>你只知道一件事：你把一个字改了，那个人就死了。</p>
+<p>你二十五岁那年，你表哥来找你。</p>
+<p>他叫邹明远。他是医生。</p>
+<p>他说：我需要你把一份名单上的顺序改一下。</p>
+<p>你问：为什么。</p>
+<p>他说：有人愿意付钱。</p>
+<p>你说：好。</p>
+<p>你改了那份名单。</p>
+<p>那份名单上，排第一的人，是一个女孩。你记得她的名字，因为她的名字很好听。</p>
+<p>她叫<strong>黎小满</strong>。</p>
+<p>你后来查过她。她十七岁。她不是在等器官。</p>
+<p>她是<strong>提供</strong>器官的那一个。</p>      
+<div class="read-more-btn">
+  <a href="/articles/n/06_%E5%8D%95%E5%85%83%E5%85%AD_%E5%A5%B9%E8%87%AA%E5%B7%B1%E8%AE%BE%E4%B8%8B%E7%9A%84%E6%AD%BB%E4%BA%A1%E9%A2%84%E5%91%8A/" rel="contents">
+    阅读全文 &raquo;
+  </a>
+</div>
+      
+    </div>
+
+    
+    
+
+    
+
+    
+  </div>
+</article>
+  
+  
+
+<article class="post post-type-normal">
+  <div class="card post-block">
+
+    
+
+    <header class="post-header">
+
+      
+      <h1 class="post-title">
+        
+        <a href="/articles/n/05_%E5%8D%95%E5%85%83%E4%BA%94_%E6%B6%88%E5%A4%B1%E7%9A%84%E7%AC%AC%E4%BA%8C%E8%A1%8C%E8%84%9A%E5%8D%B0/">《雪盲》· 消失的第二行脚印</a>
+        
+      </h1>
+      
+
+      <div class="post-meta">
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">发表于</span>
+    <time title="创建时间：2026-10-17 18:00:05">2026-10-17</time>
+  </span>
+  
+
+  
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">分类于</span>
+    <span><a href="/categories/%E5%B0%8F%E8%AF%B4/" rel="index"><span>小说</span></a></span>  </span>
+  
+
+  
+  
+
+</div>
+
+    </header>
+
+    <div class="post-body">
+      
+      <h2 id="单元五-·-消失的第二行脚印"><a href="#单元五-·-消失的第二行脚印" class="headerlink" title="单元五 · 消失的第二行脚印"></a>单元五 · 消失的第二行脚印</h2><h3 id="【档案·五】"><a href="#【档案·五】" class="headerlink" title="【档案·五】"></a>【档案·五】</h3><p>你二十九岁那年，办了一个案子。</p>
+<p>一个女人死在城郊的水渠里。现场没有目击者，没有指纹，只有一枚鞋印。你追了十一个月，抓到一个人。</p>
+<p>那个人姓宋。他承认了。他承认得很干脆，干脆到你觉得不对。</p>
+<p>你在笔录上问：你为什么杀她。</p>
+<p>他说：因为她看见了。</p>
+<p>你问：看见了什么。</p>
+<p>他说：看见了我。</p>
+<p>你后来才知道，这句话里有一个漏洞。<strong>看见了他，和看见他杀人，不是一回事。</strong></p>
+<p>但那个时候你没有想。你只想把案子结了。</p>
+<p>你结了案。你立了功。</p>
+<p>三年后，你调去别的队。走之前，你在档案室收拾东西。你翻到那个案子的卷宗，翻到第三遍的时候，你看见了一页——</p>
+<p><strong>那一页上写着一份证词。</strong></p>
+<p>证人的名字被划掉了。内容被涂黑了。只在角落留了两个字：<strong>另案</strong>。</p>
+<p>你把那一页抽出来，放进自己口袋。</p>
+<p>你没有上交。</p>
+<p>你告诉自己：这是留个底。</p>
+<p>后来有人来找你。他没有说名字，只说了一个数字：<strong>二十万。</strong></p>
+<p>你把那一页给了他。</p>
+<p>那个人后来没有死。</p>
+<p>后来又有三个人死了。</p>
+<p>他们在同一条水渠的不同位置，被同一把刀杀的。</p>
+<p>你把那一页烧了。</p>
+<p>烧的时候，你在厨房里，水龙头开着。你把灰冲进下水道。</p>
+<p>然后你回到客厅，看了一晚上的电视。</p>
+<p>你记得那天晚上电视里放的是什么。</p>
+<p>你记得很多年。</p>      
+<div class="read-more-btn">
+  <a href="/articles/n/05_%E5%8D%95%E5%85%83%E4%BA%94_%E6%B6%88%E5%A4%B1%E7%9A%84%E7%AC%AC%E4%BA%8C%E8%A1%8C%E8%84%9A%E5%8D%B0/" rel="contents">
+    阅读全文 &raquo;
+  </a>
+</div>
+      
+    </div>
+
+    
+    
+
+    
+
+    
+  </div>
+</article>
+  
+  
+
+<article class="post post-type-normal">
+  <div class="card post-block">
+
+    
+
+    <header class="post-header">
+
+      
+      <h1 class="post-title">
+        
+        <a href="/articles/n/04_%E5%8D%95%E5%85%83%E5%9B%9B_%E6%89%80%E6%9C%89%E4%BA%BA%E9%83%BD%E5%90%83%E8%BF%87%E7%9A%84%E8%8F%9C/">《雪盲》· 所有人都吃过的菜</a>
+        
+      </h1>
+      
+
+      <div class="post-meta">
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">发表于</span>
+    <time title="创建时间：2026-10-17 18:00:04">2026-10-17</time>
+  </span>
+  
+
+  
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">分类于</span>
+    <span><a href="/categories/%E5%B0%8F%E8%AF%B4/" rel="index"><span>小说</span></a></span>  </span>
+  
+
+  
+  
+
+</div>
+
+    </header>
+
+    <div class="post-body">
+      
+      <h2 id="单元四-·-所有人都吃过的菜"><a href="#单元四-·-所有人都吃过的菜" class="headerlink" title="单元四 · 所有人都吃过的菜"></a>单元四 · 所有人都吃过的菜</h2><h3 id="【档案·四】"><a href="#【档案·四】" class="headerlink" title="【档案·四】"></a>【档案·四】</h3><p>你二十三岁那年，第一次替一个人脱罪。</p>
+<p>那个人杀了他妻子。他把妻子的尸体放进车里，开到水库边，然后报警说是车祸。你只用了三天，就找到了十七个可以推翻警方结论的点。你在法庭上说了两个小时，最后说：<strong>证据不足，疑罪从无。</strong></p>
+<p>他被判无罪。走出法院的时候，他在台阶上握了你的手。他的手很热。</p>
+<p>你说：不客气。</p>
+<p>你回到车里，坐了很久。</p>
+<p>你不是在高兴。你是在想一件事——<strong>他妻子的名字，你记住了。</strong></p>
+<p>她叫江惠。三十一岁。</p>
+<p>你后来查过她。她有一个女儿，五岁，跟外婆住。</p>
+<p>你每年给那个孩子寄一次钱。你寄了十年。你没有留名字。</p>
+<p>你告诉自己：这是为了平衡。</p>
+<p>你三十四岁那年，你已经很有名了。业内叫你”程不收”——因为你挑案子。你不接rape案，不接骗老人的案子，不接伤害儿童的案子。你接的是”证据有瑕疵”的案子。</p>
+<p>你给自己定了一条规矩：<strong>只接那些警方本来就可能抓错人的案子。</strong></p>
+<p>你靠这条规矩，活了十二年。</p>
+<p>你三十五岁那年，出了事。</p>
+<p>你接了一桩案子。被告是个男人，姓陆。他涉嫌在争执中杀了一个女人，证据链里有三个漏洞。你本来打算照常做。</p>
+<p>那天晚上，你接了一个电话。</p>
+<p>电话里的人说：<strong>你妹妹的名字，在我手里。</strong></p>
+<p>你没有说话。</p>
+<p>他说：<strong>她十七岁那年，在雨夜里做的事，我全都知道。</strong></p>
+<p>他说：<strong>你要么接这个案子，要么看着她进去。</strong></p>
+<p>你在窗前站了一夜。</p>
+<p>第二天，你接了案子。</p>
+<p>你输了。你输得很干净，干净到你自己都信了。</p>
+<p>被告判了七年。他在法庭上回头看了你一眼。</p>
+<p>那一眼你记得很多年。</p>
+<p>因为他没有恨你。</p>
+<p>他只是看了你一眼。</p>      
+<div class="read-more-btn">
+  <a href="/articles/n/04_%E5%8D%95%E5%85%83%E5%9B%9B_%E6%89%80%E6%9C%89%E4%BA%BA%E9%83%BD%E5%90%83%E8%BF%87%E7%9A%84%E8%8F%9C/" rel="contents">
+    阅读全文 &raquo;
+  </a>
+</div>
+      
+    </div>
+
+    
+    
+
+    
+
+    
+  </div>
+</article>
+  
+  
+
+<article class="post post-type-normal">
+  <div class="card post-block">
+
+    
+
+    <header class="post-header">
+
+      
+      <h1 class="post-title">
+        
+        <a href="/articles/n/03_%E5%8D%95%E5%85%83%E4%B8%89_%E4%BC%AA%E9%80%A0%E7%9A%84%E8%87%AA%E6%9D%80/">《雪盲》· 伪造的自杀</a>
+        
+      </h1>
+      
+
+      <div class="post-meta">
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">发表于</span>
+    <time title="创建时间：2026-10-17 18:00:03">2026-10-17</time>
+  </span>
+  
+
+  
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">分类于</span>
+    <span><a href="/categories/%E5%B0%8F%E8%AF%B4/" rel="index"><span>小说</span></a></span>  </span>
+  
+
+  
+  
+
+</div>
+
+    </header>
+
+    <div class="post-body">
+      
+      <h2 id="单元三-·-伪造的自杀"><a href="#单元三-·-伪造的自杀" class="headerlink" title="单元三 · 伪造的自杀"></a>单元三 · 伪造的自杀</h2><h3 id="【档案·三】"><a href="#【档案·三】" class="headerlink" title="【档案·三】"></a>【档案·三】</h3><p>你二十六岁那年，第一次坐在审讯室的单面镜后面。</p>
+<p>你在笔记本上写下一行字：<strong>供述不是事实，供述是关系。</strong></p>
+<p>那年你写了一篇论文，题目是《审讯中的情绪锚点》。你在论文里说：一个人说谎的时候，身体会有反应；但一个人说真话的时候，身体也会有反应。所以真正的问题不是”他有没有说谎”，而是”他想不想让你相信”。</p>
+<p>他想让你相信什么，他就会给你什么。</p>
+<p>你三十四岁那年，你已经很有名了。有人请你去帮一个案子。</p>
+<p>那是一起灭门案。一家四口，死在春节前三天。凶手用了一把菜刀，砍了四十七刀。现场没有指纹，没有脚印，没有目击者。</p>
+<p>你在案卷里挑了一个人。</p>
+<p>他是被害人的邻居，十六岁，智力偏低，说话的时候会把”昨天”说成”前天”。他母亲说他从小就怕生，见了人会躲到门后面。</p>
+<p>你和他谈了十一次。第十一次，他哭了。他说：是我干的。</p>
+<p>你让他把这句话说了三遍。第一遍他说得很快，第二遍他停顿了，第三遍他说得很慢，一个字一个字。</p>
+<p>你把这三遍都录了下来。</p>
+<p>你在报告里写道：<strong>嫌疑人供述稳定，情绪反应与案情匹配，具备完全刑事责任能力。</strong></p>
+<p>他被判无期。第二年冬天，他在监所里用床单结束了自己。</p>
+<p>你在那年发表了《论虚假供述的心理机制》，写了三百页。书里有一段话，后来被引用了几百次：</p>
+<blockquote>
+<p><strong>虚假供述不是谎言。虚假供述是一种求助。</strong></p>
 </blockquote>
-<h1 id="注册命名空间"><a href="#注册命名空间" class="headerlink" title="注册命名空间"></a>注册命名空间</h1><p>首先，在<a target="_blank" rel="noopener" href="https://central.sonatype.com/">maven central</a>注册一个账号，推荐使用GitHub直接登录，这样的好处是你可以直接得到一个验证通过的Namespace</p>
-<p><img src="https://github.com/jiangtj/blog/assets/15902347/d26c0f80-0146-42e6-bcb5-7e69c8637a93" alt="image"></p>
-<p>点击 Add Namespace 按钮可以添加一个Namespace</p>
-<p><img src="https://github.com/jiangtj/blog/assets/15902347/994f3744-8b28-4321-be7f-ff162a760166" alt="image"></p>
-<p>然后在你的域名解析商那上添加一个TXT记录，比如上面的例子，主机记录为<code>testmvn</code>，记录值为<code>提供的token</code>，这样就可以得到一个和GitHub一样的Namespace了。</p>      
+<p>那本书得了奖。</p>
+<p>领奖那天你穿了一身很合身的西装。你在台上说：<strong>我们要相信科学。</strong></p>
+<p>你下台的时候，有一个人给你递了一杯水。你没有看他。你只是接过来，喝了。</p>
+<p>水是温的。</p>
+<p>你记得那个温度。你记得很多年。</p>      
 <div class="read-more-btn">
-  <a href="/articles/durian/maven-publish/" rel="contents">
+  <a href="/articles/n/03_%E5%8D%95%E5%85%83%E4%B8%89_%E4%BC%AA%E9%80%A0%E7%9A%84%E8%87%AA%E6%9D%80/" rel="contents">
     阅读全文 &raquo;
   </a>
 </div>
@@ -385,7 +723,7 @@
       
       <h1 class="post-title">
         
-        <a href="/articles/durian/spring-graphql/">为 Spring Boot 应用添加 GraphQL</a>
+        <a href="/articles/n/02_%E5%8D%95%E5%85%83%E4%BA%8C_%E9%9B%AA%E5%9C%B0%E4%B8%8A%E5%8F%AA%E6%9C%89%E4%B8%80%E8%A1%8C%E8%84%9A%E5%8D%B0/">《雪盲》· 雪地上只有一行脚印</a>
         
       </h1>
       
@@ -399,7 +737,7 @@
       <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
     </span>
     <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2023-08-16 09:50:35">2023-08-16</time>
+    <time title="创建时间：2026-10-17 18:00:02">2026-10-17</time>
   </span>
   
 
@@ -412,7 +750,7 @@
       <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
     </span>
     <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
+    <span><a href="/categories/%E5%B0%8F%E8%AF%B4/" rel="index"><span>小说</span></a></span>  </span>
   
 
   
@@ -424,10 +762,30 @@
 
     <div class="post-body">
       
-      <p>GraphQL 已经出现很久了，最近我在看 Spring 文档时，看到了相关的介绍（我记得以前是没的，不知道什么时候的新特性），就试了试，先来一段AI的介绍。如果你仅想看怎么实现，跳过下面这段</p>
-<h1 id="来着-Codeium-AI-的介绍"><a href="#来着-Codeium-AI-的介绍" class="headerlink" title="来着 Codeium AI 的介绍"></a>来着 Codeium AI 的介绍</h1><p>GraphQL是一种用于API开发的查询语言和运行时环境。它由Facebook开发并于2015年开源。GraphQL的主要目标是提供一种更高效、灵活和易于使用的方式来获取和操作数据。与传统的RESTful API相比，GraphQL允许客户端精确地指定需要的数据，并减少了不必要的网络传输和数据处理。</p>      
+      <h2 id="单元二-·-雪地上只有一行脚印"><a href="#单元二-·-雪地上只有一行脚印" class="headerlink" title="单元二 · 雪地上只有一行脚印"></a>单元二 · 雪地上只有一行脚印</h2><h3 id="【档案·二】"><a href="#【档案·二】" class="headerlink" title="【档案·二】"></a>【档案·二】</h3><p>你二十二岁那年穿上警服，扣子扣到最上面一颗。</p>
+<p>那时候你觉得自己是个好人。你有一个很具体的证据：你每天早上去食堂打饭，会替门口那个扫地的大爷带一份。你带了四年。</p>
+<p>你三十二岁那年，办了一个案子。</p>
+<p>那个男人姓宋。你只记得他姓宋——后来的二十年里，你逼自己只记得这一点。他杀了两个人，你抓到了他，证据很全，口供也齐。你记得把他押上警车那天，天很热，柏油路是软的，他回头看了你一眼。</p>
+<p>他没有恨你。他只是看了你一眼。</p>
+<p>后来有人来找你。那个人没有露面，只放了一个信封在传达室。信封里有三样东西：一张你女儿学校的照片，一张汇款单，和一张白纸。</p>
+<p>白纸上写着一行字：<strong>放他走，这件事从来没有发生过。</strong></p>
+<p>你在传达室坐了一夜。</p>
+<p>第二天，你把卷宗里的两页抽了出来。</p>
+<p>你告诉自己：只抽两页。少了那两页，证据链就断了，案子就得退查。退查就是拖，拖久了，人就放了。你告诉自己，你没有放他走，是程序把他放了。</p>
+<p>宋某被释放后十一个月，杀了四个人。其中两个是学生。</p>
+<p>你从那天起，不再照镜子。</p>
+<p>不是因为怕看见自己的脸。是因为你发现，你的脸和以前一模一样。<strong>你还是那个会替扫地大爷带饭的人。</strong></p>
+<p>你辞职。你去了一座很冷的山。</p>
+<p>有人在那里等你。他说他姓黎，别人叫他灰先生。他没有骂你，也没有威胁你。他只说了一句话：</p>
+<p>“你不是坏人。你只是想让日子过下去。我雇的就是这种人。”</p>
+<p>他给了你一份工作。</p>
+<p>工作内容是：处理不听话的客户。</p>
+<p>你处理过三个。</p>
+<p>你从来没有问过他们后来去了哪里。你也从来没有告诉自己，你处理过三个。</p>
+<p>你只是每天早上六点起床，把院子扫一遍。</p>
+<p>你扫得很干净。</p>      
 <div class="read-more-btn">
-  <a href="/articles/durian/spring-graphql/" rel="contents">
+  <a href="/articles/n/02_%E5%8D%95%E5%85%83%E4%BA%8C_%E9%9B%AA%E5%9C%B0%E4%B8%8A%E5%8F%AA%E6%9C%89%E4%B8%80%E8%A1%8C%E8%84%9A%E5%8D%B0/" rel="contents">
     阅读全文 &raquo;
   </a>
 </div>
@@ -455,7 +813,7 @@
       
       <h1 class="post-title">
         
-        <a href="/articles/durian/spring-native-action/">GitHub Action 构建原生 Spring Boot 应用</a>
+        <a href="/articles/n/01_%E5%8D%95%E5%85%83%E4%B8%80_%E6%97%A0%E4%BA%BA%E8%BF%9B%E5%85%A5%E7%9A%84%E5%AF%86%E5%AE%A4/">《雪盲》· 无人进入的密室</a>
         
       </h1>
       
@@ -469,7 +827,7 @@
       <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
     </span>
     <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2023-05-20 14:18:29">2023-05-20</time>
+    <time title="创建时间：2026-10-17 18:00:01">2026-10-17</time>
   </span>
   
 
@@ -482,7 +840,7 @@
       <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
     </span>
     <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
+    <span><a href="/categories/%E5%B0%8F%E8%AF%B4/" rel="index"><span>小说</span></a></span>  </span>
   
 
   
@@ -494,469 +852,305 @@
 
     <div class="post-body">
       
-      <p>原生构建是非常消耗系统资源的，你可以看到编译过程中，cpu与内存都接近100%，所以能用免费的CI，那必须是要用的</p>
-<h1 id="创建一个-Action"><a href="#创建一个-Action" class="headerlink" title="创建一个 Action"></a>创建一个 Action</h1><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">name:</span> <span class="hljs-string">Docker</span> <span class="hljs-string">Push</span><br><br><span class="hljs-attr">on:</span><br>  <span class="hljs-attr">push:</span><br>    <span class="hljs-attr">branches:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;**&quot;</span><br>    <span class="hljs-attr">tags:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;v*.*.*&quot;</span><br><br><span class="hljs-attr">jobs:</span><br>  <span class="hljs-attr">docker_push:</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span><br>    <span class="hljs-attr">permissions:</span><br>      <span class="hljs-attr">packages:</span> <span class="hljs-string">write</span><br>    <span class="hljs-attr">steps:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v3</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Set</span> <span class="hljs-string">up</span> <span class="hljs-string">JDK</span> <span class="hljs-number">17</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-java@v3</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-attr">java-version:</span> <span class="hljs-string">&#x27;17&#x27;</span><br>          <span class="hljs-attr">distribution:</span> <span class="hljs-string">&#x27;temurin&#x27;</span><br>          <span class="hljs-attr">cache:</span> <span class="hljs-string">maven</span><br></code></pre></td></tr></table></figure>
+      <h2 id="单元一-·-无人进入的密室"><a href="#单元一-·-无人进入的密室" class="headerlink" title="单元一 · 无人进入的密室"></a>单元一 · 无人进入的密室</h2><h3 id="【档案·一】"><a href="#【档案·一】" class="headerlink" title="【档案·一】"></a>【档案·一】</h3><p>你十一岁那年，在苏州观前街的一家古玩铺里，第一次学会了看人。</p>
+<p>你师父说，东西会说谎，人不会。东西的谎是工匠说的，人的谎是自己说的。你师父说这话的时候正在给一位客人倒茶，茶倒到七分满，停了。你问你师父为什么倒七分。你师父说：因为这位客人只带了七分的钱。</p>
+<p>你后来一辈子都在给人倒七分的茶。</p>
+<p>你二十五岁那年，认识了周振声。</p>
+<p>他是当时江南最好的青铜器鉴定师。他一辈子没有说过一句假话。他穷，因为他穷，所以他说真话的时候，别人反而觉得他在装。</p>
+<p>你和他一起看过一百三十七件东西。你从他身上学会了一件事：真话比假话值钱，因为真话只有一个人能说。</p>
+<p>你三十一岁那年，你决定自己来说真话。</p>
+<p>——不是因为你变好了。</p>
+<p>是因为你发现，只要说真话的人死了，真话就可以由活着的人来说。</p>
+<p>周振声进山那天，天气很好。</p>
+<p>你记得那天的天气，因为你后来每次上坟都要回忆一遍。天很蓝，没有云，松针落在石头上，踩上去很软。</p>
+<p>你走在他前面。你回头看了他一次。</p>
+<p>他手里提着一个布包，包里是他最后鉴定过的那件小青铜兽。他对你笑了一下，说：”绍棠，这东西我看了四十年，还是看不厌。”</p>
+<p>你也笑了。</p>
+<p>那是你最后一次对他笑。</p>      
+<div class="read-more-btn">
+  <a href="/articles/n/01_%E5%8D%95%E5%85%83%E4%B8%80_%E6%97%A0%E4%BA%BA%E8%BF%9B%E5%85%A5%E7%9A%84%E5%AF%86%E5%AE%A4/" rel="contents">
+    阅读全文 &raquo;
+  </a>
+</div>
+      
+    </div>
 
-<p>上面就是简单的action，监听分支与tags，然后checkout代码仓库并设置java环境，我们需要将构建产物发布，所以设置packages的权限为write</p>
-<h1 id="登录到-Github-容器注册中心"><a href="#登录到-Github-容器注册中心" class="headerlink" title="登录到 Github 容器注册中心"></a>登录到 Github 容器注册中心</h1><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Login</span> <span class="hljs-string">to</span> <span class="hljs-string">GitHub</span> <span class="hljs-string">Container</span> <span class="hljs-string">Registry</span><br>  <span class="hljs-attr">uses:</span> <span class="hljs-string">docker/login-action@v2</span><br>  <span class="hljs-attr">with:</span><br>    <span class="hljs-attr">registry:</span> <span class="hljs-string">ghcr.io</span><br>    <span class="hljs-attr">username:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">github.actor</span> <span class="hljs-string">&#125;&#125;</span><br>    <span class="hljs-attr">password:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.GITHUB_TOKEN</span> <span class="hljs-string">&#125;&#125;</span><br></code></pre></td></tr></table></figure>
+    
+    
 
-<p>在 steps 中添加上面的代码，就可以登录到 GitHub Container Registry，当然也可以改用docker hub，或者可以登录多个</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Login</span> <span class="hljs-string">to</span> <span class="hljs-string">Docker</span> <span class="hljs-string">Hub</span><br>  <span class="hljs-attr">uses:</span> <span class="hljs-string">docker/login-action@v2</span><br>  <span class="hljs-attr">with:</span><br>    <span class="hljs-attr">username:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.DOCKERHUB_USERNAME</span> <span class="hljs-string">&#125;&#125;</span><br>    <span class="hljs-attr">password:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.DOCKERHUB_TOKEN</span> <span class="hljs-string">&#125;&#125;</span><br></code></pre></td></tr></table></figure>
+    
 
-<p>registry 默认是 docker hub，但是，需要配置 DOCKERHUB_USERNAME 和 DOCKERHUB_TOKEN，我是觉得麻烦直接用了GitHub的</p>
-<h1 id="metadata-action-生成-tag"><a href="#metadata-action-生成-tag" class="headerlink" title="metadata-action 生成 tag"></a>metadata-action 生成 tag</h1><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Docker</span> <span class="hljs-string">meta</span><br>  <span class="hljs-attr">id:</span> <span class="hljs-string">meta</span><br>  <span class="hljs-attr">uses:</span> <span class="hljs-string">docker/metadata-action@v4</span><br>  <span class="hljs-attr">with:</span><br>    <span class="hljs-attr">images:</span> <span class="hljs-string">ghcr.io/name/app</span><br></code></pre></td></tr></table></figure>
+    
+  </div>
+</article>
+  
+  
 
-<p>这是将 CI 中的 refs 转换我们需要的 tags，比如 <code>v1.0.5</code>，就需要转换为 <code>latest</code> <code>1</code> <code>1.0</code> <code>1.0.5</code>，而且，由于 docker tag 的特殊性，它需要拼接镜像的名称，<code>name/app:latest</code> 等，所以，我们需要这个action帮我们简化生成过程</p>
-<p>默认情况下的转换是这样的</p>
-<table>
+<article class="post post-type-normal">
+  <div class="card post-block">
+
+    
+
+    <header class="post-header">
+
+      
+      <h1 class="post-title">
+        
+        <a href="/articles/n/00_%E5%BA%8F%E7%AB%A0_%E5%BC%80%E5%B9%95/">《雪盲》· 序章 · 开幕</a>
+        
+      </h1>
+      
+
+      <div class="post-meta">
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">发表于</span>
+    <time title="创建时间：2026-10-17 18:00:00">2026-10-17</time>
+  </span>
+  
+
+  
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">分类于</span>
+    <span><a href="/categories/%E5%B0%8F%E8%AF%B4/" rel="index"><span>小说</span></a></span>  </span>
+  
+
+  
+  
+
+</div>
+
+    </header>
+
+    <div class="post-body">
+      
+      <h2 id="序章-·-开幕"><a href="#序章-·-开幕" class="headerlink" title="序章 · 开幕"></a>序章 · 开幕</h2><h3 id="【档案·零】"><a href="#【档案·零】" class="headerlink" title="【档案·零】"></a>【档案·零】</h3><p>你们一共八个人，来自七个方向。</p>
+<p>你们之中，有人一生只撒过一次谎，那次谎撒了二十年。有人从不撒谎，因为他把真话剪碎了说。有人靠别人的秘密活着，有人靠别人的尸体活着，有人靠别人的眼泪活着。</p>
+<p>你们没有一个是干净的。</p>
+<p>这不是我的判断。这是你们自己知道的事——你们只是不知道，别人也知道。</p>
+<p>今天，雪要来了。桥还在。你们还可以回头。</p>
+<p>我劝你们回头。</p>
+<p>——但我不会拦你们。从来没有人在这一页上回头过。</p>      
+<div class="read-more-btn">
+  <a href="/articles/n/00_%E5%BA%8F%E7%AB%A0_%E5%BC%80%E5%B9%95/" rel="contents">
+    阅读全文 &raquo;
+  </a>
+</div>
+      
+    </div>
+
+    
+    
+
+    
+
+    
+  </div>
+</article>
+  
+  
+
+<article class="post post-type-normal">
+  <div class="card post-block">
+
+    
+
+    <header class="post-header">
+
+      
+      <h1 class="post-title">
+        
+        <a href="/articles/n/%E9%9B%AA%E7%9B%B2_%E9%9C%9C%E8%A7%81%E5%BA%84/">AI 写了一本小说，一起看看哈</a>
+        
+      </h1>
+      
+
+      <div class="post-meta">
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">发表于</span>
+    <time title="创建时间：2026-10-17 17:00:00">2026-10-17</time>
+  </span>
+  
+
+  
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">分类于</span>
+    <span><a href="/categories/%E5%B0%8F%E8%AF%B4/" rel="index"><span>小说</span></a></span>  </span>
+  
+
+  
+  
+
+</div>
+
+    </header>
+
+    <div class="post-body">
+      
+      <h1 id="《雪盲》·-霜见庄"><a href="#《雪盲》·-霜见庄" class="headerlink" title="《雪盲》· 霜见庄"></a>《雪盲》· 霜见庄</h1><blockquote>
+<p>十个人。十一天。一整面空白的墙。
+凶手从来没有碰过任何人。</p>
+</blockquote>
+<hr>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><table>
 <thead>
 <tr>
-<th>Event</th>
-<th>Ref</th>
-<th>Docker Tags</th>
+<th>文件</th>
+<th>内容</th>
+<th>死者</th>
+<th>凶手</th>
+<th>字数</th>
 </tr>
 </thead>
 <tbody><tr>
-<td><code>pull_request</code></td>
-<td><code>refs/pull/2/merge</code></td>
-<td><code>pr-2</code></td>
+<td><a href="00_%E5%BA%8F%E7%AB%A0_%E5%BC%80%E5%B9%95.md">00<em>序章</em>开幕</a></td>
+<td>七封请柬／七人抵达／灰先生的遗体坐在主位／六条规则／桥断</td>
+<td>—</td>
+<td>—</td>
+<td>25,895</td>
 </tr>
 <tr>
-<td><code>push</code></td>
-<td><code>refs/heads/master</code></td>
-<td><code>master</code></td>
+<td><a href="01_%E5%8D%95%E5%85%83%E4%B8%80_%E6%97%A0%E4%BA%BA%E8%BF%9B%E5%85%A5%E7%9A%84%E5%AF%86%E5%AE%A4.md">01<em>单元一</em>无人进入的密室</a></td>
+<td>死了九个小时才被发现的自锁密室／一块铜戒指</td>
+<td>何绍棠</td>
+<td>裴守拙</td>
+<td>27,218</td>
 </tr>
 <tr>
-<td><code>push</code></td>
-<td><code>refs/heads/releases/v1</code></td>
-<td><code>releases-v1</code></td>
+<td><a href="02_%E5%8D%95%E5%85%83%E4%BA%8C_%E9%9B%AA%E5%9C%B0%E4%B8%8A%E5%8F%AA%E6%9C%89%E4%B8%80%E8%A1%8C%E8%84%9A%E5%8D%B0.md">02<em>单元二</em>雪地上只有一行脚印</a></td>
+<td>雪地无足迹，凶手从未出门／一杯蜂蜜水</td>
+<td>裴守拙</td>
+<td>沈砚</td>
+<td>25,713</td>
 </tr>
 <tr>
-<td><code>push tag</code></td>
-<td><code>refs/tags/v1.2.3</code></td>
-<td><code>v1.2.3</code>, <code>latest</code></td>
+<td><a href="03_%E5%8D%95%E5%85%83%E4%B8%89_%E4%BC%AA%E9%80%A0%E7%9A%84%E8%87%AA%E6%9D%80.md">03<em>单元三</em>伪造的自杀</a></td>
+<td>一场他自己签名的”自杀”／二十六粒胶囊合成一粒</td>
+<td>沈砚</td>
+<td>程雪</td>
+<td>26,397</td>
 </tr>
 <tr>
-<td><code>push tag</code></td>
-<td><code>refs/tags/v2.0.8-beta.67</code></td>
-<td><code>v2.0.8-beta.67</code>, <code>latest</code></td>
+<td><a href="04_%E5%8D%95%E5%85%83%E5%9B%9B_%E6%89%80%E6%9C%89%E4%BA%BA%E9%83%BD%E5%90%83%E8%BF%87%E7%9A%84%E8%8F%9C.md">04<em>单元四</em>所有人都吃过的菜</a></td>
+<td>毒在被害人的验毒试纸上</td>
+<td>程雪</td>
+<td>陆秉文</td>
+<td>24,257</td>
 </tr>
 <tr>
-<td><code>workflow_dispatch</code></td>
-<td><code>refs/heads/master</code></td>
-<td><code>master</code></td>
+<td><a href="05_%E5%8D%95%E5%85%83%E4%BA%94_%E6%B6%88%E5%A4%B1%E7%9A%84%E7%AC%AC%E4%BA%8C%E8%A1%8C%E8%84%9A%E5%8D%B0.md">05<em>单元五</em>消失的第二行脚印</a></td>
+<td>凶手站在死者的脚印里，倒退着走</td>
+<td>陆秉文</td>
+<td>周晚</td>
+<td>25,000</td>
+</tr>
+<tr>
+<td><a href="06_%E5%8D%95%E5%85%83%E5%85%AD_%E5%A5%B9%E8%87%AA%E5%B7%B1%E8%AE%BE%E4%B8%8B%E7%9A%84%E6%AD%BB%E4%BA%A1%E9%A2%84%E5%91%8A.md">06<em>单元六</em>她自己设下的死亡预告</a></td>
+<td>死亡预告是她自己三天前录的／一针胰岛素</td>
+<td>周晚</td>
+<td>邹明远</td>
+<td>24,396</td>
+</tr>
+<tr>
+<td><a href="07_%E5%8D%95%E5%85%83%E4%B8%83_%E8%A2%AB%E6%91%86%E6%88%90%E6%89%8B%E6%9C%AF%E5%A7%BF%E5%8A%BF%E7%9A%84%E5%B0%B8%E4%BD%93.md">07<em>单元七</em>被摆成手术姿势的尸体</a></td>
+<td>死于自己的职业强迫／一个哑女孩的七张纸</td>
+<td>邹明远</td>
+<td>白鹭</td>
+<td>24,290</td>
+</tr>
+<tr>
+<td><a href="08_%E7%BB%88%E7%AB%A0_%E7%AC%AC%E5%85%AB%E4%BB%BD%E6%A1%A3%E6%A1%88.md">08<em>终章</em>第八份档案</a></td>
+<td>八页空白纸／墙里的剧本／没有标签的酒／无人活着</td>
+<td>阿桑、白鹭</td>
+<td>白鹭、灰先生的酒</td>
+<td>19,122</td>
 </tr>
 </tbody></table>
-<p>当然我们也可以自己设置</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Docker</span> <span class="hljs-string">meta</span><br>  <span class="hljs-attr">id:</span> <span class="hljs-string">meta</span><br>  <span class="hljs-attr">uses:</span> <span class="hljs-string">docker/metadata-action@v4</span><br>  <span class="hljs-attr">with:</span><br>    <span class="hljs-attr">images:</span> <span class="hljs-string">|</span><br><span class="hljs-string">      name/app</span><br><span class="hljs-string"></span>    <span class="hljs-attr">tags:</span> <span class="hljs-string">|</span><br><span class="hljs-string">      type=ref,event=branch</span><br><span class="hljs-string">      type=ref,event=pr</span><br><span class="hljs-string">      type=semver,pattern=&#123;&#123;version&#125;&#125;</span><br><span class="hljs-string">      type=semver,pattern=&#123;&#123;major&#125;&#125;.&#123;&#123;minor&#125;&#125;</span><br></code></pre></td></tr></table></figure>
+<p><strong>合计：223,288 字</strong></p>
+<hr>
+<h2 id="死亡顺序与杀人链"><a href="#死亡顺序与杀人链" class="headerlink" title="死亡顺序与杀人链"></a>死亡顺序与杀人链</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">何绍棠 ──杀──▶ 裴守拙 ──杀──▶ 沈砚 ──杀──▶ 程雪<br>   ▲                                              │<br>   │                                              ▼<br>白鹭 ◀──杀── 邹明远 ◀──杀── 周晚 ◀──杀── 陆秉文<br></code></pre></td></tr></table></figure>
 
-<h1 id="通过-Maven-构建-Spring-Native"><a href="#通过-Maven-构建-Spring-Native" class="headerlink" title="通过 Maven 构建 Spring Native"></a>通过 Maven 构建 Spring Native</h1><p>我们需要在 pom 中添加原生的插件</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.graalvm.buildtools<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>native-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">configuration</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">image</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>$&#123;docker.image.name&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">tags</span>&gt;</span>$&#123;docker.image.tags&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">tags</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">env</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">BP_OCI_SOURCE</span>&gt;</span>$&#123;project.scm.url&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">BP_OCI_SOURCE</span>&gt;</span><br>      <span class="hljs-tag">&lt;/<span class="hljs-name">env</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">configuration</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span><br></code></pre></td></tr></table></figure>
-
-<p>需要配置 BP_OCI_SOURCE 为你的 GitHub 项目地址，为了让包与项目关联，这涉及到费用，只要你的项目开源，那么可以无限免费用，我是设置了一个 <code>project.scm.url</code> 这个是maven里的关于项目信息的配置</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">scm</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>https://github.com/yourname/project<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">scm</span>&gt;</span><br></code></pre></td></tr></table></figure>
-
-<p>在 aciton 中添加以下步骤</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Build</span> <span class="hljs-string">image</span><br>  <span class="hljs-attr">run:</span> <span class="hljs-string">|</span><br><span class="hljs-string">    mvn -Pnative \</span><br><span class="hljs-string">    -Ddocker.image.name=ghcr.io/name/app \</span><br><span class="hljs-string">    -Ddocker.image.tags=$&#123;&#123; join( fromJSON(steps.meta.outputs.json).tags, &#x27;,&#x27; ) &#125;&#125; \</span><br><span class="hljs-string">    spring-boot:build-image</span><br></code></pre></td></tr></table></figure>
-
-<p>这样就可以构建出我们需要的镜像了，同时也打上了对应的 tags</p>
-<h1 id="推送-images"><a href="#推送-images" class="headerlink" title="推送 images"></a>推送 images</h1><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Push</span><br>  <span class="hljs-attr">run:</span> <span class="hljs-string">|</span><br>    <span class="hljs-string">docker</span> <span class="hljs-string">push</span> <span class="hljs-string">-a</span> <span class="hljs-string">ghcr.io/name/app</span><br></code></pre></td></tr></table></figure>
-
-<p><code>-a</code> 表示推送所有 tags</p>
-<h1 id="完整例子"><a href="#完整例子" class="headerlink" title="完整例子"></a>完整例子</h1><p>你可以前往的开源项目 <a target="_blank" rel="noopener" href="https://github.com/jiangtj/api-core">https://github.com/jiangtj/api-core</a> 查看</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">name:</span> <span class="hljs-string">Docker</span> <span class="hljs-string">Push</span><br><br><span class="hljs-attr">on:</span><br>  <span class="hljs-attr">push:</span><br>    <span class="hljs-attr">branches:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">master</span><br>    <span class="hljs-attr">tags:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;v*.*.*&quot;</span><br><br><span class="hljs-attr">jobs:</span><br>  <span class="hljs-attr">docker_push:</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span><br><br>    <span class="hljs-attr">permissions:</span><br>      <span class="hljs-attr">packages:</span> <span class="hljs-string">write</span><br><br>    <span class="hljs-attr">steps:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v3</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Set</span> <span class="hljs-string">up</span> <span class="hljs-string">JDK</span> <span class="hljs-number">17</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-java@v3</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-attr">java-version:</span> <span class="hljs-string">&#x27;17&#x27;</span><br>          <span class="hljs-attr">distribution:</span> <span class="hljs-string">&#x27;temurin&#x27;</span><br>          <span class="hljs-attr">cache:</span> <span class="hljs-string">maven</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Docker</span> <span class="hljs-string">meta</span><br>        <span class="hljs-attr">id:</span> <span class="hljs-string">meta</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">docker/metadata-action@v4</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-comment"># list of Docker images to use as base name for tags</span><br>          <span class="hljs-attr">images:</span> <span class="hljs-string">|</span><br><span class="hljs-string">            ghcr.io/jiangtj/api-core</span><br><span class="hljs-string"></span>          <span class="hljs-comment"># generate Docker tags based on the following events/attributes</span><br>          <span class="hljs-attr">tags:</span> <span class="hljs-string">|</span><br><span class="hljs-string">            type=schedule</span><br><span class="hljs-string">            type=ref,event=branch</span><br><span class="hljs-string">            type=semver,pattern=&#123;&#123;version&#125;&#125;</span><br><span class="hljs-string">            type=semver,pattern=&#123;&#123;major&#125;&#125;.&#123;&#123;minor&#125;&#125;,enable=$&#123;&#123; !startsWith(github.ref, &#x27;refs/tags/v0.&#x27;) &#125;&#125;</span><br><span class="hljs-string">            type=semver,pattern=&#123;&#123;major&#125;&#125;,enable=$&#123;&#123; !startsWith(github.ref, &#x27;refs/tags/v0.&#x27;) &#125;&#125;</span><br><span class="hljs-string"></span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Login</span> <span class="hljs-string">to</span> <span class="hljs-string">GitHub</span> <span class="hljs-string">Container</span> <span class="hljs-string">Registry</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">docker/login-action@v2</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-attr">registry:</span> <span class="hljs-string">ghcr.io</span><br>          <span class="hljs-attr">username:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">github.actor</span> <span class="hljs-string">&#125;&#125;</span><br>          <span class="hljs-attr">password:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.GITHUB_TOKEN</span> <span class="hljs-string">&#125;&#125;</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Build</span> <span class="hljs-string">image</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">|</span><br><span class="hljs-string">          mvn -Pnative \</span><br><span class="hljs-string">          -Ddocker.image.name=ghcr.io/jiangtj/api-core \</span><br><span class="hljs-string">          -Ddocker.image.tags=$&#123;&#123; join( fromJSON(steps.meta.outputs.json).tags, &#x27;,&#x27; ) &#125;&#125; \</span><br><span class="hljs-string">          spring-boot:build-image</span><br><span class="hljs-string"></span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Push</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">|</span><br>          <span class="hljs-string">docker</span> <span class="hljs-string">push</span> <span class="hljs-string">-a</span> <span class="hljs-string">ghcr.io/jiangtj/api-core</span><br></code></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-
-    
-
-    
-  </div>
-</article>
-  
-  
-
-<article class="post post-type-normal">
-  <div class="card post-block">
-
-    
-
-    <header class="post-header">
-
-      
-      <h1 class="post-title">
-        
-        <a href="/articles/durian/custom-endpoint/">Spring Boot 自定义 Endpoint</a>
-        
-      </h1>
-      
-
-      <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2023-04-11 20:13:14">2023-04-11</time>
-  </span>
-  
-
-  
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
-  
-
-  
-  
-
-</div>
-
-    </header>
-
-    <div class="post-body">
-      
-      <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>下面是AI的介绍，如果你很了解可以直接跳到第二部分</p>
-<p>在 Spring Boot 中，Endpoint 是一种可以暴露应用程序内部信息的机制。Endpoint 可以提供应用程序的健康状况、内存使用情况、线程信息、日志等等信息。通过访问这些 Endpoint，我们可以更加方便地了解应用程序的运行情况，进行问题排查和监控。</p>
-<p>Spring Boot 提供了一些内置的 Endpoint，比如 &#x2F;health、&#x2F;metrics 等等，同时也支持自定义 Endpoint。我们可以通过在应用程序中添加 Spring Boot Actuator 依赖来启用这些内置的 Endpoint，也可以通过编写自定义 Endpoint 来扩展应用程序的监控能力。</p>
-<p>一般来说，Endpoint 都是通过 HTTP 协议暴露出来的，可以通过浏览器、curl 命令等方式进行访问。同时，Spring Boot 还支持将 Endpoint 信息输出到控制台、JMX 等地方，方便我们查看。</p>
-<p>在访问 Endpoint 时，我们需要提供正确的访问路径和身份验证信息（如果启用了身份验证）。Spring Boot 提供了许多安全措施来保护 Endpoint 的访问，比如只允许特定 IP 地址访问、启用 HTTPS 等等。</p>
-<p>总之，Endpoint 是 Spring Boot 中非常重要的一个功能，可以帮助我们更加方便地监控和管理应用程序。如果您还没有使用过 Endpoint，建议您尝试一下，相信会有不错的体验。</p>      
-<div class="read-more-btn">
-  <a href="/articles/durian/custom-endpoint/" rel="contents">
-    阅读全文 &raquo;
-  </a>
-</div>
-      
-    </div>
-
-    
-    
-
-    
-
-    
-  </div>
-</article>
-  
-  
-
-<article class="post post-type-normal">
-  <div class="card post-block">
-
-    
-
-    <header class="post-header">
-
-      
-      <h1 class="post-title">
-        
-        <a href="/articles/durian/cloud-4/">Spring Cloud 平台搭建(四)：Spring Boot Admin</a>
-        
-      </h1>
-      
-
-      <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2023-04-07 14:21:38">2023-04-07</time>
-  </span>
-  
-
-  
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
-  
-
-  
-  
-
-</div>
-
-    </header>
-
-    <div class="post-body">
-      
-      <blockquote>
-<p>源码：<a target="_blank" rel="noopener" href="https://github.com/jiangtj/jc-platform">J Cloud Platform</a>，期待你们的star ٩(๑❛ᴗ❛๑)۶</p>
+<p><strong>每个单元的凶手，都是下一个单元的死者。</strong></p>
+<p>白鹭是唯一一个”无人要杀、且持密者已死”的人，所以她活到最后一个。</p>
+<p><strong>最终：十个人，全部死亡。</strong></p>
+<hr>
+<h2 id="三个必须记住的设定"><a href="#三个必须记住的设定" class="headerlink" title="三个必须记住的设定"></a>三个必须记住的设定</h2><ol>
+<li><strong>持密者环。</strong> 每人手里的纸是另一个人的。箭头指向”我手里那一页是谁的”，所以”我要杀的人”是自己的持密者。</li>
+<li><strong>持密者死，那一页自动销毁。</strong> 于是每死一人，就有一人被解放——死亡像多米诺自己倒下。</li>
+<li><strong>八页纸全是空的。</strong> 灰先生只有一份真档案，是白鹭的。八个人死于”万一他说的是真的”。</li>
+</ol>
+<hr>
+<h2 id="核心诡计链（读者可自行推理）"><a href="#核心诡计链（读者可自行推理）" class="headerlink" title="核心诡计链（读者可自行推理）"></a>核心诡计链（读者可自行推理）</h2><ul>
+<li>想杀白鹭的只有何绍棠，而何绍棠第一天就死了</li>
+<li>想杀阿桑的没有</li>
+<li>所以最后两人，是白鹭与阿桑</li>
+<li>最后：白鹭杀阿桑，独自下山，死于雪中</li>
+</ul>
+<p><strong>这是全书唯一一条”公平可解”的大谜题。</strong></p>
+<hr>
+<h2 id="全书主题句"><a href="#全书主题句" class="headerlink" title="全书主题句"></a>全书主题句</h2><blockquote>
+<p><strong>他们不是被别人杀死的。他们是被自己杀死的。凶手只是递了刀。</strong></p>
 </blockquote>
-<p>Spring Boot Admin 是简单，同时功能也比较全面的监控服务，所以对于快速搭建微服务框架来说，是最佳的。比如 ELK Stack 能更好的处理日志，以及一些运行数据，但是，他需要配置，同时，对于少量的微服务显得笨重，而且后期加难度也不大。</p>
-<p>老规矩，先让AI介绍下概念，这是换成了Notion AI，我也不知道为啥我bing用不了了。。。</p>
-<h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>Spring Boot Admin是一个开源的第三方监控工具，可以用于管理和监控Spring Boot应用程序。它提供了一个简单易用的Web用户界面，让开发者可以轻松地查看应用程序的运行状况、性能指标、日志信息等。</p>      
-<div class="read-more-btn">
-  <a href="/articles/durian/cloud-4/" rel="contents">
-    阅读全文 &raquo;
-  </a>
-</div>
-      
-    </div>
-
-    
-    
-
-    
-
-    
-  </div>
-</article>
-  
-  
-
-<article class="post post-type-normal">
-  <div class="card post-block">
-
-    
-
-    <header class="post-header">
-
-      
-      <h1 class="post-title">
-        
-        <a href="/articles/durian/cloud-3/">Spring Cloud 平台搭建(三)：更换 Spring Cloud Tencent</a>
-        
-      </h1>
-      
-
-      <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2023-03-30 00:00:00">2023-03-30</time>
-  </span>
-  
-
-  
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
-  
-
-  
-  
-
-</div>
-
-    </header>
-
-    <div class="post-body">
-      
-      <blockquote>
-<p>配套源码：<a target="_blank" rel="noopener" href="https://github.com/jiangtj/jc-platform">J Cloud Platform</a></p>
+<blockquote>
+<p><strong>这本书会卖得很好。因为这里面没有一个好人——而没有人会觉得自己是坏人。</strong></p>
 </blockquote>
-<p>Spring Cloud Tencent 与 Spring Cloud Alibaba 的差别如下</p>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> 配置中心 支持配置属性更新回调</li>
-<li><input disabled="" type="checkbox"> 配置中心 支持 import，但仍必须配置bootsrap.yaml</li>
-<li><input checked="" disabled="" type="checkbox"> 控制台 内存占用小于nacos，对于我来说，开发电脑配置不太够，能好些</li>
-<li><input checked="" disabled="" type="checkbox"> 集成类似于阿里Sentinel的功能</li>
-<li><input disabled="" type="checkbox"> 默认占用常用端口，比如8080、8090</li>
+<hr>
+<h2 id="三层反转"><a href="#三层反转" class="headerlink" title="三层反转"></a>三层反转</h2><table>
+<thead>
+<tr>
+<th>层</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>第一层</td>
+<td>每个人手里握着别人一页纸</td>
+</tr>
+<tr>
+<td>第二层</td>
+<td>持密者环：杀自己的持密者，就解放下一个人</td>
+</tr>
+<tr>
+<td>第三层</td>
+<td><strong>八页纸全是空白。</strong> 恐惧本身就是武器</td>
+</tr>
+<tr>
+<td>终极</td>
+<td><strong>灰先生自己也死了，他连自己女儿的死都没算清楚</strong></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="已完成"><a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> 序章（含七封请柬、第一夜录音、灰先生的剧本）</li>
+<li><input checked="" disabled="" type="checkbox"> 七个单元，每单元独立可读（现场／谜题／回忆／解答四段式）</li>
+<li><input checked="" disabled="" type="checkbox"> 终章（八页空白、墙里的剧本、没标签的酒、无人生还）</li>
+<li><input checked="" disabled="" type="checkbox"> 尾声（案卷线与出版商的最后一句）</li>
+<li><input checked="" disabled="" type="checkbox"> 全书十一天时间线贯通</li>
+<li><input checked="" disabled="" type="checkbox"> 十个人全部死亡，无幸存者</li>
 </ul>
-<p>各有优劣，不过我更倾向于腾讯，所以做了替换</p>      
-<div class="read-more-btn">
-  <a href="/articles/durian/cloud-3/" rel="contents">
-    阅读全文 &raquo;
-  </a>
-</div>
-      
-    </div>
-
-    
-    
-
-    
-
-    
-  </div>
-</article>
-  
-  
-
-<article class="post post-type-normal">
-  <div class="card post-block">
-
-    
-
-    <header class="post-header">
-
-      
-      <h1 class="post-title">
-        
-        <a href="/articles/durian/spring-native/">GraalVM 构建 Spring Native 应用</a>
-        
-      </h1>
-      
-
-      <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2023-03-28 09:33:31">2023-03-28</time>
-  </span>
-  
-
-  
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
-  
-
-  
-  
-  <div class="post-description">Win 平台下构建 Spring Native 应用</div>
-  
-
-</div>
-
-    </header>
-
-    <div class="post-body">
-      
-      <h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><ul>
-<li>GraalVM 配置<ul>
-<li>下载 GraalVM</li>
-<li>设置 JAVA_HOME</li>
-<li>设置 Path 将 GraalVM 放在最前面</li>
-<li>*运行 <code>gu install native-image</code> (不需要，在编译过程中会自动下载)</li>
-</ul>
-</li>
-<li>Win 编辑工具<ul>
-<li>下载 Visual Studio Build Tools 和 Windows SDK</li>
-</ul>
-</li>
-</ul>
-<p>原生编译不容易的，准备工作弄好，好几个G的空间没了</p>      
-<div class="read-more-btn">
-  <a href="/articles/durian/spring-native/" rel="contents">
-    阅读全文 &raquo;
-  </a>
-</div>
-      
-    </div>
-
-    
-    
-
-    
-
-    
-  </div>
-</article>
-  
-  
-
-<article class="post post-type-normal">
-  <div class="card post-block">
-
-    
-
-    <header class="post-header">
-
-      
-      <h1 class="post-title">
-        
-        <a href="/articles/durian/cloud-2/">Spring Cloud 平台搭建(二)：统一异常处理 RFC 7807</a>
-        
-      </h1>
-      
-
-      <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2023-03-22 10:59:02">2023-03-22</time>
-  </span>
-  
-
-  
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
-  
-
-  
-  
-
-</div>
-
-    </header>
-
-    <div class="post-body">
-      
-      <p>兄弟们，上强度啦，你们觉得微服务搭建过程什么最重要？说实话，我也不清楚，但是我知道，规范一定是最重要的那部分之一</p>
-<h1 id="RFC-7807-定义"><a href="#RFC-7807-定义" class="headerlink" title="RFC 7807 定义"></a>RFC 7807 定义</h1><p>微服务规范最重要的就是服务间的调用，目前来说绝大多数都是restful接口，请求成功直接会返回业务数据，失败的话，一般都是抛出运行时异常，并统一捕获转化为对应的http状态码以及描述错误Json内容，这部分一般都是自定义的，但最近我看到了Spring最新官方文档其中Error Responses部分</p>
-<p><img src="https://raw.githubusercontent.com/jiangtj/picgo-repo/master/img-a20230323142900.png"></p>
-<p>是的，错误部分也有了一个规范，它包含五个部分</p>
-<ul>
-<li>type: 问题描述文档地址，如果不存在，则”about:blank”</li>
-<li>title: 简短的描述问题</li>
-<li>status: http 状态码，比如400、401、500等</li>
-<li>detail: 详细说明发生问题的原因</li>
-<li>instance: 问题发生的URL地址</li>
-</ul>
-<p>这个和我原本自定义的错误内容差不多，所以，在这次搭建过程中，就使用了规范的定义，接下来就介绍我的开源项目<a target="_blank" rel="noopener" href="https://github.com/jiangtj/jc-platform">J Cloud Platform</a>中<code>micro-common</code>模块</p>      
-<div class="read-more-btn">
-  <a href="/articles/durian/cloud-2/" rel="contents">
-    阅读全文 &raquo;
-  </a>
-</div>
       
     </div>
 
@@ -973,7 +1167,7 @@
 
 
 <nav class="pagination">
-  <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/"><svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="angle-right" class="svg-inline--fa fa-angle-right fa-w-8 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></a></nav>
+  <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/"><svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="angle-right" class="svg-inline--fa fa-angle-right fa-w-8 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></a></nav>
 
         </div>
         

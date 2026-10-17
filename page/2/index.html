@@ -107,7 +107,7 @@
     
     <div class="site-state-item site-state-posts">
       <a href="/archives/">
-        <span class="site-state-item-count">79</span>
+        <span class="site-state-item-count">89</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -116,7 +116,7 @@
     
     <div class="site-state-item site-state-categories">
       <a href="/categories/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span>
       </a>
     </div>
@@ -125,7 +125,7 @@
     
     <div class="site-state-item site-state-tags">
       <a href="/tags/">
-        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-count">55</span>
         <span class="site-state-item-name">标签</span>
       </a>
     </div>
@@ -160,7 +160,7 @@
       
       <h1 class="post-title">
         
-        <a href="/articles/durian/cloud-1/">Spring Cloud 平台搭建(一)：服务注册与配置中心Nacos</a>
+        <a href="/articles/durian/spring-restclient/">Spring 6.1 新的 Web 客户端 RestClient</a>
         
       </h1>
       
@@ -174,7 +174,7 @@
       <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
     </span>
     <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2023-03-21 21:35:15">2023-03-21</time>
+    <time title="创建时间：2024-02-17 12:33:19">2024-02-17</time>
   </span>
   
 
@@ -199,26 +199,11 @@
 
     <div class="post-body">
       
-      <h1 id="Nacos-是什么？"><a href="#Nacos-是什么？" class="headerlink" title="Nacos 是什么？"></a>Nacos 是什么？</h1><p>Nacos 是一个易用的动态服务发现、配置和服务管理平台，可以帮助你在云原生时代，轻松构建、交付、管理自己的微服务平台，快速复用和组合业务服务，快速交付商业创新的价值。</p>
-<p>Nacos 是阿里巴巴开源的一个项目，它的名字来源于Na ming and Co nfiguration S ervice。nacos提供了以下几个核心功能：</p>
-<p>Nacos 提供了以下主要功能：</p>
-<ul>
-<li><strong>动态服务发现</strong>：Nacos 可以让你注册和发现各种类型的微服务，包括 HTTP、RPC 和 WebSocket 等，并提供负载均衡、流量控制和故障转移等能力。</li>
-<li><strong>动态配置管理</strong>：Nacos 可以让你集中管理应用的配置信息，并支持配置变更推送、版本控制和灰度发布等功能。</li>
-<li><strong>动态 DNS 服务</strong>：Nacos 可以让你基于权重路由请求到不同的后端集群，并支持域名解析、健康检查和故障隔离等功能。</li>
-<li><strong>服务及其元数据管理</strong>：Nacos 可以让你存储和查询微服务及其元数据信息，并支持元数据驱动的开发模式。</li>
-</ul>
-<h1 id="为什么要使用-Nacos？"><a href="#为什么要使用-Nacos？" class="headerlink" title="为什么要使用 Nacos？"></a>为什么要使用 Nacos？</h1><p>在微服务架构中，我们需要解决以下几个问题：</p>
-<ul>
-<li>如何发现和调用其他微服务？</li>
-<li>如何管理微服务之间的依赖关系？</li>
-<li>如何动态调整微服务的配置？</li>
-<li>如何保证微服务之间的高可用性和弹性？</li>
-<li>如何实现微服务之间的分布式事务？</li>
-</ul>
-<p>这些问题都需要一个强大而灵活的中间件来支撑。而 Nacos 正是这样一个中间件，它可以为我们提供一站式的解决方案。</p>      
+      <p>在 Spring 6.1 中，添加了一个新的同步 web 客户端 RestClient，提供更现代化的 fluent API，所以我们能在 spring mvc 里获得与 webflux 一样的 web 请求的编码体验（再加上 project loom 的支持，webflux 还有存在的意义么？）</p>
+<h1 id="创建-RestClient"><a href="#创建-RestClient" class="headerlink" title="创建 RestClient"></a>创建 RestClient</h1><p>RestClient 可以用过 <code>create()</code> 方法直接简单的创建，也可以通过 <code>builder()</code> 构建。在 <code>builder()</code> 中，我们可以传入一些配置或者默认参数，这对于我们统一请求规范有很大的帮助</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">RestClient</span> <span class="hljs-variable">defaultClient</span> <span class="hljs-operator">=</span> RestClient.create();<br><br><span class="hljs-type">RestClient</span> <span class="hljs-variable">customClient</span> <span class="hljs-operator">=</span> RestClient.builder()<br>  .requestFactory(<span class="hljs-keyword">new</span> <span class="hljs-title class_">HttpComponentsClientHttpRequestFactory</span>())<br>  .messageConverters(converters -&gt; converters.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">MyCustomMessageConverter</span>()))<br>  .baseUrl(<span class="hljs-string">&quot;https://example.com&quot;</span>)<br>  .defaultUriVariables(Map.of(<span class="hljs-string">&quot;variable&quot;</span>, <span class="hljs-string">&quot;foo&quot;</span>))<br>  .defaultHeader(<span class="hljs-string">&quot;My-Header&quot;</span>, <span class="hljs-string">&quot;Foo&quot;</span>)<br>  .requestInterceptor(myCustomInterceptor)<br>  .requestInitializer(myCustomInitializer)<br>  .build();<br></code></pre></td></tr></table></figure>      
 <div class="read-more-btn">
-  <a href="/articles/durian/cloud-1/" rel="contents">
+  <a href="/articles/durian/spring-restclient/" rel="contents">
     阅读全文 &raquo;
   </a>
 </div>
@@ -246,7 +231,7 @@
       
       <h1 class="post-title">
         
-        <a href="/articles/durian/cloud-0/">Spring Cloud 平台搭建(序)：聊一聊与做些准备</a>
+        <a href="/articles/durian/maven-publish-action/">通过 GitHub Action 发布你的 jar 包</a>
         
       </h1>
       
@@ -260,7 +245,7 @@
       <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
     </span>
     <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2023-03-21 14:32:15">2023-03-21</time>
+    <time title="创建时间：2024-02-16 15:59:15">2024-02-16</time>
   </span>
   
 
@@ -285,21 +270,21 @@
 
     <div class="post-body">
       
-      <h1 id="开场白"><a href="#开场白" class="headerlink" title="开场白"></a>开场白</h1><p>学技术的我相信绝大部分都是理科生，和一样，写博客会很为难，不知道怎么开场，但救星来了，那就是ChatGPT，当然，我这里不是（需要填手机号，然后提示不提供服务，哎），是new bing生成的，让我们欣赏下AI吧</p>
-<p>你好，欢迎来到我的博客。今天我想和大家聊一聊spring cloud，这是一个基于spring boot的微服务框架，它提供了一系列的组件和工具，让我们可以快速地开发和部署分布式系统。</p>
-<p>什么是微服务呢？简单地说，就是把一个大型的单体应用拆分成多个小的、独立的、可复用的服务，每个服务负责一个特定的功能或业务领域，它们之间通过轻量级的通信协议进行交互。这样做有什么好处呢？主要有以下几点：</p>
-<ul>
-<li>可扩展性：当某个服务需要扩容或缩容时，我们只需要对该服务进行操作，而不影响其他服务。</li>
-<li>灵活性：当某个服务需要更新或替换时，我们只需要对该服务进行操作，而不影响其他服务。</li>
-<li>容错性：当某个服务出现故障时，我们可以快速地恢复或切换到备用方案，而不影响其他服务。</li>
-<li>解耦性：每个服务都有自己的数据存储和业务逻辑，它们之间通过定义好的接口进行交互，这样可以降低耦合度和依赖性。</li>
-</ul>
-<p>当然，微服务也有一些挑战和问题，比如：</p>      
-<div class="read-more-btn">
-  <a href="/articles/durian/cloud-0/" rel="contents">
-    阅读全文 &raquo;
-  </a>
-</div>
+      <p>继上篇内容<a href="https://jiangtj.com/articles/durian/maven-publish/">《在 Maven Central 发布你的jar包》</a>，本篇将介绍如何通过 GitHub Action 自动发布你的 jar 包。</p>
+<h1 id="创建-GitHub-Action"><a href="#创建-GitHub-Action" class="headerlink" title="创建 GitHub Action"></a>创建 GitHub Action</h1><p>添加以下 action 到你的 .github&#x2F;workflows 目录下</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">name:</span> <span class="hljs-string">Publish</span> <span class="hljs-string">to</span> <span class="hljs-string">Maven</span> <span class="hljs-string">Central</span><br><span class="hljs-attr">on:</span><br>  <span class="hljs-attr">push:</span> <br>    <span class="hljs-attr">tags:</span> <br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;v*.*.*&quot;</span><br><span class="hljs-attr">jobs:</span><br>  <span class="hljs-attr">build:</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span><br>    <span class="hljs-attr">steps:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Checkout</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v3</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Set</span> <span class="hljs-string">up</span> <span class="hljs-string">Apache</span> <span class="hljs-string">Maven</span> <span class="hljs-string">Central</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-java@v4</span><br>        <span class="hljs-attr">with:</span> <span class="hljs-comment"># running setup-java again overwrites the settings.xml</span><br>          <span class="hljs-attr">java-version:</span> <span class="hljs-string">&#x27;17&#x27;</span><br>          <span class="hljs-attr">distribution:</span> <span class="hljs-string">&#x27;temurin&#x27;</span><br>          <span class="hljs-attr">cache:</span> <span class="hljs-string">maven</span><br>          <span class="hljs-attr">server-id:</span> <span class="hljs-string">central</span> <span class="hljs-comment"># Value of the distributionManagement/repository/id field of the pom.xml</span><br>          <span class="hljs-attr">server-username:</span> <span class="hljs-string">MAVEN_USERNAME</span> <span class="hljs-comment"># env variable for username in deploy</span><br>          <span class="hljs-attr">server-password:</span> <span class="hljs-string">MAVEN_CENTRAL_TOKEN</span> <span class="hljs-comment"># env variable for token in deploy</span><br>          <span class="hljs-attr">gpg-private-key:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.MAVEN_GPG_PRIVATE_KEY</span> <span class="hljs-string">&#125;&#125;</span> <span class="hljs-comment"># Value of the GPG private key to import</span><br>          <span class="hljs-attr">gpg-passphrase:</span> <span class="hljs-string">MAVEN_GPG_PASSPHRASE</span> <span class="hljs-comment"># env variable for GPG private key passphrase</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Publish</span> <span class="hljs-string">to</span> <span class="hljs-string">Apache</span> <span class="hljs-string">Maven</span> <span class="hljs-string">Central</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">mvn</span> <span class="hljs-string">deploy</span><br>        <span class="hljs-attr">env:</span><br>          <span class="hljs-attr">MAVEN_USERNAME:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.MAVEN_USERNAME</span> <span class="hljs-string">&#125;&#125;</span><br>          <span class="hljs-attr">MAVEN_CENTRAL_TOKEN:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.MAVEN_CENTRAL_TOKEN</span> <span class="hljs-string">&#125;&#125;</span><br>          <span class="hljs-attr">MAVEN_GPG_PASSPHRASE:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.MAVEN_GPG_PASSPHRASE</span> <span class="hljs-string">&#125;&#125;</span><br></code></pre></td></tr></table></figure>
+
+<h1 id="修改-pom-文件"><a href="#修改-pom-文件" class="headerlink" title="修改 pom 文件"></a>修改 pom 文件</h1><p>Maven GPG Plugin 可能会报以下错误 <code>Inappropriate ioctl for device</code> 或者 <code>gpg: signing failed: No such file or directory</code>，所以需要在 <code>configuration</code> 中添加以下内容:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">configuration</span>&gt;</span><br>  <span class="hljs-comment">&lt;!-- Prevent gpg from using pinentry programs --&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">gpgArguments</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">arg</span>&gt;</span>--pinentry-mode<span class="hljs-tag">&lt;/<span class="hljs-name">arg</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">arg</span>&gt;</span>loopback<span class="hljs-tag">&lt;/<span class="hljs-name">arg</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">gpgArguments</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">configuration</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<h1 id="添加-GitHub-Action-密钥"><a href="#添加-GitHub-Action-密钥" class="headerlink" title="添加 GitHub Action 密钥"></a>添加 GitHub Action 密钥</h1><p>在 GitHub 仓库的 Settings -&gt; Secrets 中添加以下内容：</p>
+<ol>
+<li>MAVEN_GPG_PRIVATE_KEY: 通过命令行获取<code>gpg --armor --export-secret-keys YOUR_ID</code></li>
+<li>MAVEN_GPG_PASSPHRASE: 当前GPG私钥的密码</li>
+<li>MAVEN_USERNAME: maven central 用户名</li>
+<li>MAVEN_CENTRAL_TOKEN: maven central 的 token</li>
+</ol>
+<p>然后发布新的release版本，GitHub Action 会自动发布你的 jar 包到 Maven Central。</p>
       
     </div>
 
@@ -324,7 +309,7 @@
       
       <h1 class="post-title">
         
-        <a href="/articles/cherry/docker-dev/">在 Docker 中使用 Hexo</a>
+        <a href="/articles/durian/maven-publish/">在 Maven Central 发布你的jar包</a>
         
       </h1>
       
@@ -338,224 +323,7 @@
       <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
     </span>
     <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2023-03-09 08:09:49">2023-03-09</time>
-  </span>
-  
-
-  
-
-  
-
-  
-  
-
-</div>
-
-    </header>
-
-    <div class="post-body">
-      
-      <p>在项目的根目录创建一个 <code>compose-dev.yaml</code> 定义docker compose用于生成开发环境，由于博客不需要额外的数据库等，所以很简单</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">services:</span><br>  <span class="hljs-attr">blog:</span><br>    <span class="hljs-attr">build:</span><br>      <span class="hljs-attr">context:</span> <span class="hljs-string">.</span><br>      <span class="hljs-attr">target:</span> <span class="hljs-string">dev-envs</span><br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>context 指定docker位置</li>
-<li>target 指定docker镜像构建目标</li>
-</ul>
-<p>然后创建 <code>Dockerfile</code></p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs Dockerfile"><span class="hljs-comment"># syntax=docker/dockerfile:1.4</span><br><br><span class="hljs-keyword">FROM</span> node:lts AS buildhexo<br><span class="hljs-keyword">RUN</span><span class="language-bash"> yarn global add hexo-cli</span><br><br><span class="hljs-keyword">FROM</span> buildhexo AS development<br><span class="hljs-keyword">WORKDIR</span><span class="language-bash"> /app</span><br><span class="hljs-keyword">COPY</span><span class="language-bash"> . .</span><br><span class="hljs-keyword">RUN</span><span class="language-bash"> yarn install</span><br><span class="hljs-keyword">CMD</span><span class="language-bash"> hexo s</span><br><br><span class="hljs-keyword">FROM</span> buildhexo as dev-envs<br><span class="hljs-comment"># 添加工具git docker vscode</span><br><span class="hljs-comment"># RUN &lt;&lt;EOF</span><br><span class="hljs-comment"># apt-get update</span><br><span class="hljs-comment"># apt-get install -y --no-install-recommends git</span><br><span class="hljs-comment"># EOF</span><br><span class="hljs-comment"># RUN &lt;&lt;EOF</span><br><span class="hljs-comment"># useradd -s /bin/bash -m vscode</span><br><span class="hljs-comment"># groupadd docker</span><br><span class="hljs-comment"># usermod -aG docker vscode</span><br><span class="hljs-comment"># EOF</span><br><span class="hljs-comment"># install Docker tools (cli, buildx, compose)</span><br><span class="hljs-comment"># COPY --from=gloursdocker/docker / /</span><br><span class="hljs-keyword">CMD</span><span class="language-bash"> /bin/sh -c <span class="hljs-string">&quot;while sleep 1000; do :; done&quot;</span></span><br></code></pre></td></tr></table></figure>
-
-<p>上面<code>dev-envs</code>是被指定执行的，而<code>development</code>不会被执行，注释的内容是因为我遇到了网络问题，是从其他模板中复制过来的，理论上没问题，结尾的<code>CMD /bin/sh -c &quot;while sleep 1000; do :; done&quot;</code>用于保持容器运行</p>
-<p>最后，在docker桌面版中，按提示，创建Dev Environments即可</p>
-      
-    </div>
-
-    
-    
-
-    
-
-    
-  </div>
-</article>
-  
-  
-
-<article class="post post-type-normal">
-  <div class="card post-block">
-
-    
-
-    <header class="post-header">
-
-      
-      <h1 class="post-title">
-        
-        <a href="/articles/cherry/helm-for-dev/">使用 Helm 管理开发环境</a>
-        
-      </h1>
-      
-
-      <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2023-02-23 11:25:11">2023-02-23</time>
-  </span>
-  
-
-  
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E8%BF%90%E7%BB%B4/" rel="index"><span>运维</span></a></span>  </span>
-  
-
-  
-  
-  <div class="post-description">helm来管理开发环境会不会比docker更方便呢</div>
-  
-
-</div>
-
-    </header>
-
-    <div class="post-body">
-      
-      <h1 id="添加负载均衡"><a href="#添加负载均衡" class="headerlink" title="添加负载均衡"></a>添加负载均衡</h1><p>在云端，这个通常是由云服务商提供的，但由于我们是本地。所以需要自己添加，traefik 是目前最主流的</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">helm repo add traefik https://traefik.github.io/charts<br>helm repo update<br>helm install traefik traefik/traefik<br></code></pre></td></tr></table></figure>
-
-<p>运行下面命令，可以在 <code>http://127.0.0.1:9000/dashboard/</code> 查看仪表</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">kubectl port-forward $(kubectl get pods --selector <span class="hljs-string">&quot;app.kubernetes.io/name=traefik&quot;</span> --output=name) 9000:9000<br></code></pre></td></tr></table></figure>
-
-<h1 id="Nacos"><a href="#Nacos" class="headerlink" title="Nacos"></a>Nacos</h1><p>Nacos 是 Spring Cloud 最好的服务发现与配置中心，我仍然使用了它的 <code>k8s operator</code></p>
-<p>首先安装 operator</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/nacos-group/nacos-k8s.git<br><span class="hljs-built_in">cd</span> operator<br>helm install nacos-operator ./chart/nacos-operator <br></code></pre></td></tr></table></figure>
-
-<p>其次安装 nacos</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">helm repo add jiangtj https://jiangtj.github.io/helm-charts<br>helm install nacos jiangtj/nacos-simple <br></code></pre></td></tr></table></figure>
-
-<p><code>nacos-simple</code> 包含了一个 <code>nacos.yaml</code> 定义nacos服务和一个 <code>ingress.yaml</code> 定义转发，<a target="_blank" rel="noopener" href="https://github.com/jiangtj/helm-charts/tree/master/charts/nacos-simple">详见GitHub</a></p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>k8s 能定义一系列的服务，对于一个复杂开发环境来说，会比 docker 更加简单，比如同时需要redis rabbitmq mysql等等，尤其还能通过 helm 同步定义，当然简单的环境，还是 docker 吧</p>
-      
-    </div>
-
-    
-    
-
-    
-
-    
-  </div>
-</article>
-  
-  
-
-<article class="post post-type-normal">
-  <div class="card post-block">
-
-    
-
-    <header class="post-header">
-
-      
-      <h1 class="post-title">
-        
-        <a href="/articles/cherry/linux-proxy/">linux 代理</a>
-        
-      </h1>
-      
-
-      <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2023-02-21 16:32:26">2023-02-21</time>
-  </span>
-  
-
-  
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E8%BF%90%E7%BB%B4/" rel="index"><span>运维</span></a></span>  </span>
-  
-
-  
-  
-
-</div>
-
-    </header>
-
-    <div class="post-body">
-      
-      <h1 id="env"><a href="#env" class="headerlink" title="env"></a>env</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> http_proxy=http://192.168.1.20:7890<br><span class="hljs-built_in">export</span> https_proxy=http://192.168.1.20:7890<br></code></pre></td></tr></table></figure>
-
-<h1 id="profile"><a href="#profile" class="headerlink" title="profile"></a>profile</h1><p>在 <code>~/.profile</code> 持久化当前用户的代理，全局在 <code>/etc/profile</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> http_proxy=http://192.168.1.20:7890<br><span class="hljs-built_in">export</span> https_proxy=http://192.168.1.20:7890<br></code></pre></td></tr></table></figure>
-
-<h1 id="wget"><a href="#wget" class="headerlink" title="wget"></a>wget</h1><p>修改 <code>~/.wgetrc</code> 创建 <code>wget</code> 代理</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#You can set the default proxies for Wget to use for http, https, and ftp.</span><br><span class="hljs-comment"># They will override the value in the environment.</span><br>https_proxy = http://192.168.1.20:7890<br>http_proxy = http://192.168.1.20:7890<br>ftp_proxy = http://192.168.1.20:7890<br><br><span class="hljs-comment"># If you do not want to use proxy at all, set this to off.</span><br>use_proxy = on<br></code></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-
-    
-
-    
-  </div>
-</article>
-  
-  
-
-<article class="post post-type-normal">
-  <div class="card post-block">
-
-    
-
-    <header class="post-header">
-
-      
-      <h1 class="post-title">
-        
-        <a href="/articles/cherry/webflux-event/">为 Spring WebFlux 提供 &#39;ApplicationEventPublisher&#39;</a>
-        
-      </h1>
-      
-
-      <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2021-09-24 16:15:07">2021-09-24</time>
+    <time title="创建时间：2024-02-14 22:09:10">2024-02-14</time>
   </span>
   
 
@@ -580,10 +348,16 @@
 
     <div class="post-body">
       
-      <p>在 Spring 中提供了 ApplicationEventPublisher，用于发布事件，这在一些场景下十分有用，比如，当我创建一个货物，而另一个服务监听货物的创建并为其创建库存。所以在Spring MVC中很实用，我也常常用它来解耦，但是当我切换为 WebFlux 时，就尴尬了。因为 ApplicationEventPublisher 是同步操作，它并不支持响应式，即流操作。</p>
-<p>所以，我在 WebFlux 中实现一个类似的发布订阅模式，以替代 ApplicationEventPublisher</p>      
+      <blockquote>
+<p>在2024年2月1日，sonatype 终于放弃了原本的maven-central的注册方式，将提交issue注册改成了通过dns验证域名即可，这对于我们这些可能只想存个工具类的人来说，就方便太多了。</p>
+</blockquote>
+<h1 id="注册命名空间"><a href="#注册命名空间" class="headerlink" title="注册命名空间"></a>注册命名空间</h1><p>首先，在<a target="_blank" rel="noopener" href="https://central.sonatype.com/">maven central</a>注册一个账号，推荐使用GitHub直接登录，这样的好处是你可以直接得到一个验证通过的Namespace</p>
+<p><img src="https://github.com/jiangtj/blog/assets/15902347/d26c0f80-0146-42e6-bcb5-7e69c8637a93" alt="image"></p>
+<p>点击 Add Namespace 按钮可以添加一个Namespace</p>
+<p><img src="https://github.com/jiangtj/blog/assets/15902347/994f3744-8b28-4321-be7f-ff162a760166" alt="image"></p>
+<p>然后在你的域名解析商那上添加一个TXT记录，比如上面的例子，主机记录为<code>testmvn</code>，记录值为<code>提供的token</code>，这样就可以得到一个和GitHub一样的Namespace了。</p>      
 <div class="read-more-btn">
-  <a href="/articles/cherry/webflux-event/" rel="contents">
+  <a href="/articles/durian/maven-publish/" rel="contents">
     阅读全文 &raquo;
   </a>
 </div>
@@ -611,7 +385,7 @@
       
       <h1 class="post-title">
         
-        <a href="/articles/cherry/winget/">WinGet Windows官方的包管理工具</a>
+        <a href="/articles/durian/spring-graphql/">为 Spring Boot 应用添加 GraphQL</a>
         
       </h1>
       
@@ -625,81 +399,7 @@
       <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
     </span>
     <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2021-07-01 20:54:09">2021-07-01</time>
-  </span>
-  
-
-  
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E5%B7%A5%E5%85%B7/" rel="index"><span>工具</span></a></span>  </span>
-  
-
-  
-  
-  <div class="post-description">当你重装电脑的时候，这或许能让你最快进入状态</div>
-  
-
-</div>
-
-    </header>
-
-    <div class="post-body">
-      
-      <p>WinGet 是官方推出的包管理工具，它目前支持以下命令</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs cmd">winget  install   安装给定的程序包<br>winget  show      显示有关程序包的信息<br>winget  source    管理程序包的来源<br>winget  search    查找并显示程序包的基本信息<br>winget  hash      哈希安装程序的帮助程序<br>winget  validate  验证清单文件<br>winget  settings  打开设置<br>winget  features  显示实验性功能的状态<br>winget  export    导出已安装程序包的列表<br>winget  import    安装文件中的所有程序包<br></code></pre></td></tr></table></figure>
-
-<p>大部分命令都是很常见的，相对于Linux来说，WinGet的安装方式是下载exe mis等文件，直接运行安装，在体验上有些怪怪的。而且，从我个人使用来看，目前 WinGet 最适合的场景就是重装完系统，快速安装软件</p>      
-<div class="read-more-btn">
-  <a href="/articles/cherry/winget/" rel="contents">
-    阅读全文 &raquo;
-  </a>
-</div>
-      
-    </div>
-
-    
-    
-
-    
-
-    
-  </div>
-</article>
-  
-  
-
-<article class="post post-type-normal">
-  <div class="card post-block">
-
-    
-
-    <header class="post-header">
-
-      
-      <h1 class="post-title">
-        
-        <a href="/articles/cherry/r2dbc/">R2DBC-传统数据库也能响应式编程</a>
-        
-      </h1>
-      
-
-      <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2021-04-20 16:44:55">2021-04-20</time>
+    <time title="创建时间：2023-08-16 09:50:35">2023-08-16</time>
   </span>
   
 
@@ -724,10 +424,10 @@
 
     <div class="post-body">
       
-      <p>R2DBC 是 Reactive Relational Database Connectivity （关系型数据库的响应式连接） 的缩写，最近在项目中尝试 Webflux，被迫，使用 R2DBC 进行数据库操作（我还是更喜欢关系型数据库而不是文档型）。当然在实际使用后，发现这个框架虽然有些不足，但这才是我喜欢的DB框架</p>
-<p>这里零散的记录下我遇到的一些问题，或者钟爱的一些特性，或者自己写的小工具</p>      
+      <p>GraphQL 已经出现很久了，最近我在看 Spring 文档时，看到了相关的介绍（我记得以前是没的，不知道什么时候的新特性），就试了试，先来一段AI的介绍。如果你仅想看怎么实现，跳过下面这段</p>
+<h1 id="来着-Codeium-AI-的介绍"><a href="#来着-Codeium-AI-的介绍" class="headerlink" title="来着 Codeium AI 的介绍"></a>来着 Codeium AI 的介绍</h1><p>GraphQL是一种用于API开发的查询语言和运行时环境。它由Facebook开发并于2015年开源。GraphQL的主要目标是提供一种更高效、灵活和易于使用的方式来获取和操作数据。与传统的RESTful API相比，GraphQL允许客户端精确地指定需要的数据，并减少了不必要的网络传输和数据处理。</p>      
 <div class="read-more-btn">
-  <a href="/articles/cherry/r2dbc/" rel="contents">
+  <a href="/articles/durian/spring-graphql/" rel="contents">
     阅读全文 &raquo;
   </a>
 </div>
@@ -755,7 +455,7 @@
       
       <h1 class="post-title">
         
-        <a href="/articles/cherry/spring-boot-2-4-config/">Spring Boot 2.4 新的配置文件处理方式</a>
+        <a href="/articles/durian/spring-native-action/">GitHub Action 构建原生 Spring Boot 应用</a>
         
       </h1>
       
@@ -769,12 +469,20 @@
       <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
     </span>
     <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2021-03-16 13:38:27">2021-03-16</time>
+    <time title="创建时间：2023-05-20 14:18:29">2023-05-20</time>
   </span>
   
 
   
 
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">分类于</span>
+    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
   
 
   
@@ -786,14 +494,302 @@
 
     <div class="post-body">
       
-      <p>配置文件是 Spring Boot 的一个核心特性，自正式版发布以来，几乎未改动过，而在2.4中，Spring 官方调整了配置文件的处理逻辑</p>
+      <p>原生构建是非常消耗系统资源的，你可以看到编译过程中，cpu与内存都接近100%，所以能用免费的CI，那必须是要用的</p>
+<h1 id="创建一个-Action"><a href="#创建一个-Action" class="headerlink" title="创建一个 Action"></a>创建一个 Action</h1><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">name:</span> <span class="hljs-string">Docker</span> <span class="hljs-string">Push</span><br><br><span class="hljs-attr">on:</span><br>  <span class="hljs-attr">push:</span><br>    <span class="hljs-attr">branches:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;**&quot;</span><br>    <span class="hljs-attr">tags:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;v*.*.*&quot;</span><br><br><span class="hljs-attr">jobs:</span><br>  <span class="hljs-attr">docker_push:</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span><br>    <span class="hljs-attr">permissions:</span><br>      <span class="hljs-attr">packages:</span> <span class="hljs-string">write</span><br>    <span class="hljs-attr">steps:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v3</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Set</span> <span class="hljs-string">up</span> <span class="hljs-string">JDK</span> <span class="hljs-number">17</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-java@v3</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-attr">java-version:</span> <span class="hljs-string">&#x27;17&#x27;</span><br>          <span class="hljs-attr">distribution:</span> <span class="hljs-string">&#x27;temurin&#x27;</span><br>          <span class="hljs-attr">cache:</span> <span class="hljs-string">maven</span><br></code></pre></td></tr></table></figure>
+
+<p>上面就是简单的action，监听分支与tags，然后checkout代码仓库并设置java环境，我们需要将构建产物发布，所以设置packages的权限为write</p>
+<h1 id="登录到-Github-容器注册中心"><a href="#登录到-Github-容器注册中心" class="headerlink" title="登录到 Github 容器注册中心"></a>登录到 Github 容器注册中心</h1><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Login</span> <span class="hljs-string">to</span> <span class="hljs-string">GitHub</span> <span class="hljs-string">Container</span> <span class="hljs-string">Registry</span><br>  <span class="hljs-attr">uses:</span> <span class="hljs-string">docker/login-action@v2</span><br>  <span class="hljs-attr">with:</span><br>    <span class="hljs-attr">registry:</span> <span class="hljs-string">ghcr.io</span><br>    <span class="hljs-attr">username:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">github.actor</span> <span class="hljs-string">&#125;&#125;</span><br>    <span class="hljs-attr">password:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.GITHUB_TOKEN</span> <span class="hljs-string">&#125;&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p>在 steps 中添加上面的代码，就可以登录到 GitHub Container Registry，当然也可以改用docker hub，或者可以登录多个</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Login</span> <span class="hljs-string">to</span> <span class="hljs-string">Docker</span> <span class="hljs-string">Hub</span><br>  <span class="hljs-attr">uses:</span> <span class="hljs-string">docker/login-action@v2</span><br>  <span class="hljs-attr">with:</span><br>    <span class="hljs-attr">username:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.DOCKERHUB_USERNAME</span> <span class="hljs-string">&#125;&#125;</span><br>    <span class="hljs-attr">password:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.DOCKERHUB_TOKEN</span> <span class="hljs-string">&#125;&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p>registry 默认是 docker hub，但是，需要配置 DOCKERHUB_USERNAME 和 DOCKERHUB_TOKEN，我是觉得麻烦直接用了GitHub的</p>
+<h1 id="metadata-action-生成-tag"><a href="#metadata-action-生成-tag" class="headerlink" title="metadata-action 生成 tag"></a>metadata-action 生成 tag</h1><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Docker</span> <span class="hljs-string">meta</span><br>  <span class="hljs-attr">id:</span> <span class="hljs-string">meta</span><br>  <span class="hljs-attr">uses:</span> <span class="hljs-string">docker/metadata-action@v4</span><br>  <span class="hljs-attr">with:</span><br>    <span class="hljs-attr">images:</span> <span class="hljs-string">ghcr.io/name/app</span><br></code></pre></td></tr></table></figure>
+
+<p>这是将 CI 中的 refs 转换我们需要的 tags，比如 <code>v1.0.5</code>，就需要转换为 <code>latest</code> <code>1</code> <code>1.0</code> <code>1.0.5</code>，而且，由于 docker tag 的特殊性，它需要拼接镜像的名称，<code>name/app:latest</code> 等，所以，我们需要这个action帮我们简化生成过程</p>
+<p>默认情况下的转换是这样的</p>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Ref</th>
+<th>Docker Tags</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>pull_request</code></td>
+<td><code>refs/pull/2/merge</code></td>
+<td><code>pr-2</code></td>
+</tr>
+<tr>
+<td><code>push</code></td>
+<td><code>refs/heads/master</code></td>
+<td><code>master</code></td>
+</tr>
+<tr>
+<td><code>push</code></td>
+<td><code>refs/heads/releases/v1</code></td>
+<td><code>releases-v1</code></td>
+</tr>
+<tr>
+<td><code>push tag</code></td>
+<td><code>refs/tags/v1.2.3</code></td>
+<td><code>v1.2.3</code>, <code>latest</code></td>
+</tr>
+<tr>
+<td><code>push tag</code></td>
+<td><code>refs/tags/v2.0.8-beta.67</code></td>
+<td><code>v2.0.8-beta.67</code>, <code>latest</code></td>
+</tr>
+<tr>
+<td><code>workflow_dispatch</code></td>
+<td><code>refs/heads/master</code></td>
+<td><code>master</code></td>
+</tr>
+</tbody></table>
+<p>当然我们也可以自己设置</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Docker</span> <span class="hljs-string">meta</span><br>  <span class="hljs-attr">id:</span> <span class="hljs-string">meta</span><br>  <span class="hljs-attr">uses:</span> <span class="hljs-string">docker/metadata-action@v4</span><br>  <span class="hljs-attr">with:</span><br>    <span class="hljs-attr">images:</span> <span class="hljs-string">|</span><br><span class="hljs-string">      name/app</span><br><span class="hljs-string"></span>    <span class="hljs-attr">tags:</span> <span class="hljs-string">|</span><br><span class="hljs-string">      type=ref,event=branch</span><br><span class="hljs-string">      type=ref,event=pr</span><br><span class="hljs-string">      type=semver,pattern=&#123;&#123;version&#125;&#125;</span><br><span class="hljs-string">      type=semver,pattern=&#123;&#123;major&#125;&#125;.&#123;&#123;minor&#125;&#125;</span><br></code></pre></td></tr></table></figure>
+
+<h1 id="通过-Maven-构建-Spring-Native"><a href="#通过-Maven-构建-Spring-Native" class="headerlink" title="通过 Maven 构建 Spring Native"></a>通过 Maven 构建 Spring Native</h1><p>我们需要在 pom 中添加原生的插件</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.graalvm.buildtools<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>native-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">configuration</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">image</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>$&#123;docker.image.name&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">tags</span>&gt;</span>$&#123;docker.image.tags&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">tags</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">env</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">BP_OCI_SOURCE</span>&gt;</span>$&#123;project.scm.url&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">BP_OCI_SOURCE</span>&gt;</span><br>      <span class="hljs-tag">&lt;/<span class="hljs-name">env</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">configuration</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>需要配置 BP_OCI_SOURCE 为你的 GitHub 项目地址，为了让包与项目关联，这涉及到费用，只要你的项目开源，那么可以无限免费用，我是设置了一个 <code>project.scm.url</code> 这个是maven里的关于项目信息的配置</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">scm</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>https://github.com/yourname/project<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">scm</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>在 aciton 中添加以下步骤</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Build</span> <span class="hljs-string">image</span><br>  <span class="hljs-attr">run:</span> <span class="hljs-string">|</span><br><span class="hljs-string">    mvn -Pnative \</span><br><span class="hljs-string">    -Ddocker.image.name=ghcr.io/name/app \</span><br><span class="hljs-string">    -Ddocker.image.tags=$&#123;&#123; join( fromJSON(steps.meta.outputs.json).tags, &#x27;,&#x27; ) &#125;&#125; \</span><br><span class="hljs-string">    spring-boot:build-image</span><br></code></pre></td></tr></table></figure>
+
+<p>这样就可以构建出我们需要的镜像了，同时也打上了对应的 tags</p>
+<h1 id="推送-images"><a href="#推送-images" class="headerlink" title="推送 images"></a>推送 images</h1><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Push</span><br>  <span class="hljs-attr">run:</span> <span class="hljs-string">|</span><br>    <span class="hljs-string">docker</span> <span class="hljs-string">push</span> <span class="hljs-string">-a</span> <span class="hljs-string">ghcr.io/name/app</span><br></code></pre></td></tr></table></figure>
+
+<p><code>-a</code> 表示推送所有 tags</p>
+<h1 id="完整例子"><a href="#完整例子" class="headerlink" title="完整例子"></a>完整例子</h1><p>你可以前往的开源项目 <a target="_blank" rel="noopener" href="https://github.com/jiangtj/api-core">https://github.com/jiangtj/api-core</a> 查看</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">name:</span> <span class="hljs-string">Docker</span> <span class="hljs-string">Push</span><br><br><span class="hljs-attr">on:</span><br>  <span class="hljs-attr">push:</span><br>    <span class="hljs-attr">branches:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">master</span><br>    <span class="hljs-attr">tags:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;v*.*.*&quot;</span><br><br><span class="hljs-attr">jobs:</span><br>  <span class="hljs-attr">docker_push:</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span><br><br>    <span class="hljs-attr">permissions:</span><br>      <span class="hljs-attr">packages:</span> <span class="hljs-string">write</span><br><br>    <span class="hljs-attr">steps:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v3</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Set</span> <span class="hljs-string">up</span> <span class="hljs-string">JDK</span> <span class="hljs-number">17</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-java@v3</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-attr">java-version:</span> <span class="hljs-string">&#x27;17&#x27;</span><br>          <span class="hljs-attr">distribution:</span> <span class="hljs-string">&#x27;temurin&#x27;</span><br>          <span class="hljs-attr">cache:</span> <span class="hljs-string">maven</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Docker</span> <span class="hljs-string">meta</span><br>        <span class="hljs-attr">id:</span> <span class="hljs-string">meta</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">docker/metadata-action@v4</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-comment"># list of Docker images to use as base name for tags</span><br>          <span class="hljs-attr">images:</span> <span class="hljs-string">|</span><br><span class="hljs-string">            ghcr.io/jiangtj/api-core</span><br><span class="hljs-string"></span>          <span class="hljs-comment"># generate Docker tags based on the following events/attributes</span><br>          <span class="hljs-attr">tags:</span> <span class="hljs-string">|</span><br><span class="hljs-string">            type=schedule</span><br><span class="hljs-string">            type=ref,event=branch</span><br><span class="hljs-string">            type=semver,pattern=&#123;&#123;version&#125;&#125;</span><br><span class="hljs-string">            type=semver,pattern=&#123;&#123;major&#125;&#125;.&#123;&#123;minor&#125;&#125;,enable=$&#123;&#123; !startsWith(github.ref, &#x27;refs/tags/v0.&#x27;) &#125;&#125;</span><br><span class="hljs-string">            type=semver,pattern=&#123;&#123;major&#125;&#125;,enable=$&#123;&#123; !startsWith(github.ref, &#x27;refs/tags/v0.&#x27;) &#125;&#125;</span><br><span class="hljs-string"></span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Login</span> <span class="hljs-string">to</span> <span class="hljs-string">GitHub</span> <span class="hljs-string">Container</span> <span class="hljs-string">Registry</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">docker/login-action@v2</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-attr">registry:</span> <span class="hljs-string">ghcr.io</span><br>          <span class="hljs-attr">username:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">github.actor</span> <span class="hljs-string">&#125;&#125;</span><br>          <span class="hljs-attr">password:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.GITHUB_TOKEN</span> <span class="hljs-string">&#125;&#125;</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Build</span> <span class="hljs-string">image</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">|</span><br><span class="hljs-string">          mvn -Pnative \</span><br><span class="hljs-string">          -Ddocker.image.name=ghcr.io/jiangtj/api-core \</span><br><span class="hljs-string">          -Ddocker.image.tags=$&#123;&#123; join( fromJSON(steps.meta.outputs.json).tags, &#x27;,&#x27; ) &#125;&#125; \</span><br><span class="hljs-string">          spring-boot:build-image</span><br><span class="hljs-string"></span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Push</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">|</span><br>          <span class="hljs-string">docker</span> <span class="hljs-string">push</span> <span class="hljs-string">-a</span> <span class="hljs-string">ghcr.io/jiangtj/api-core</span><br></code></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+
+    
+
+    
+  </div>
+</article>
+  
+  
+
+<article class="post post-type-normal">
+  <div class="card post-block">
+
+    
+
+    <header class="post-header">
+
+      
+      <h1 class="post-title">
+        
+        <a href="/articles/durian/custom-endpoint/">Spring Boot 自定义 Endpoint</a>
+        
+      </h1>
+      
+
+      <div class="post-meta">
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">发表于</span>
+    <time title="创建时间：2023-04-11 20:13:14">2023-04-11</time>
+  </span>
+  
+
+  
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">分类于</span>
+    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
+  
+
+  
+  
+
+</div>
+
+    </header>
+
+    <div class="post-body">
+      
+      <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>下面是AI的介绍，如果你很了解可以直接跳到第二部分</p>
+<p>在 Spring Boot 中，Endpoint 是一种可以暴露应用程序内部信息的机制。Endpoint 可以提供应用程序的健康状况、内存使用情况、线程信息、日志等等信息。通过访问这些 Endpoint，我们可以更加方便地了解应用程序的运行情况，进行问题排查和监控。</p>
+<p>Spring Boot 提供了一些内置的 Endpoint，比如 &#x2F;health、&#x2F;metrics 等等，同时也支持自定义 Endpoint。我们可以通过在应用程序中添加 Spring Boot Actuator 依赖来启用这些内置的 Endpoint，也可以通过编写自定义 Endpoint 来扩展应用程序的监控能力。</p>
+<p>一般来说，Endpoint 都是通过 HTTP 协议暴露出来的，可以通过浏览器、curl 命令等方式进行访问。同时，Spring Boot 还支持将 Endpoint 信息输出到控制台、JMX 等地方，方便我们查看。</p>
+<p>在访问 Endpoint 时，我们需要提供正确的访问路径和身份验证信息（如果启用了身份验证）。Spring Boot 提供了许多安全措施来保护 Endpoint 的访问，比如只允许特定 IP 地址访问、启用 HTTPS 等等。</p>
+<p>总之，Endpoint 是 Spring Boot 中非常重要的一个功能，可以帮助我们更加方便地监控和管理应用程序。如果您还没有使用过 Endpoint，建议您尝试一下，相信会有不错的体验。</p>      
+<div class="read-more-btn">
+  <a href="/articles/durian/custom-endpoint/" rel="contents">
+    阅读全文 &raquo;
+  </a>
+</div>
+      
+    </div>
+
+    
+    
+
+    
+
+    
+  </div>
+</article>
+  
+  
+
+<article class="post post-type-normal">
+  <div class="card post-block">
+
+    
+
+    <header class="post-header">
+
+      
+      <h1 class="post-title">
+        
+        <a href="/articles/durian/cloud-4/">Spring Cloud 平台搭建(四)：Spring Boot Admin</a>
+        
+      </h1>
+      
+
+      <div class="post-meta">
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">发表于</span>
+    <time title="创建时间：2023-04-07 14:21:38">2023-04-07</time>
+  </span>
+  
+
+  
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">分类于</span>
+    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
+  
+
+  
+  
+
+</div>
+
+    </header>
+
+    <div class="post-body">
+      
+      <blockquote>
+<p>源码：<a target="_blank" rel="noopener" href="https://github.com/jiangtj/jc-platform">J Cloud Platform</a>，期待你们的star ٩(๑❛ᴗ❛๑)۶</p>
+</blockquote>
+<p>Spring Boot Admin 是简单，同时功能也比较全面的监控服务，所以对于快速搭建微服务框架来说，是最佳的。比如 ELK Stack 能更好的处理日志，以及一些运行数据，但是，他需要配置，同时，对于少量的微服务显得笨重，而且后期加难度也不大。</p>
+<p>老规矩，先让AI介绍下概念，这是换成了Notion AI，我也不知道为啥我bing用不了了。。。</p>
+<h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>Spring Boot Admin是一个开源的第三方监控工具，可以用于管理和监控Spring Boot应用程序。它提供了一个简单易用的Web用户界面，让开发者可以轻松地查看应用程序的运行状况、性能指标、日志信息等。</p>      
+<div class="read-more-btn">
+  <a href="/articles/durian/cloud-4/" rel="contents">
+    阅读全文 &raquo;
+  </a>
+</div>
+      
+    </div>
+
+    
+    
+
+    
+
+    
+  </div>
+</article>
+  
+  
+
+<article class="post post-type-normal">
+  <div class="card post-block">
+
+    
+
+    <header class="post-header">
+
+      
+      <h1 class="post-title">
+        
+        <a href="/articles/durian/cloud-3/">Spring Cloud 平台搭建(三)：更换 Spring Cloud Tencent</a>
+        
+      </h1>
+      
+
+      <div class="post-meta">
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">发表于</span>
+    <time title="创建时间：2023-03-30 00:00:00">2023-03-30</time>
+  </span>
+  
+
+  
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">分类于</span>
+    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
+  
+
+  
+  
+
+</div>
+
+    </header>
+
+    <div class="post-body">
+      
+      <blockquote>
+<p>配套源码：<a target="_blank" rel="noopener" href="https://github.com/jiangtj/jc-platform">J Cloud Platform</a></p>
+</blockquote>
+<p>Spring Cloud Tencent 与 Spring Cloud Alibaba 的差别如下</p>
 <ul>
-<li>外部配置文件优先于内部 Profile 配置</li>
-<li>重命名 <code>spring.profiles</code> 为 <code>spring.config.activate.on-profile</code></li>
-<li>新增 Profile 组</li>
-</ul>      
+<li><input checked="" disabled="" type="checkbox"> 配置中心 支持配置属性更新回调</li>
+<li><input disabled="" type="checkbox"> 配置中心 支持 import，但仍必须配置bootsrap.yaml</li>
+<li><input checked="" disabled="" type="checkbox"> 控制台 内存占用小于nacos，对于我来说，开发电脑配置不太够，能好些</li>
+<li><input checked="" disabled="" type="checkbox"> 集成类似于阿里Sentinel的功能</li>
+<li><input disabled="" type="checkbox"> 默认占用常用端口，比如8080、8090</li>
+</ul>
+<p>各有优劣，不过我更倾向于腾讯，所以做了替换</p>      
 <div class="read-more-btn">
-  <a href="/articles/cherry/spring-boot-2-4-config/" rel="contents">
+  <a href="/articles/durian/cloud-3/" rel="contents">
     阅读全文 &raquo;
   </a>
 </div>
@@ -821,7 +817,7 @@
       
       <h1 class="post-title">
         
-        <a href="/articles/cherry/npm-pack-proxy/">NPM 包代理</a>
+        <a href="/articles/durian/spring-native/">GraalVM 构建 Spring Native 应用</a>
         
       </h1>
       
@@ -835,12 +831,104 @@
       <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
     </span>
     <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2021-01-29 15:57:56">2021-01-29</time>
+    <time title="创建时间：2023-03-28 09:33:31">2023-03-28</time>
   </span>
   
 
   
 
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">分类于</span>
+    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
+  
+
+  
+  
+  <div class="post-description">Win 平台下构建 Spring Native 应用</div>
+  
+
+</div>
+
+    </header>
+
+    <div class="post-body">
+      
+      <h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><ul>
+<li>GraalVM 配置<ul>
+<li>下载 GraalVM</li>
+<li>设置 JAVA_HOME</li>
+<li>设置 Path 将 GraalVM 放在最前面</li>
+<li>*运行 <code>gu install native-image</code> (不需要，在编译过程中会自动下载)</li>
+</ul>
+</li>
+<li>Win 编辑工具<ul>
+<li>下载 Visual Studio Build Tools 和 Windows SDK</li>
+</ul>
+</li>
+</ul>
+<p>原生编译不容易的，准备工作弄好，好几个G的空间没了</p>      
+<div class="read-more-btn">
+  <a href="/articles/durian/spring-native/" rel="contents">
+    阅读全文 &raquo;
+  </a>
+</div>
+      
+    </div>
+
+    
+    
+
+    
+
+    
+  </div>
+</article>
+  
+  
+
+<article class="post post-type-normal">
+  <div class="card post-block">
+
+    
+
+    <header class="post-header">
+
+      
+      <h1 class="post-title">
+        
+        <a href="/articles/durian/cloud-2/">Spring Cloud 平台搭建(二)：统一异常处理 RFC 7807</a>
+        
+      </h1>
+      
+
+      <div class="post-meta">
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">发表于</span>
+    <time title="创建时间：2023-03-22 10:59:02">2023-03-22</time>
+  </span>
+  
+
+  
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">分类于</span>
+    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
   
 
   
@@ -852,9 +940,23 @@
 
     <div class="post-body">
       
-      <p>在国外，最简单的是安装，在国内，最难得就是安装，太难了</p>
-<p>下面是一份我正在用的<code>.yarnrc</code>的配置</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">disable-self-update-check true<br>registry &quot;https://registry.npm.taobao.org&quot;<br>phantomjs_cdnurl &quot;https://npm.taobao.org/dist/phantomjs/&quot;<br>electron_mirror &quot;https://npm.taobao.org/mirrors/electron/&quot;<br>electron_builder_binaries_mirror &quot;https://npm.taobao.org/mirrors/electron-builder-binaries/&quot;<br>sass_binary_site &quot;https://npm.taobao.org/mirrors/node-sass/&quot;<br>profiler_binary_host_mirror &quot;https://npm.taobao.org/mirrors/node-inspector/&quot;<br>chromedriver_cdnurl &quot;https://cdn.npm.taobao.org/dist/chromedriver&quot;<br>operadriver_cdnurl &quot;http://npm.taobao.org/mirrors/operadriver&quot;<br>node_sqlite3_binary_host_mirror &quot;http://npm.taobao.org/mirrors&quot;<br>python_mirror &quot;http://npm.taobao.org/mirrors/python&quot;<br></code></pre></td></tr></table></figure>
+      <p>兄弟们，上强度啦，你们觉得微服务搭建过程什么最重要？说实话，我也不清楚，但是我知道，规范一定是最重要的那部分之一</p>
+<h1 id="RFC-7807-定义"><a href="#RFC-7807-定义" class="headerlink" title="RFC 7807 定义"></a>RFC 7807 定义</h1><p>微服务规范最重要的就是服务间的调用，目前来说绝大多数都是restful接口，请求成功直接会返回业务数据，失败的话，一般都是抛出运行时异常，并统一捕获转化为对应的http状态码以及描述错误Json内容，这部分一般都是自定义的，但最近我看到了Spring最新官方文档其中Error Responses部分</p>
+<p><img src="https://raw.githubusercontent.com/jiangtj/picgo-repo/master/img-a20230323142900.png"></p>
+<p>是的，错误部分也有了一个规范，它包含五个部分</p>
+<ul>
+<li>type: 问题描述文档地址，如果不存在，则”about:blank”</li>
+<li>title: 简短的描述问题</li>
+<li>status: http 状态码，比如400、401、500等</li>
+<li>detail: 详细说明发生问题的原因</li>
+<li>instance: 问题发生的URL地址</li>
+</ul>
+<p>这个和我原本自定义的错误内容差不多，所以，在这次搭建过程中，就使用了规范的定义，接下来就介绍我的开源项目<a target="_blank" rel="noopener" href="https://github.com/jiangtj/jc-platform">J Cloud Platform</a>中<code>micro-common</code>模块</p>      
+<div class="read-more-btn">
+  <a href="/articles/durian/cloud-2/" rel="contents">
+    阅读全文 &raquo;
+  </a>
+</div>
       
     </div>
 
@@ -871,7 +973,7 @@
 
 
 <nav class="pagination">
-  <a class="extend prev" rel="prev" href="/"><svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="angle-left" class="svg-inline--fa fa-angle-left fa-w-8 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path></svg></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/"><svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="angle-right" class="svg-inline--fa fa-angle-right fa-w-8 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></a></nav>
+  <a class="extend prev" rel="prev" href="/"><svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="angle-left" class="svg-inline--fa fa-angle-left fa-w-8 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path></svg></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/3/"><svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="angle-right" class="svg-inline--fa fa-angle-right fa-w-8 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></a></nav>
 
         </div>
         

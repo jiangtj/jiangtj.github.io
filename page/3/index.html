@@ -107,7 +107,7 @@
     
     <div class="site-state-item site-state-posts">
       <a href="/archives/">
-        <span class="site-state-item-count">79</span>
+        <span class="site-state-item-count">89</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -116,7 +116,7 @@
     
     <div class="site-state-item site-state-categories">
       <a href="/categories/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span>
       </a>
     </div>
@@ -125,7 +125,7 @@
     
     <div class="site-state-item site-state-tags">
       <a href="/tags/">
-        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-count">55</span>
         <span class="site-state-item-name">标签</span>
       </a>
     </div>
@@ -160,7 +160,7 @@
       
       <h1 class="post-title">
         
-        <a href="/articles/cherry/deploy-spring-boot/">部署 Spring Boot 应用为 systemd 服务</a>
+        <a href="/articles/durian/cloud-1/">Spring Cloud 平台搭建(一)：服务注册与配置中心Nacos</a>
         
       </h1>
       
@@ -174,7 +174,7 @@
       <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
     </span>
     <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2021-01-20 14:21:46">2021-01-20</time>
+    <time title="创建时间：2023-03-21 21:35:15">2023-03-21</time>
   </span>
   
 
@@ -199,595 +199,26 @@
 
     <div class="post-body">
       
-      <p>很久之前，我写过一个<a target="_blank" rel="noopener" href="https://dnocm.com/articles/almond/spring-boot-autorun-with-gitlab/">脚本</a>用于重启Spring Boot应用，但最近在看Spring Boot文档，发现之前写的的确不够优雅</p>
-<p>Spring Boot 文档中，有一大章专门写<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-boot/docs/current/reference/html/deployment.html#deployment">关于如何在系统中部署</a>，其中，个人认为最佳的方案是作为一个systemd服务运行，由Liunx服务直接调度</p>      
-<div class="read-more-btn">
-  <a href="/articles/cherry/deploy-spring-boot/" rel="contents">
-    阅读全文 &raquo;
-  </a>
-</div>
-      
-    </div>
-
-    
-    
-
-    
-
-    
-  </div>
-</article>
-  
-  
-
-<article class="post post-type-normal">
-  <div class="card post-block">
-
-    
-
-    <header class="post-header">
-
-      
-      <h1 class="post-title">
-        
-        <a href="/articles/cherry/flutter-install/">Flutter 环境搭建注意事项</a>
-        
-      </h1>
-      
-
-      <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2020-08-28 16:21:58">2020-08-28</time>
-  </span>
-  
-
-  
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E5%89%8D%E7%AB%AF/" rel="index"><span>前端</span></a></span>  </span>
-  
-
-  
-  
-  <div class="post-description">Flutter 是谷歌推出的，用于构建跨平台原生应用</div>
-  
-
-</div>
-
-    </header>
-
-    <div class="post-body">
-      
-      <p>国内无法访问谷歌的服务，所以参考这篇 <a target="_blank" rel="noopener" href="https://flutter.dev/community/china">Using Flutter in China</a> 官方的文档，进行配置</p>
-<p>Flutter的中文社区为： <a target="_blank" rel="noopener" href="https://flutter.cn/">https://flutter.cn</a></p>
-<h1 id="SDK下载"><a href="#SDK下载" class="headerlink" title="SDK下载"></a>SDK下载</h1><p>使用 <a target="_blank" rel="noopener" href="https://storage.flutter-io.cn/">https://storage.flutter-io.cn/</a> 代替 <a target="_blank" rel="noopener" href="https://storage.googleapis.com/">https://storage.googleapis.com/</a> ,下载对应的SDK，例如</p>
+      <h1 id="Nacos-是什么？"><a href="#Nacos-是什么？" class="headerlink" title="Nacos 是什么？"></a>Nacos 是什么？</h1><p>Nacos 是一个易用的动态服务发现、配置和服务管理平台，可以帮助你在云原生时代，轻松构建、交付、管理自己的微服务平台，快速复用和组合业务服务，快速交付商业创新的价值。</p>
+<p>Nacos 是阿里巴巴开源的一个项目，它的名字来源于Na ming and Co nfiguration S ervice。nacos提供了以下几个核心功能：</p>
+<p>Nacos 提供了以下主要功能：</p>
 <ul>
-<li><p>Original URL: <a target="_blank" rel="noopener" href="https://storage.googleapis.com/flutter_infra/releases/stable/windows/flutter_windows_v1.0.0-stable.zip">https://storage.googleapis.com/flutter_infra/releases/stable/windows/flutter_windows_v1.0.0-stable.zip</a></p>
-</li>
-<li><p>Mirrored URL: <a target="_blank" rel="noopener" href="https://storage.flutter-io.cn/flutter_infra/releases/stable/windows/flutter_windows_v1.0.0-stable.zip">https://storage.flutter-io.cn/flutter_infra/releases/stable/windows/flutter_windows_v1.0.0-stable.zip</a></p>
-</li>
+<li><strong>动态服务发现</strong>：Nacos 可以让你注册和发现各种类型的微服务，包括 HTTP、RPC 和 WebSocket 等，并提供负载均衡、流量控制和故障转移等能力。</li>
+<li><strong>动态配置管理</strong>：Nacos 可以让你集中管理应用的配置信息，并支持配置变更推送、版本控制和灰度发布等功能。</li>
+<li><strong>动态 DNS 服务</strong>：Nacos 可以让你基于权重路由请求到不同的后端集群，并支持域名解析、健康检查和故障隔离等功能。</li>
+<li><strong>服务及其元数据管理</strong>：Nacos 可以让你存储和查询微服务及其元数据信息，并支持元数据驱动的开发模式。</li>
 </ul>
-<p>或者使用迅雷下载，迅雷P2P加速可以绕过(<a target="_blank" rel="noopener" href="http://down.sandai.net/thunder11/XunLeiSetup11.0.2.52Preview.exe">迅雷11内测版下载</a>)</p>
-<h1 id="Android-Studio"><a href="#Android-Studio" class="headerlink" title="Android Studio"></a>Android Studio</h1><p>Jetbrains 的<a target="_blank" rel="noopener" href="https://www.jetbrains.com/toolbox-app/">下载工具</a>已经支持下载 Android Studio, 可以通过它下载</p>
-<p>Android SDK 现在似乎不被屏蔽了。。。</p>
-<h1 id="使用镜像"><a href="#使用镜像" class="headerlink" title="使用镜像"></a>使用镜像</h1><p>Flutter 依赖于 Dart 的依赖环境，在国内需要通过镜像访问。所以在在运行Fltter命令之前，需要设置两个环境变量：<code>PUB_HOSTORD_URL</code>和<code>FALTER_STORKER_BASE_URL</code>。</p>
-<p>MacOS&#x2F;Linux 用户</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> PUB_HOSTED_URL=https://pub.flutter-io.cn<br><span class="hljs-built_in">export</span> FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn<br></code></pre></td></tr></table></figure>
-
-<p>Windows 用户</p>
-<p>在 <code>电脑 -&gt; 属性 -&gt; 高级系统设置 -&gt; 高级 -&gt; 环境变量</code> 中修改</p>
-<h1 id="下载-Gradle"><a href="#下载-Gradle" class="headerlink" title="下载 Gradle"></a>下载 Gradle</h1><p>Gradle 没被墙，但是下载很慢，如果不手动下载，可能长时间卡在这一步</p>
-<p>当你创建一个新项目时，会生成一些文件，其中有个<code>${project}/android/gradle/wrapper/gradle-wrapper.properties</code></p>
-<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-comment">#Fri Jun 23 08:50:38 CEST 2017</span><br><span class="hljs-attr">distributionBase</span>=<span class="hljs-string">GRADLE_USER_HOME</span><br><span class="hljs-attr">distributionPath</span>=<span class="hljs-string">wrapper/dists</span><br><span class="hljs-attr">zipStoreBase</span>=<span class="hljs-string">GRADLE_USER_HOME</span><br><span class="hljs-attr">zipStorePath</span>=<span class="hljs-string">wrapper/dists</span><br><span class="hljs-attr">distributionUrl</span>=<span class="hljs-string">https\://services.gradle.org/distributions/gradle-5.6.2-all.zip</span><br></code></pre></td></tr></table></figure>
-
-<p>这个文件描述了 Gradle 下载的位置，以及它的分发地址(我这需要下载bin归档，不知道是我环境问题还是什么，即<a target="_blank" rel="noopener" href="https://services.gradle.org/distributions/gradle-5.6.2-bin.zip">https://services.gradle.org/distributions/gradle-5.6.2-bin.zip</a>)</p>
-<p>存放的位置很奇怪，是<code>${GRADLE_USER_HOME}/wrapper/dists/gradle-S{version}-all/${sha}/</code>，比较简单的方法是先运行下，再去找这个目录，把已经下好的 gradle 归档文件直接丢进去，不需要减压或重命名</p>
-<p>暂时就这些，如果还有以后补充</p>
-      
-    </div>
-
-    
-    
-
-    
-
-    
-  </div>
-</article>
-  
-  
-
-<article class="post post-type-normal">
-  <div class="card post-block">
-
-    
-<div class="post-banner">
-  <img src="https://jiangtj-lab.github.io/pic-repo/img-apricot/20200825094705.png"  alt=""/></div>
-
-
-    <header class="post-header">
-
-      
-      <h1 class="post-title">
-        
-        <a href="/articles/cherry/hexo-5/">Hexo 5.0.0 正式发布</a>
-        
-      </h1>
-      
-
-      <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2020-08-25 09:43:40">2020-08-25</time>
-  </span>
-  
-
-  
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E8%BD%AC%E8%BD%BD/" rel="index"><span>转载</span></a></span>  </span>
-  
-
-  
-  
-  <div class="post-description">文章转载自<a target="_blank" rel="noopener" href="https://blog.skk.moe/post/hexo-5/">Sukka</a>，Sukka为hexo 5.0带来了许多特性🎉</div>
-  
-
-</div>
-
-    </header>
-
-    <div class="post-body">
-      
-      <p>Node.js 上最快的静态站点生成器 Hexo 发布了 5.0.0 版本。作为 Hexo 核心团队成员，让我为大家介绍一下 Hexo 5.0.0 中的新特性，以及如何从 Hexo 4.x 版本升级到 Hexo 5.0.0。</p>      
-<div class="read-more-btn">
-  <a href="/articles/cherry/hexo-5/" rel="contents">
-    阅读全文 &raquo;
-  </a>
-</div>
-      
-    </div>
-
-    
-    
-
-    
-
-    
-  </div>
-</article>
-  
-  
-
-<article class="post post-type-normal">
-  <div class="card post-block">
-
-    
-
-    <header class="post-header">
-
-      
-      <h1 class="post-title">
-        
-        <a href="/articles/cherry/gradle-start/">Gradle 初探</a>
-        
-      </h1>
-      
-
-      <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2020-06-17 09:46:00">2020-06-17</time>
-  </span>
-  
-
-  
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
-  
-
-  
-  
-  <div class="post-description">跟我一起，学透它~~~</div>
-  
-
-</div>
-
-    </header>
-
-    <div class="post-body">
-      
-      <p>第一次接触 Gradle 是在数年前做android开发的时候，然而后来我的工作都是 Maven 做web开发，所以 Gradle 也就忘得差不多了（其实本来就没学多少）</p>
-<p>我相信每个看到这篇文章的人，都是用过 Maven 的， 想学习 Gradle，但在开始前，我们应该弄清楚为什么要学它，它能带来怎样的益处（相对于 Maven）？</p>
-<h1 id="Why"><a href="#Why" class="headerlink" title="Why"></a>Why</h1><p>如果你问 Gradle 优于 Maven 么？ 答案必定是不一定</p>
-<p>在 Maven 中有完善的依赖管理以及成熟的构建流程，在绝大多数的项目中都能很好的运行。但也是那一套流程，使的 Maven 十分死板。而且 Maven 是只属于 Java 的项目构建工具</p>
-<p>在 Gradle 中就灵活的多，你可以随意的定义流程，但一个大型的项目规范是十分重要的，即便是构建流程，也要有规范，也是要统一的，试问假如我要构建一个普通的Web应用，自己定的构建流程又怎么能比过这么长时间积累下来的 Maven 的流程的？ 但我的项目是个缝合怪呢，有java有node，那么 Gradle 就能同时组织它们。 Gradle 是 Java 环境下的构建工具， 它不是 Java 项目构建工具， 就如 node 里的 Gulp</p>      
-<div class="read-more-btn">
-  <a href="/articles/cherry/gradle-start/" rel="contents">
-    阅读全文 &raquo;
-  </a>
-</div>
-      
-    </div>
-
-    
-    
-
-    
-
-    
-  </div>
-</article>
-  
-  
-
-<article class="post post-type-normal">
-  <div class="card post-block">
-
-    
-
-    <header class="post-header">
-
-      
-      <h1 class="post-title">
-        
-        <a href="/articles/cherry/new-deploy/">新网址！</a>
-        
-      </h1>
-      
-
-      <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2020-05-19 13:29:58">2020-05-19</time>
-  </span>
-  
-
-  
-
-  
-
-  
-  
-
-</div>
-
-    </header>
-
-    <div class="post-body">
-      
-      <p>netlify免费版的网络真的太差了（跟1年多前刚使用的时候比，差太多），所以原本打算迁移到github pages</p>
-<p>看对比，github pages整体比netlify稳定的多，但github不支持重定向。而腾讯云的解析服务，重定向需要备案，所以dnocm只好保持不动，选择新增了一个部署</p>
-<p>同时也尝试了coding，但在国外的ping不理想，所以干脆一次性部署了多个</p>
+<h1 id="为什么要使用-Nacos？"><a href="#为什么要使用-Nacos？" class="headerlink" title="为什么要使用 Nacos？"></a>为什么要使用 Nacos？</h1><p>在微服务架构中，我们需要解决以下几个问题：</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://dnocm.com/">https://dnocm.com</a>(<a target="_blank" rel="noopener" href="https://www.dnocm.com/">https://www.dnocm.com</a>) 由netlify提供服务</li>
-<li><a href="https://jiangtj.com/">https://jiangtj.com</a> 由github pages提供服务</li>
-<li><a target="_blank" rel="noopener" href="https://jiangtj.gitlab.io/">https://jiangtj.gitlab.io</a> 由gitlab pages提供服务</li>
-<li><a target="_blank" rel="noopener" href="https://zh.jiangtj.com/">https://zh.jiangtj.com</a>(<a target="_blank" rel="noopener" href="https://www.jiangtj.com/">https://www.jiangtj.com</a>) 由coding提供服务，中国访问较快</li>
+<li>如何发现和调用其他微服务？</li>
+<li>如何管理微服务之间的依赖关系？</li>
+<li>如何动态调整微服务的配置？</li>
+<li>如何保证微服务之间的高可用性和弹性？</li>
+<li>如何实现微服务之间的分布式事务？</li>
 </ul>
-<p>假如，你在访问当前地址时，感觉卡，可以试试前往我的其他域名下</p>
-<p><img src="https://jiangtj-lab.github.io/pic-repo/img-apricot/20200519112323.png"></p>
-<p><img src="https://jiangtj-lab.github.io/pic-repo/img-apricot/20200519170805.png"></p>
-      
-    </div>
-
-    
-    
-
-    
-
-    
-  </div>
-</article>
-  
-  
-
-<article class="post post-type-normal">
-  <div class="card post-block">
-
-    
-
-    <header class="post-header">
-
-      
-      <h1 class="post-title">
-        
-        <a href="/articles/cherry/dark-mode/">暗色模式上线啦！！</a>
-        
-      </h1>
-      
-
-      <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2020-05-11 15:36:12">2020-05-11</time>
-  </span>
-  
-
-  
-
-  
-
-  
-  
-
-</div>
-
-    </header>
-
-    <div class="post-body">
-      
-      <p>馋好久了，最近总算是改完了</p>
-<p>当切换系统的色彩方案（亮&#x2F;暗）时，能自动切换到对应的模式</p>
-<p><img src="https://jiangtj-lab.github.io/pic-repo/img-apricot/20200511154312.png"></p>
-<h1 id="相关提交"><a href="#相关提交" class="headerlink" title="相关提交"></a>相关提交</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/jiangtj/hexo-theme-cake/pull/55">https://github.com/jiangtj/hexo-theme-cake/pull/55</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/jiangtj-lab/hexo-cake-local-search/commit/350e77722eca991e9678abdd8278663eda66d1dc">https://github.com/jiangtj-lab/hexo-cake-local-search/commit/350e77722eca991e9678abdd8278663eda66d1dc</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/jiangtj-lab/hexo-cake-moon-menu/commit/8556fe6cb26e993c99805cd9b9d28d80039734b1">https://github.com/jiangtj-lab/hexo-cake-moon-menu/commit/8556fe6cb26e993c99805cd9b9d28d80039734b1</a></li>
-</ul>
-      
-    </div>
-
-    
-    
-
-    
-
-    
-  </div>
-</article>
-  
-  
-
-<article class="post post-type-normal">
-  <div class="card post-block">
-
-    
-
-    <header class="post-header">
-
-      
-      <h1 class="post-title">
-        
-        <a href="/articles/cherry/JPromise/">JPromise:Java版的Promise</a>
-        
-      </h1>
-      
-
-      <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2020-04-23 16:49:07">2020-04-23</time>
-  </span>
-  
-
-  
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
-  
-
-  
-  
-  <div class="post-description">有一个小轮子</div>
-  
-
-</div>
-
-    </header>
-
-    <div class="post-body">
-      
-      <p>由于Java是强类型语言，js的Promise是不能在Java中实现的，所以也就写着玩玩</p>
-<p><img src="https://jiangtj-lab.github.io/pic-repo/img-apricot/20200423165107.png"></p>
-<p>发布在github上，但下载有点麻烦，有兴趣可以看下我的这个项目路</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/jiangtj-lab/jpromise">https://github.com/jiangtj-lab/jpromise</a></p>
-      
-    </div>
-
-    
-    
-
-    
-
-    
-  </div>
-</article>
-  
-  
-
-<article class="post post-type-normal">
-  <div class="card post-block">
-
-    
-
-    <header class="post-header">
-
-      
-      <h1 class="post-title">
-        
-        <a href="/articles/cherry/mine-promise/">造了套自己的 Promise</a>
-        
-      </h1>
-      
-
-      <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2020-04-22 16:39:45">2020-04-22</time>
-  </span>
-  
-
-  
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E5%89%8D%E7%AB%AF/" rel="index"><span>前端</span></a></span>  </span>
-  
-
-  
-  
-  <div class="post-description">39行代码，走过路过不要错过哦~</div>
-  
-
-</div>
-
-    </header>
-
-    <div class="post-body">
-      
-      <p>Promise 很火，没看源码，仅参考平时的使用，造了一个小轮子（有时间再去看源码把）</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">class</span> <span class="hljs-title class_">PromiseT</span> &#123;<br>  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">status</span> = <span class="hljs-string">&#x27;running&#x27;</span>;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">val</span> = <span class="hljs-literal">null</span>;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">pendingList</span> = [];<br>  &#125;<br>  <span class="hljs-title function_">then</span>(<span class="hljs-params">...list</span>) &#123;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">pendingList</span>.<span class="hljs-title function_">push</span>(...list);<br>    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">run</span>();<br>  &#125;<br>  <span class="hljs-title function_">resolve</span>(<span class="hljs-params">val</span>) &#123;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">status</span> = <span class="hljs-string">&#x27;running&#x27;</span>;<br>    <span class="hljs-keyword">if</span> (val !== <span class="hljs-literal">undefined</span>) &#123;<br>      <span class="hljs-variable language_">this</span>.<span class="hljs-property">val</span> = val;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">run</span>();<br>  &#125;<br>  <span class="hljs-title function_">pending</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">status</span> = <span class="hljs-string">&#x27;pending&#x27;</span>;<br>  &#125;<br>  <span class="hljs-title function_">run</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">status</span> === <span class="hljs-string">&#x27;pending&#x27;</span>) &#123;<br>      <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>;<br>    &#125;<br>    <span class="hljs-keyword">const</span> cal = <span class="hljs-variable language_">this</span>.<span class="hljs-property">pendingList</span>.<span class="hljs-title function_">shift</span>();<br>    <span class="hljs-keyword">if</span> (cal === <span class="hljs-literal">undefined</span>) &#123;<br>      <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>;<br>    &#125;<br>    <span class="hljs-keyword">const</span> result = <span class="hljs-title function_">cal</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">val</span>, <span class="hljs-variable language_">this</span>);<br>    <span class="hljs-keyword">if</span> (result === <span class="hljs-literal">undefined</span>) &#123;<br>      <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">run</span>();<br>    &#125;<br>    <span class="hljs-keyword">if</span> (result.<span class="hljs-property">constructor</span> === <span class="hljs-title class_">PromiseT</span>) &#123;<br>      <span class="hljs-keyword">return</span> result.<span class="hljs-title function_">then</span>(...<span class="hljs-variable language_">this</span>.<span class="hljs-property">pendingList</span>);<br>    &#125;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">val</span> = result;<br>    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">run</span>();<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>测试：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">new</span> <span class="hljs-title class_">PromiseT</span>()<br>  .<span class="hljs-title function_">resolve</span>(<span class="hljs-number">5</span>)<br>  .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> x + <span class="hljs-number">1</span>)<br>  .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">PromiseT</span>().<span class="hljs-title function_">resolve</span>(<span class="hljs-number">2</span>).<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">a</span> =&gt;</span> x / a))<br>  .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(x))<br>  .<span class="hljs-title function_">then</span>(<span class="hljs-function">(<span class="hljs-params">x, p</span>) =&gt;</span> &#123;<br>    p.<span class="hljs-title function_">pending</span>();<br>    <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> &#123;<br>      p.<span class="hljs-title function_">resolve</span>(x - <span class="hljs-number">3</span>);<br>    &#125;, <span class="hljs-number">2000</span>);<br>  &#125;)<br>  .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(x));<br><br><span class="hljs-comment">// 输出 3</span><br><span class="hljs-comment">// 等待 2s</span><br><span class="hljs-comment">// 输出 0</span><br></code></pre></td></tr></table></figure>
-
-<p>毕竟是小轮子，<code>catch()</code> <code>finally()</code> 这些没写。。。</p>
-      
-    </div>
-
-    
-    
-
-    
-
-    
-  </div>
-</article>
-  
-  
-
-<article class="post post-type-normal">
-  <div class="card post-block">
-
-    
-
-    <header class="post-header">
-
-      
-      <h1 class="post-title">
-        
-        <a href="/articles/cherry/github-packages-npm/">发布 npm 包到 GitHub Packages</a>
-        
-      </h1>
-      
-
-      <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2020-04-22 09:37:54">2020-04-22</time>
-  </span>
-  
-
-  
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E5%89%8D%E7%AB%AF/" rel="index"><span>前端</span></a></span>  </span>
-  
-
-  
-  
-
-</div>
-
-    </header>
-
-    <div class="post-body">
-      
-      <p>GitHub Packages在半年前尝试过，那时候存在些问题</p>
-<ol>
-<li><del>不能使用yarn安装（这个已经修复了）</del></li>
-<li>必须认证授权才能使用，即便你的包是开源的，很不方便</li>
-</ol>
-<p><img src="https://jiangtj-lab.github.io/pic-repo/img-apricot/20200422094211.png"></p>
-<p>但不管怎样，GitHub Packages始终是个不错的备选方案</p>      
+<p>这些问题都需要一个强大而灵活的中间件来支撑。而 Nacos 正是这样一个中间件，它可以为我们提供一站式的解决方案。</p>      
 <div class="read-more-btn">
-  <a href="/articles/cherry/github-packages-npm/" rel="contents">
+  <a href="/articles/durian/cloud-1/" rel="contents">
     阅读全文 &raquo;
   </a>
 </div>
@@ -815,7 +246,7 @@
       
       <h1 class="post-title">
         
-        <a href="/articles/cherry/junit-5-info/">JUnit 5 教程</a>
+        <a href="/articles/durian/cloud-0/">Spring Cloud 平台搭建(序)：聊一聊与做些准备</a>
         
       </h1>
       
@@ -829,7 +260,7 @@
       <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
     </span>
     <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2020-01-16 00:00:00">2020-01-16</time>
+    <time title="创建时间：2023-03-21 14:32:15">2023-03-21</time>
   </span>
   
 
@@ -847,7 +278,75 @@
 
   
   
-  <div class="post-description">欢迎欣赏新的一年第一篇博文😁</div>
+
+</div>
+
+    </header>
+
+    <div class="post-body">
+      
+      <h1 id="开场白"><a href="#开场白" class="headerlink" title="开场白"></a>开场白</h1><p>学技术的我相信绝大部分都是理科生，和一样，写博客会很为难，不知道怎么开场，但救星来了，那就是ChatGPT，当然，我这里不是（需要填手机号，然后提示不提供服务，哎），是new bing生成的，让我们欣赏下AI吧</p>
+<p>你好，欢迎来到我的博客。今天我想和大家聊一聊spring cloud，这是一个基于spring boot的微服务框架，它提供了一系列的组件和工具，让我们可以快速地开发和部署分布式系统。</p>
+<p>什么是微服务呢？简单地说，就是把一个大型的单体应用拆分成多个小的、独立的、可复用的服务，每个服务负责一个特定的功能或业务领域，它们之间通过轻量级的通信协议进行交互。这样做有什么好处呢？主要有以下几点：</p>
+<ul>
+<li>可扩展性：当某个服务需要扩容或缩容时，我们只需要对该服务进行操作，而不影响其他服务。</li>
+<li>灵活性：当某个服务需要更新或替换时，我们只需要对该服务进行操作，而不影响其他服务。</li>
+<li>容错性：当某个服务出现故障时，我们可以快速地恢复或切换到备用方案，而不影响其他服务。</li>
+<li>解耦性：每个服务都有自己的数据存储和业务逻辑，它们之间通过定义好的接口进行交互，这样可以降低耦合度和依赖性。</li>
+</ul>
+<p>当然，微服务也有一些挑战和问题，比如：</p>      
+<div class="read-more-btn">
+  <a href="/articles/durian/cloud-0/" rel="contents">
+    阅读全文 &raquo;
+  </a>
+</div>
+      
+    </div>
+
+    
+    
+
+    
+
+    
+  </div>
+</article>
+  
+  
+
+<article class="post post-type-normal">
+  <div class="card post-block">
+
+    
+
+    <header class="post-header">
+
+      
+      <h1 class="post-title">
+        
+        <a href="/articles/cherry/docker-dev/">在 Docker 中使用 Hexo</a>
+        
+      </h1>
+      
+
+      <div class="post-meta">
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">发表于</span>
+    <time title="创建时间：2023-03-09 08:09:49">2023-03-09</time>
+  </span>
+  
+
+  
+
+  
+
+  
   
 
 </div>
@@ -856,15 +355,506 @@
 
     <div class="post-body">
       
-      <p>JUnit 5 作为新一代的 Java 单元测试框架，提供很多改进。例如对比 <a target="_blank" rel="noopener" href="https://junit.org/junit4/">JUnit4</a> 与 <a target="_blank" rel="noopener" href="https://junit.org/junit5/">JUnit5</a> 的官网，JUnit5 的设计更加简约与时尚，至少不会抗拒阅读的程度了（像破烂一样的网站，看了整个人都难受，不影响效率？不存在的）</p>
-<p><img src="https://jiangtj-lab.github.io/pic-repo/img-apricot/20200116113048.png"></p>
-<p>而且，除此外，他的文档使用了 Asciidoc， 相对于markdown复杂，主要是它还支持具有包含另一个文件内容，这对于写API文档来说挺重要的，有兴趣可以了解下~</p>
-<p>Okay， 结束吐槽，让我来看看 JUnit5 到底带来了哪些变化吧</p>      
+      <p>在项目的根目录创建一个 <code>compose-dev.yaml</code> 定义docker compose用于生成开发环境，由于博客不需要额外的数据库等，所以很简单</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">services:</span><br>  <span class="hljs-attr">blog:</span><br>    <span class="hljs-attr">build:</span><br>      <span class="hljs-attr">context:</span> <span class="hljs-string">.</span><br>      <span class="hljs-attr">target:</span> <span class="hljs-string">dev-envs</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>context 指定docker位置</li>
+<li>target 指定docker镜像构建目标</li>
+</ul>
+<p>然后创建 <code>Dockerfile</code></p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs Dockerfile"><span class="hljs-comment"># syntax=docker/dockerfile:1.4</span><br><br><span class="hljs-keyword">FROM</span> node:lts AS buildhexo<br><span class="hljs-keyword">RUN</span><span class="language-bash"> yarn global add hexo-cli</span><br><br><span class="hljs-keyword">FROM</span> buildhexo AS development<br><span class="hljs-keyword">WORKDIR</span><span class="language-bash"> /app</span><br><span class="hljs-keyword">COPY</span><span class="language-bash"> . .</span><br><span class="hljs-keyword">RUN</span><span class="language-bash"> yarn install</span><br><span class="hljs-keyword">CMD</span><span class="language-bash"> hexo s</span><br><br><span class="hljs-keyword">FROM</span> buildhexo as dev-envs<br><span class="hljs-comment"># 添加工具git docker vscode</span><br><span class="hljs-comment"># RUN &lt;&lt;EOF</span><br><span class="hljs-comment"># apt-get update</span><br><span class="hljs-comment"># apt-get install -y --no-install-recommends git</span><br><span class="hljs-comment"># EOF</span><br><span class="hljs-comment"># RUN &lt;&lt;EOF</span><br><span class="hljs-comment"># useradd -s /bin/bash -m vscode</span><br><span class="hljs-comment"># groupadd docker</span><br><span class="hljs-comment"># usermod -aG docker vscode</span><br><span class="hljs-comment"># EOF</span><br><span class="hljs-comment"># install Docker tools (cli, buildx, compose)</span><br><span class="hljs-comment"># COPY --from=gloursdocker/docker / /</span><br><span class="hljs-keyword">CMD</span><span class="language-bash"> /bin/sh -c <span class="hljs-string">&quot;while sleep 1000; do :; done&quot;</span></span><br></code></pre></td></tr></table></figure>
+
+<p>上面<code>dev-envs</code>是被指定执行的，而<code>development</code>不会被执行，注释的内容是因为我遇到了网络问题，是从其他模板中复制过来的，理论上没问题，结尾的<code>CMD /bin/sh -c &quot;while sleep 1000; do :; done&quot;</code>用于保持容器运行</p>
+<p>最后，在docker桌面版中，按提示，创建Dev Environments即可</p>
+      
+    </div>
+
+    
+    
+
+    
+
+    
+  </div>
+</article>
+  
+  
+
+<article class="post post-type-normal">
+  <div class="card post-block">
+
+    
+
+    <header class="post-header">
+
+      
+      <h1 class="post-title">
+        
+        <a href="/articles/cherry/helm-for-dev/">使用 Helm 管理开发环境</a>
+        
+      </h1>
+      
+
+      <div class="post-meta">
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">发表于</span>
+    <time title="创建时间：2023-02-23 11:25:11">2023-02-23</time>
+  </span>
+  
+
+  
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">分类于</span>
+    <span><a href="/categories/%E8%BF%90%E7%BB%B4/" rel="index"><span>运维</span></a></span>  </span>
+  
+
+  
+  
+  <div class="post-description">helm来管理开发环境会不会比docker更方便呢</div>
+  
+
+</div>
+
+    </header>
+
+    <div class="post-body">
+      
+      <h1 id="添加负载均衡"><a href="#添加负载均衡" class="headerlink" title="添加负载均衡"></a>添加负载均衡</h1><p>在云端，这个通常是由云服务商提供的，但由于我们是本地。所以需要自己添加，traefik 是目前最主流的</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">helm repo add traefik https://traefik.github.io/charts<br>helm repo update<br>helm install traefik traefik/traefik<br></code></pre></td></tr></table></figure>
+
+<p>运行下面命令，可以在 <code>http://127.0.0.1:9000/dashboard/</code> 查看仪表</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">kubectl port-forward $(kubectl get pods --selector <span class="hljs-string">&quot;app.kubernetes.io/name=traefik&quot;</span> --output=name) 9000:9000<br></code></pre></td></tr></table></figure>
+
+<h1 id="Nacos"><a href="#Nacos" class="headerlink" title="Nacos"></a>Nacos</h1><p>Nacos 是 Spring Cloud 最好的服务发现与配置中心，我仍然使用了它的 <code>k8s operator</code></p>
+<p>首先安装 operator</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/nacos-group/nacos-k8s.git<br><span class="hljs-built_in">cd</span> operator<br>helm install nacos-operator ./chart/nacos-operator <br></code></pre></td></tr></table></figure>
+
+<p>其次安装 nacos</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">helm repo add jiangtj https://jiangtj.github.io/helm-charts<br>helm install nacos jiangtj/nacos-simple <br></code></pre></td></tr></table></figure>
+
+<p><code>nacos-simple</code> 包含了一个 <code>nacos.yaml</code> 定义nacos服务和一个 <code>ingress.yaml</code> 定义转发，<a target="_blank" rel="noopener" href="https://github.com/jiangtj/helm-charts/tree/master/charts/nacos-simple">详见GitHub</a></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>k8s 能定义一系列的服务，对于一个复杂开发环境来说，会比 docker 更加简单，比如同时需要redis rabbitmq mysql等等，尤其还能通过 helm 同步定义，当然简单的环境，还是 docker 吧</p>
+      
+    </div>
+
+    
+    
+
+    
+
+    
+  </div>
+</article>
+  
+  
+
+<article class="post post-type-normal">
+  <div class="card post-block">
+
+    
+
+    <header class="post-header">
+
+      
+      <h1 class="post-title">
+        
+        <a href="/articles/cherry/linux-proxy/">linux 代理</a>
+        
+      </h1>
+      
+
+      <div class="post-meta">
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">发表于</span>
+    <time title="创建时间：2023-02-21 16:32:26">2023-02-21</time>
+  </span>
+  
+
+  
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">分类于</span>
+    <span><a href="/categories/%E8%BF%90%E7%BB%B4/" rel="index"><span>运维</span></a></span>  </span>
+  
+
+  
+  
+
+</div>
+
+    </header>
+
+    <div class="post-body">
+      
+      <h1 id="env"><a href="#env" class="headerlink" title="env"></a>env</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> http_proxy=http://192.168.1.20:7890<br><span class="hljs-built_in">export</span> https_proxy=http://192.168.1.20:7890<br></code></pre></td></tr></table></figure>
+
+<h1 id="profile"><a href="#profile" class="headerlink" title="profile"></a>profile</h1><p>在 <code>~/.profile</code> 持久化当前用户的代理，全局在 <code>/etc/profile</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> http_proxy=http://192.168.1.20:7890<br><span class="hljs-built_in">export</span> https_proxy=http://192.168.1.20:7890<br></code></pre></td></tr></table></figure>
+
+<h1 id="wget"><a href="#wget" class="headerlink" title="wget"></a>wget</h1><p>修改 <code>~/.wgetrc</code> 创建 <code>wget</code> 代理</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#You can set the default proxies for Wget to use for http, https, and ftp.</span><br><span class="hljs-comment"># They will override the value in the environment.</span><br>https_proxy = http://192.168.1.20:7890<br>http_proxy = http://192.168.1.20:7890<br>ftp_proxy = http://192.168.1.20:7890<br><br><span class="hljs-comment"># If you do not want to use proxy at all, set this to off.</span><br>use_proxy = on<br></code></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+
+    
+
+    
+  </div>
+</article>
+  
+  
+
+<article class="post post-type-normal">
+  <div class="card post-block">
+
+    
+
+    <header class="post-header">
+
+      
+      <h1 class="post-title">
+        
+        <a href="/articles/cherry/webflux-event/">为 Spring WebFlux 提供 &#39;ApplicationEventPublisher&#39;</a>
+        
+      </h1>
+      
+
+      <div class="post-meta">
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">发表于</span>
+    <time title="创建时间：2021-09-24 16:15:07">2021-09-24</time>
+  </span>
+  
+
+  
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">分类于</span>
+    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
+  
+
+  
+  
+
+</div>
+
+    </header>
+
+    <div class="post-body">
+      
+      <p>在 Spring 中提供了 ApplicationEventPublisher，用于发布事件，这在一些场景下十分有用，比如，当我创建一个货物，而另一个服务监听货物的创建并为其创建库存。所以在Spring MVC中很实用，我也常常用它来解耦，但是当我切换为 WebFlux 时，就尴尬了。因为 ApplicationEventPublisher 是同步操作，它并不支持响应式，即流操作。</p>
+<p>所以，我在 WebFlux 中实现一个类似的发布订阅模式，以替代 ApplicationEventPublisher</p>      
 <div class="read-more-btn">
-  <a href="/articles/cherry/junit-5-info/" rel="contents">
+  <a href="/articles/cherry/webflux-event/" rel="contents">
     阅读全文 &raquo;
   </a>
 </div>
+      
+    </div>
+
+    
+    
+
+    
+
+    
+  </div>
+</article>
+  
+  
+
+<article class="post post-type-normal">
+  <div class="card post-block">
+
+    
+
+    <header class="post-header">
+
+      
+      <h1 class="post-title">
+        
+        <a href="/articles/cherry/winget/">WinGet Windows官方的包管理工具</a>
+        
+      </h1>
+      
+
+      <div class="post-meta">
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">发表于</span>
+    <time title="创建时间：2021-07-01 20:54:09">2021-07-01</time>
+  </span>
+  
+
+  
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">分类于</span>
+    <span><a href="/categories/%E5%B7%A5%E5%85%B7/" rel="index"><span>工具</span></a></span>  </span>
+  
+
+  
+  
+  <div class="post-description">当你重装电脑的时候，这或许能让你最快进入状态</div>
+  
+
+</div>
+
+    </header>
+
+    <div class="post-body">
+      
+      <p>WinGet 是官方推出的包管理工具，它目前支持以下命令</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs cmd">winget  install   安装给定的程序包<br>winget  show      显示有关程序包的信息<br>winget  source    管理程序包的来源<br>winget  search    查找并显示程序包的基本信息<br>winget  hash      哈希安装程序的帮助程序<br>winget  validate  验证清单文件<br>winget  settings  打开设置<br>winget  features  显示实验性功能的状态<br>winget  export    导出已安装程序包的列表<br>winget  import    安装文件中的所有程序包<br></code></pre></td></tr></table></figure>
+
+<p>大部分命令都是很常见的，相对于Linux来说，WinGet的安装方式是下载exe mis等文件，直接运行安装，在体验上有些怪怪的。而且，从我个人使用来看，目前 WinGet 最适合的场景就是重装完系统，快速安装软件</p>      
+<div class="read-more-btn">
+  <a href="/articles/cherry/winget/" rel="contents">
+    阅读全文 &raquo;
+  </a>
+</div>
+      
+    </div>
+
+    
+    
+
+    
+
+    
+  </div>
+</article>
+  
+  
+
+<article class="post post-type-normal">
+  <div class="card post-block">
+
+    
+
+    <header class="post-header">
+
+      
+      <h1 class="post-title">
+        
+        <a href="/articles/cherry/r2dbc/">R2DBC-传统数据库也能响应式编程</a>
+        
+      </h1>
+      
+
+      <div class="post-meta">
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">发表于</span>
+    <time title="创建时间：2021-04-20 16:44:55">2021-04-20</time>
+  </span>
+  
+
+  
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">分类于</span>
+    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
+  
+
+  
+  
+
+</div>
+
+    </header>
+
+    <div class="post-body">
+      
+      <p>R2DBC 是 Reactive Relational Database Connectivity （关系型数据库的响应式连接） 的缩写，最近在项目中尝试 Webflux，被迫，使用 R2DBC 进行数据库操作（我还是更喜欢关系型数据库而不是文档型）。当然在实际使用后，发现这个框架虽然有些不足，但这才是我喜欢的DB框架</p>
+<p>这里零散的记录下我遇到的一些问题，或者钟爱的一些特性，或者自己写的小工具</p>      
+<div class="read-more-btn">
+  <a href="/articles/cherry/r2dbc/" rel="contents">
+    阅读全文 &raquo;
+  </a>
+</div>
+      
+    </div>
+
+    
+    
+
+    
+
+    
+  </div>
+</article>
+  
+  
+
+<article class="post post-type-normal">
+  <div class="card post-block">
+
+    
+
+    <header class="post-header">
+
+      
+      <h1 class="post-title">
+        
+        <a href="/articles/cherry/spring-boot-2-4-config/">Spring Boot 2.4 新的配置文件处理方式</a>
+        
+      </h1>
+      
+
+      <div class="post-meta">
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">发表于</span>
+    <time title="创建时间：2021-03-16 13:38:27">2021-03-16</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+
+</div>
+
+    </header>
+
+    <div class="post-body">
+      
+      <p>配置文件是 Spring Boot 的一个核心特性，自正式版发布以来，几乎未改动过，而在2.4中，Spring 官方调整了配置文件的处理逻辑</p>
+<ul>
+<li>外部配置文件优先于内部 Profile 配置</li>
+<li>重命名 <code>spring.profiles</code> 为 <code>spring.config.activate.on-profile</code></li>
+<li>新增 Profile 组</li>
+</ul>      
+<div class="read-more-btn">
+  <a href="/articles/cherry/spring-boot-2-4-config/" rel="contents">
+    阅读全文 &raquo;
+  </a>
+</div>
+      
+    </div>
+
+    
+    
+
+    
+
+    
+  </div>
+</article>
+  
+  
+
+<article class="post post-type-normal">
+  <div class="card post-block">
+
+    
+
+    <header class="post-header">
+
+      
+      <h1 class="post-title">
+        
+        <a href="/articles/cherry/npm-pack-proxy/">NPM 包代理</a>
+        
+      </h1>
+      
+
+      <div class="post-meta">
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">发表于</span>
+    <time title="创建时间：2021-01-29 15:57:56">2021-01-29</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+
+</div>
+
+    </header>
+
+    <div class="post-body">
+      
+      <p>在国外，最简单的是安装，在国内，最难得就是安装，太难了</p>
+<p>下面是一份我正在用的<code>.yarnrc</code>的配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">disable-self-update-check true<br>registry &quot;https://registry.npm.taobao.org&quot;<br>phantomjs_cdnurl &quot;https://npm.taobao.org/dist/phantomjs/&quot;<br>electron_mirror &quot;https://npm.taobao.org/mirrors/electron/&quot;<br>electron_builder_binaries_mirror &quot;https://npm.taobao.org/mirrors/electron-builder-binaries/&quot;<br>sass_binary_site &quot;https://npm.taobao.org/mirrors/node-sass/&quot;<br>profiler_binary_host_mirror &quot;https://npm.taobao.org/mirrors/node-inspector/&quot;<br>chromedriver_cdnurl &quot;https://cdn.npm.taobao.org/dist/chromedriver&quot;<br>operadriver_cdnurl &quot;http://npm.taobao.org/mirrors/operadriver&quot;<br>node_sqlite3_binary_host_mirror &quot;http://npm.taobao.org/mirrors&quot;<br>python_mirror &quot;http://npm.taobao.org/mirrors/python&quot;<br></code></pre></td></tr></table></figure>
       
     </div>
 
@@ -881,7 +871,7 @@
 
 
 <nav class="pagination">
-  <a class="extend prev" rel="prev" href="/page/2/"><svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="angle-left" class="svg-inline--fa fa-angle-left fa-w-8 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path></svg></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/4/"><svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="angle-right" class="svg-inline--fa fa-angle-right fa-w-8 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></a></nav>
+  <a class="extend prev" rel="prev" href="/page/2/"><svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="angle-left" class="svg-inline--fa fa-angle-left fa-w-8 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path></svg></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/4/"><svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="angle-right" class="svg-inline--fa fa-angle-right fa-w-8 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></a></nav>
 
         </div>
         

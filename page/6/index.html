@@ -107,7 +107,7 @@
     
     <div class="site-state-item site-state-posts">
       <a href="/archives/">
-        <span class="site-state-item-count">79</span>
+        <span class="site-state-item-count">89</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -116,7 +116,7 @@
     
     <div class="site-state-item site-state-categories">
       <a href="/categories/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span>
       </a>
     </div>
@@ -125,7 +125,7 @@
     
     <div class="site-state-item site-state-tags">
       <a href="/tags/">
-        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-count">55</span>
         <span class="site-state-item-name">标签</span>
       </a>
     </div>
@@ -154,13 +154,16 @@
   <div class="card post-block">
 
     
+<div class="post-banner">
+  <img src="/articles/beechnut/todo-an-new-theme/g2.png"  alt=""/></div>
+
 
     <header class="post-header">
 
       
       <h1 class="post-title">
         
-        <a href="/articles/beechnut/hexo-netlify-cms/">Hexo Netlify CMS</a>
+        <a href="/articles/beechnut/todo-an-new-theme/">想写个自己的主题</a>
         
       </h1>
       
@@ -174,20 +177,12 @@
       <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
     </span>
     <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2019-01-09 00:00:00">2019-01-09</time>
+    <time title="创建时间：2019-04-30 10:37:37">2019-04-30</time>
   </span>
   
 
   
 
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E5%89%8D%E7%AB%AF/" rel="index"><span>前端</span></a></span>  </span>
   
 
   
@@ -199,81 +194,20 @@
 
     <div class="post-body">
       
-      <h1 id="缘由"><a href="#缘由" class="headerlink" title="缘由"></a>缘由</h1><p>有时候不想打开电脑修改文章，所以需要一个管理页面代替电脑操作（简单的能修改），一般而言，存在两种方案实现它</p>
+      <p>目前使用的NexT主题，也是NexT成员。但果然还是希望自己的站点能够与众不同点，所以想写个自己的主题。整理下一些资源</p>
+<p><strong>参考主题</strong></p>
 <ul>
-<li>调用GitHub（或者其他Repo）的Api，获取与修改文件</li>
-<li>通过Git命令获取修改以及推送文件</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">NexT</a>：最熟悉的</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/elmorec/hexo-theme-inside">Inside</a>：厉害的作者，使用Angular重写了生成器</li>
 </ul>
-<p>但无论那种都存在安全问题，如果在本地操作，那么完全没必要管理站点，不是本地的话且使用静态托管的话（如GitHub Page），如何确保是自己修改呢？这就需要一个安全服务，但本身只是偶尔修改使用，撘一个安全服务似乎不划算，所以这件事就一直搁置着  </p>
-<p>前段时间，我将静态服务迁移到了Netlify，发现它居然提供了CMS用于管理静态资源，我体验了Gatsby的例子，能上传媒体文件，能添加与修改文章，相对的安全性（Netlify会获取你的Git仓库很多权限，但我不认为它会做恶意破坏的行为）…满足了我的要求。 </p>      
-<div class="read-more-btn">
-  <a href="/articles/beechnut/hexo-netlify-cms/" rel="contents">
-    阅读全文 &raquo;
-  </a>
-</div>
-      
-    </div>
-
-    
-    
-
-    
-
-    
-  </div>
-</article>
-  
-  
-
-<article class="post post-type-normal">
-  <div class="card post-block">
-
-    
-
-    <header class="post-header">
-
-      
-      <h1 class="post-title">
-        
-        <a href="/articles/beechnut/microservices-note/">微服务设计笔记</a>
-        
-      </h1>
-      
-
-      <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2019-01-02 00:00:00">2019-01-02</time>
-  </span>
-  
-
-  
-
-  
-
-  
-  
-
-</div>
-
-    </header>
-
-    <div class="post-body">
-      
-      <p>一些重要的，有争议的点</p>
+<p>计划：基于NexT改进，参照Inside的设计风格</p>
+<p>Canary Channel：</p>
 <ul>
-<li>边界 - 《领域驱动设计》</li>
-<li>服务版本管理</li>
-<li>公用数据</li>
-<li>安全性</li>
-<li>报表</li>
+<li>圆润化设计</li>
+<li>扁平化，去除阴影效果</li>
+<li>banner图支持</li>
 </ul>
+<p>Next Plan：多评论系统支持，重构并简化配置（@w@现在好多）</p>
       
     </div>
 
@@ -298,7 +232,7 @@
       
       <h1 class="post-title">
         
-        <a href="/articles/almond/renew/">重新开始</a>
+        <a href="/articles/beechnut/spring-cloud-contract-dsl/">Spring Cloud Contract DSL</a>
         
       </h1>
       
@@ -312,70 +246,7 @@
       <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
     </span>
     <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2018-12-18 00:00:00">2018-12-18</time>
-  </span>
-  
-
-  
-
-  
-
-  
-  
-
-</div>
-
-    </header>
-
-    <div class="post-body">
-      
-      <p>再过去的一段时间，感觉一直在原地踏步，虽然偶尔也有写几篇文章，但几乎都是在翻旧账    </p>
-<p>但总不能一直这样下去吧   </p>
-<p>所以准备在接下来有所改变</p>
-<p>新的域名（dnocm.com）,我会再近期将其他站点迁移到这上面   </p>
-<p>新的博客Lofter，准备写一些其他兴趣相关的（Code外，动漫、游戏？），虽然目前还是零记录   </p>
-<p>新的CI&#x2F;CD，使用Netlify做静态托管，能自动https，GitLab 3年前就开始讨论与准备集成Let’s Encrypt，但。。。    </p>
-<p>新的邮箱（有新域名自然换啊），<a href="mailto:&#105;&#x40;&#100;&#x6e;&#111;&#x63;&#109;&#x2e;&#99;&#111;&#x6d;">i@dnocm.com</a>欢迎联系   </p>
-<p>新的封页（<a target="_blank" rel="noopener" href="https://www.dnocm.com/cover">https://www.dnocm.com/cover</a>）,可能调整到根路径下，打算用Web Components重写，打算中。。。</p>
-      
-    </div>
-
-    
-    
-
-    
-
-    
-  </div>
-</article>
-  
-  
-
-<article class="post post-type-normal">
-  <div class="card post-block">
-
-    
-
-    <header class="post-header">
-
-      
-      <h1 class="post-title">
-        
-        <a href="/articles/almond/restdoc-and-docsify/">Restdoc与Docsify,更简单的生成Api文档</a>
-        
-      </h1>
-      
-
-      <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2018-12-10 00:00:00">2018-12-10</time>
+    <time title="创建时间：2019-04-28 21:29:12">2019-04-28</time>
   </span>
   
 
@@ -400,11 +271,13 @@
 
     <div class="post-body">
       
-      <p>大半年前就写过一篇文章[《测试驱动开发(TDD)的实践》](<a target="_blank" rel="noopener" href="https://www.dnocm.com/articles/almond/test-driven">https://www.dnocm.com/articles/almond/test-driven</a> development&#x2F;)，关于测试的。时至今日，我仍然坚信测试是软件开发一重要环节，它在绝大多数情况下，保障了系统的质量与稳定性。   </p>
-<p>但当时所搭的框架存在一些不足，当然主要是由于Asciidoctor。这是一个足够完善的标记语言，但也足够复杂。然而大多数情况下我们并不需要这些语法，Markdown正好足够。    </p>
-<p>事实上，当时我最先尝试的也是Markdown，使用Spring Restdoc中推荐的Slate方案，来解决Markdown无法包含问题。缺点是它运行使用的Ruby，与我所学的完全不同（Java、Js）。但最近看到了另一个文档工具Docsify，它也添加了包含功能，它足够简单，以至于看几遍例子就完全学会，虽然也有缺点，SEO方面，但内部接口文档，你会在乎这个么？下面是一个例子整合Restdoc与Docsify</p>      
+      <p>这是一篇介绍Spring Cloud Contract语言定义的文章，也就是该怎么写契约内容。如果您对Spring Cloud Contract不是很了解，不知如何更好的实践的话，可以先看下我之前的文章<a href="/articles/beechnut/spring-cloud-contract">《Spring Cloud Contract 契约测试》</a></p>
+<p>在这个框架中，我们既可以采用Groovy，也可以yaml。但由于本身属于Java的框架，在支持上Groovy要更好些，推荐且这里只介绍Groovy（事实上，我对Spring官方同时支持两种定义方式并不理解，专注一种或许会更好啊）。</p>
+<blockquote>
+<p>该文章基于Spring Cloud Contract 2.1.0.GA</p>
+</blockquote>      
 <div class="read-more-btn">
-  <a href="/articles/almond/restdoc-and-docsify/" rel="contents">
+  <a href="/articles/beechnut/spring-cloud-contract-dsl/" rel="contents">
     阅读全文 &raquo;
   </a>
 </div>
@@ -432,7 +305,7 @@
       
       <h1 class="post-title">
         
-        <a href="/articles/almond/microservices-version-control/">微服务设计 - 版本控制</a>
+        <a href="/articles/beechnut/vue-cli-create/">一点点解析Vue CLI之Create</a>
         
       </h1>
       
@@ -446,7 +319,289 @@
       <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
     </span>
     <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2018-11-10 00:00:00">2018-11-10</time>
+    <time title="创建时间：2019-04-16 21:27:47">2019-04-16</time>
+  </span>
+  
+
+  
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">分类于</span>
+    <span><a href="/categories/%E5%89%8D%E7%AB%AF/" rel="index"><span>前端</span></a></span>  </span>
+  
+
+  
+  
+
+</div>
+
+    </header>
+
+    <div class="post-body">
+      
+      <p>Nodejs除了赋予前端后端的能力外，还能有各种各样的脚本，极大的简单各种操作。在早期，脚本做的工作大都是生成固定的模版，所以你需要了解的，仅仅生成的项目就够了。然而，随着框架的完善，架构师往往希望通过脚本处理默认的配置或者环境，这样能减少环境差异导致的问题，还能简化升级核心框架的升级，例如Vue CLI做的事。</p>
+<p>这时候，我们不得不探一探它的神秘面纱。</p>
+<p>这次带来的是Create的原理解析。</p>      
+<div class="read-more-btn">
+  <a href="/articles/beechnut/vue-cli-create/" rel="contents">
+    阅读全文 &raquo;
+  </a>
+</div>
+      
+    </div>
+
+    
+    
+
+    
+
+    
+  </div>
+</article>
+  
+  
+
+<article class="post post-type-normal">
+  <div class="card post-block">
+
+    
+
+    <header class="post-header">
+
+      
+      <h1 class="post-title">
+        
+        <a href="/articles/beechnut/spring-cloud-contract/">Spring Cloud Contract 契约测试</a>
+        
+      </h1>
+      
+
+      <div class="post-meta">
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">发表于</span>
+    <time title="创建时间：2019-03-28 23:18:51">2019-03-28</time>
+  </span>
+  
+
+  
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">分类于</span>
+    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
+  
+
+  
+  
+
+</div>
+
+    </header>
+
+    <div class="post-body">
+      
+      <p>Spring Cloud Contract是契约测试的一个实现，最早看到契约测试还是在《微服务设计》书中，不过那时候绝对想不到真的会接触它。</p>
+<h1 id="什么是契约测试？"><a href="#什么是契约测试？" class="headerlink" title="什么是契约测试？"></a>什么是契约测试？</h1><p>首先，先谈谈思想，什么是契约测试？事实上在很多地方都称为消费者驱动契约(CDC) ，似乎都喜欢加驱动，比如TDD测试驱动等，但我不喜欢在这里加，契约是由提供者与消费者共同制定的，不可能由一方驱动。而契约测试也将同时作用于两方：</p>
+<ul>
+<li>验证提供方是否履约</li>
+<li>验证消费方在提供方履约下是否正常工作</li>
+</ul>
+<p>由于一般都只考虑提供方的履约验证，所以误解为消费者驱动。事实呢，提供方与消费方是唯一的么？你的契约不会变么？一旦发生改变，那么契约测试也会对消费方进行验证。</p>      
+<div class="read-more-btn">
+  <a href="/articles/beechnut/spring-cloud-contract/" rel="contents">
+    阅读全文 &raquo;
+  </a>
+</div>
+      
+    </div>
+
+    
+    
+
+    
+
+    
+  </div>
+</article>
+  
+  
+
+<article class="post post-type-normal">
+  <div class="card post-block">
+
+    
+
+    <header class="post-header">
+
+      
+      <h1 class="post-title">
+        
+        <a href="/articles/beechnut/google-vs-baidu/">两幅图，谷歌与百度的差距有多大</a>
+        
+      </h1>
+      
+
+      <div class="post-meta">
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">发表于</span>
+    <time title="创建时间：2019-03-22 14:33:12">2019-03-22</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+
+</div>
+
+    </header>
+
+    <div class="post-body">
+      
+      <img src="/articles/beechnut/google-vs-baidu/baidu.png" class="box" title="baidu">
+<img src="/articles/beechnut/google-vs-baidu/google.png" class="box" title="google">
+<p><a target="_blank" rel="noopener" href="https://www.baidu.com"><img class="box" title="baidu" data-src="/articles/beechnut/google-vs-baidu/baidu.png" src="/articles/beechnut/google-vs-baidu/baidu.png"></a></p>
+<p>在针对性的SEO优化方面</p>
+<ul>
+<li>百度： 提供sitemap与提供百度蜘蛛自动推送</li>
+<li>谷歌： 提供sitemap</li>
+</ul>
+<p>就这样！</p>
+      
+    </div>
+
+    
+    
+
+    
+
+    
+  </div>
+</article>
+  
+  
+
+<article class="post post-type-normal">
+  <div class="card post-block">
+
+    
+
+    <header class="post-header">
+
+      
+      <h1 class="post-title">
+        
+        <a href="/articles/beechnut/web-components/">Web Components实践</a>
+        
+      </h1>
+      
+
+      <div class="post-meta">
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">发表于</span>
+    <time title="创建时间：2019-03-16 14:47:53">2019-03-16</time>
+  </span>
+  
+
+  
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">分类于</span>
+    <span><a href="/categories/%E5%89%8D%E7%AB%AF/" rel="index"><span>前端</span></a></span>  </span>
+  
+
+  
+  
+  <div class="post-description">上一时代的“牺牲品”是JQuery，如今Web Components被越来越多的浏览器所支持，Vue或许是下一个“祭品”。</div>
+  
+
+</div>
+
+    </header>
+
+    <div class="post-body">
+      
+      <p>组件化、复用，这几乎是所有开发者追求的东西。Web Components就是为此而提出。可以使用来创建封装功能的定制元素，可以在你喜欢的任何地方重用，不必担心代码冲突。</p>
+<p>这样的理念和Vue十分相似，专注于组件。所以Web Components或许是未来的方向！我在这里写一些Web Components的例子，供学习与参考！</p>      
+<div class="read-more-btn">
+  <a href="/articles/beechnut/web-components/" rel="contents">
+    阅读全文 &raquo;
+  </a>
+</div>
+      
+    </div>
+
+    
+    
+
+    
+
+    
+  </div>
+</article>
+  
+  
+
+<article class="post post-type-normal">
+  <div class="card post-block">
+
+    
+
+    <header class="post-header">
+
+      
+      <h1 class="post-title">
+        
+        <a href="/articles/beechnut/microservices-principles/">微服务设计 - 原则</a>
+        
+      </h1>
+      
+
+      <div class="post-meta">
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">发表于</span>
+    <time title="创建时间：2019-03-05 00:00:00">2019-03-05</time>
   </span>
   
 
@@ -464,6 +619,8 @@
 
   
   
+  <div class="post-description">《微服务设计》书中，提到了7大原则，十分赞同。</div>
+  
 
 </div>
 
@@ -471,20 +628,12 @@
 
     <div class="post-body">
       
-      <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>在微服务中，单个服务的升级改善是不可避免的，虽然改动最终引起Rest接口变动并不多，但仍然会出现。在《微服务设计》中，提供了两种处理方案：</p>
-<ol>
-<li>不同的接口共存</li>
-<li>同时运行多个版本服务</li>
-</ol>
-<p>这本书的作者Sam Newman，他认为这两种方案都是可行的，但更倾向于不同接口共存。也提出了三点主要原因</p>
-<ul>
-<li>当出现问题时，不同的接口共存可以更快的修改新老版本的代码并一同部署，而另一种就比较麻烦了</li>
-<li>方案二维护困难，同时存在多个版本服务，对运维来说具有较大的挑战性</li>
-<li>持久化层可能是一样的，方案二却有不同版本的实现，会导致潜在的复杂性</li>
-</ul>
-<p>但我更倾向于方案二，该方案的实际使用者主要是Netflix（Spring Cloud便是基于他开源的微服务框架研发的），在现阶段（2018年）相对于作者的年代（2015年），技术上已经有了较大的变化。微服务的设计已经在很多公司大规模的推行及使用，变得更加成熟。作者所提出的前两点问题已经有了比较好的方案减少影响    </p>      
+      <h1 id="围绕业务概念建模"><a href="#围绕业务概念建模" class="headerlink" title="围绕业务概念建模"></a>围绕业务概念建模</h1><blockquote>
+<p>原文：经验表明，围绕业务的限界上下文定义的接口，比围绕技术概念定义的接口更加稳定。针对系统如何工作这个领域进行建模，不仅可以帮助我们形成更稳定的接口，也能确保我们能够更好地反映业务流程的变化。使用限界上下文来定义可能的领域边界。</p>
+</blockquote>
+<p>这个原则关于微服务如何确认边界，主张以业务而非技术作为划分基准。缘由我有不同的理解。在互联网涉及的业务中，很大一部分都是原来有的，互联网使它更加简单。例如仓储系统，现实中仓储不是随着互联网的出现而发展的，它拥有悠久的例子，古代的粮仓也是呀。而我们设计服务最佳的方式，将现实中映射过来，当然也需要结合网络优点适当调整。</p>      
 <div class="read-more-btn">
-  <a href="/articles/almond/microservices-version-control/" rel="contents">
+  <a href="/articles/beechnut/microservices-principles/" rel="contents">
     阅读全文 &raquo;
   </a>
 </div>
@@ -512,7 +661,7 @@
       
       <h1 class="post-title">
         
-        <a href="/articles/almond/hexo-theme-manage/">简单、高效的管理hexo站点主题</a>
+        <a href="/articles/beechnut/netlify-lm/">Git LFS使用--Netlify Large Media</a>
         
       </h1>
       
@@ -526,296 +675,7 @@
       <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
     </span>
     <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2018-10-15 00:00:00">2018-10-15</time>
-  </span>
-  
-
-  
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E5%89%8D%E7%AB%AF/" rel="index"><span>前端</span></a></span>  </span>
-  
-
-  
-  
-
-</div>
-
-    </header>
-
-    <div class="post-body">
-      
-      <p>如果您和我一样，喜欢更新至最新的主题，那么您也应该遇到和我一样的烦恼。每次更新新的主题时，总是要重新配置，而且随着自定义的内容增多，更新就成了负担。   </p>
-<p>因此，引入了Fork与Submodules来实现以下目标</p>
-<ol>
-<li>自动合并自定义内容与配置</li>
-<li>校验更新操作是否正常工作</li>
-</ol>
-<blockquote>
-<p>如果您不了解如何使用hexo搭建博客，您可以参考这篇博客：<a target="_blank" rel="noopener" href="https://www.dnocm.com/articles/almond/gitlab-pages-for-hexo/">https://www.dnocm.com/articles/almond/gitlab-pages-for-hexo/</a></p>
-</blockquote>      
-<div class="read-more-btn">
-  <a href="/articles/almond/hexo-theme-manage/" rel="contents">
-    阅读全文 &raquo;
-  </a>
-</div>
-      
-    </div>
-
-    
-    
-
-    
-
-    
-  </div>
-</article>
-  
-  
-
-<article class="post post-type-normal">
-  <div class="card post-block">
-
-    
-
-    <header class="post-header">
-
-      
-      <h1 class="post-title">
-        
-        <a href="/articles/almond/f-open-feign/">Spring Cloud 之 Feign （Finchley版）</a>
-        
-      </h1>
-      
-
-      <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2018-08-01 00:00:00">2018-08-01</time>
-  </span>
-  
-
-  
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
-  
-
-  
-  
-
-</div>
-
-    </header>
-
-    <div class="post-body">
-      
-      <p>Feign是轻量级、声明式的Http请求客户端，它吸收了来自的Retrofit JAXRS-2.0和WebSocket的灵感，为了使写Http请求变得更容易而诞生    </p>
-<p>Feign一开始作为Eureka的子项目，用于简化Http请求。但由于其不断完善，目前作为一个轻量级、声明式的Http请求客户端项目，独立维护。在Spring Cloud中，其引入了Feign，并提供了一系列默认的配置与Spring MVC注解的支持。因此，Feign一直被作为首先的Http请求客户端。   </p>      
-<div class="read-more-btn">
-  <a href="/articles/almond/f-open-feign/" rel="contents">
-    阅读全文 &raquo;
-  </a>
-</div>
-      
-    </div>
-
-    
-    
-
-    
-
-    
-  </div>
-</article>
-  
-  
-
-<article class="post post-type-normal">
-  <div class="card post-block">
-
-    
-
-    <header class="post-header">
-
-      
-      <h1 class="post-title">
-        
-        <a href="/articles/almond/f-eureka-server/">Spring Cloud 之 Eureka （Finchley版）</a>
-        
-      </h1>
-      
-
-      <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2018-07-25 00:00:00">2018-07-25</time>
-  </span>
-  
-
-  
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
-  
-
-  
-  
-
-</div>
-
-    </header>
-
-    <div class="post-body">
-      
-      <p>在微服务架构中，服务发现是最重要的一环。Spring Cloud提供多个服务注册中心作为选择，如Eureka、Consul、Zookeeper等，当然最常用的是Eureka</p>
-<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>Eureka由Eureka Server与Eureka Client两部分组成<br>Eureka Server是高可用的（可同时作为客户端向其他注册中心注册）服务发现的注册中心，为每个客户端（Eureka Client）提供注册服务，并提供已注册服务信息<br>Eureka Client向服务注册中心注册，并提供断路、负载均衡等功能    </p>      
-<div class="read-more-btn">
-  <a href="/articles/almond/f-eureka-server/" rel="contents">
-    阅读全文 &raquo;
-  </a>
-</div>
-      
-    </div>
-
-    
-    
-
-    
-
-    
-  </div>
-</article>
-  
-  
-
-<article class="post post-type-normal">
-  <div class="card post-block">
-
-    
-
-    <header class="post-header">
-
-      
-      <h1 class="post-title">
-        
-        <a href="/articles/almond/spring-boot-relaxed-binding-2.0/">Spring Boot Relaxed Binding 2.0</a>
-        
-      </h1>
-      
-
-      <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2018-07-12 00:00:00">2018-07-12</time>
-  </span>
-  
-
-  
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">分类于</span>
-    <span><a href="/categories/%E5%90%8E%E7%AB%AF/" rel="index"><span>后端</span></a></span>  </span>
-  
-
-  
-  
-
-</div>
-
-    </header>
-
-    <div class="post-body">
-      
-      <p>Spring Boot 中的配置绑定一直是其最主要的特性。而在Spring Boot 2.0中，该绑定方式做了大量的修改，并且借机制定一些新的规范，以减少过于宽松的绑定规则导致的一些问题</p>
-<blockquote>
-<p>您也可以通过官方的<a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-boot/wiki/Relaxed-Binding-2.0">Relaxed-Binding-2.0 wiki</a>了解详细</p>
-</blockquote>      
-<div class="read-more-btn">
-  <a href="/articles/almond/spring-boot-relaxed-binding-2.0/" rel="contents">
-    阅读全文 &raquo;
-  </a>
-</div>
-      
-    </div>
-
-    
-    
-
-    
-
-    
-  </div>
-</article>
-  
-  
-
-<article class="post post-type-normal">
-  <div class="card post-block">
-
-    
-
-    <header class="post-header">
-
-      
-      <h1 class="post-title">
-        
-        <a href="/articles/almond/aria2-info/">Aria2 一个轻量级的命令行下载工具</a>
-        
-      </h1>
-      
-
-      <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
-    </span>
-    <span class="post-meta-item-text">发表于</span>
-    <time title="创建时间：2018-06-05 00:00:00">2018-06-05</time>
+    <time title="创建时间：2019-03-03 00:00:00">2019-03-03</time>
   </span>
   
 
@@ -833,6 +693,8 @@
 
   
   
+  <div class="post-description">Netlify提供了大文件存储以及图像转换功能，是时候升级一波啦。</div>
+  
 
 </div>
 
@@ -840,12 +702,148 @@
 
     <div class="post-body">
       
-      <p>aria2 是一个轻量级的、多源、跨平台的命令行下载实用工具。它支持HTTP&#x2F;HTTPS、FTP、SFTP、BitTorrent和Metalink。<br>我们可以在GitHub上下载最新的<a target="_blank" rel="noopener" href="https://github.com/aria2/aria2/releases">稳定版</a>     </p>      
+      <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Git LFS一直都想尝试，但，GitHub上</p>
+<img src="/articles/beechnut/netlify-lm/1.png" class="">
+
+<p>1G的存储，1G的带宽是，这量实在是。。。在2月26日，Netlify宣布了流量限制100G，也宣布新的功能，图像转换功能为流量限制做铺垫，以及这个转换功能所附带的大文件存储。一半伤心一半心动。虽然转换功能也有限制，2500次每月（同一次相同转换会缓存，只消耗1次次数），所以对于大部分中小型网站来说都够用了，当然100G的带宽，也是一样。</p>
+<p>作为转换功能基础的文件存储，则没提及，可能无限制吧。所以是时候升级啦。</p>      
 <div class="read-more-btn">
-  <a href="/articles/almond/aria2-info/" rel="contents">
+  <a href="/articles/beechnut/netlify-lm/" rel="contents">
     阅读全文 &raquo;
   </a>
 </div>
+      
+    </div>
+
+    
+    
+
+    
+
+    
+  </div>
+</article>
+  
+  
+
+<article class="post post-type-normal">
+  <div class="card post-block">
+
+    
+
+    <header class="post-header">
+
+      
+      <h1 class="post-title">
+        
+        <a href="/articles/beechnut/vpn-white/">小白VPN教程</a>
+        
+      </h1>
+      
+
+      <div class="post-meta">
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">发表于</span>
+    <time title="创建时间：2019-02-25 00:00:00">2019-02-25</time>
+  </span>
+  
+
+  
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">分类于</span>
+    <span><a href="/categories/%E5%B7%A5%E5%85%B7/" rel="index"><span>工具</span></a></span>  </span>
+  
+
+  
+  
+  <div class="post-description">这可能是最简单的VPN教程，但仍有一定的门槛。</div>
+  
+
+</div>
+
+    </header>
+
+    <div class="post-body">
+      
+      <p>删除图文化的教材，我认为 Outline Manage 是很简单的，你可能只需要懂一点点服务器就行了，你可能好奇我为什么要删除这篇文章，所以我在这回答两个问题</p>
+<p>Q：为什么要搭建 VPN？</p>
+<p>A：这对于程序员来说，答案是一致的。我们需要外部的资源，可能是文档，可能是lib，可能是问答社区。然而合规的搭建 vpn 需要满足两个条件，第一是企业，第二有外贸。这对于我们个人学习为目的是不可能申请下来的。所以才需要私自搭建</p>
+<p>Q：那么为什么要删除教程？</p>
+<p>A：我也一度以为，“墙”的存在，造就了诸多不便，它至少使中国的软件方面学习难度高了数倍。但近年来发生了很多事，我看到了美国这类的国家，对于中国进行诸多污蔑，并不是没人为中国发声，而是你能在推特上看到内容，基本都是被控制的。我就遇到过被推特删评的情况，这就是所谓的“民主”与“自由”。所以，如果你找到这篇文章，仅仅是希望访问外网的资讯，而不是用于其他目的（目前也就程序员有这需求吧），那么我拒绝提供相关教程，如果你是程序员，那么看我的另一篇文章，相信对于你来说这不会很难</p>
+<p>另一篇<a href="/more/vpn">VPN教程</a></p>
+      
+    </div>
+
+    
+    
+
+    
+
+    
+  </div>
+</article>
+  
+  
+
+<article class="post post-type-normal">
+  <div class="card post-block">
+
+    
+
+    <header class="post-header">
+
+      
+      <h1 class="post-title">
+        
+        <a href="/articles/beechnut/about-google-ads/">关于Google Ads</a>
+        
+      </h1>
+      
+
+      <div class="post-meta">
+
+  
+  
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+    </span>
+    <span class="post-meta-item-text">发表于</span>
+    <time title="创建时间：2019-01-12 00:00:00">2019-01-12</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+
+</div>
+
+    </header>
+
+    <div class="post-body">
+      
+      <p>在今天，加入了Google Ads，不过更多的是想体验一下广告的收益以及对页面浏览的影响。我使用的是自动广告，但自己访问，完全没有任何广告的影子，不知道是不是配错了。如果亲们访问时对你们造成了影响（或者发现了广告的影子），可以截个图，通过右下角的Chatra联系我。  </p>
+<p><del>对页面访问有影响的话会下掉广告，毕竟没国际信用卡，就算赚了也取不出来。</del><br>去掉去掉，毕竟每天只有1-2pv，一个月也就半百人访问这个小破站，而且谷歌广告需要点击才收费，点击一次3毛。。。。(2019.1.15写)</p>
+<p>另外页面会使用Google分析。。。这个可能对国内用户访问造成影响，请尽量在VPN下访问该站点，<a target="_blank" rel="noopener" href="https://www.vultr.com/">vultr</a>与<a target="_blank" rel="noopener" href="https://getoutline.org/zh-CN/home">outline</a>是不错的方案，或者可以看一下我的<a target="_blank" rel="noopener" href="https://www.dnocm.com/articles/beechnut/vpn-white/">VPN教程</a></p>
+<blockquote>
+<p>又双叒叕加回来啦😂—2019.7.28</p>
+</blockquote>
       
     </div>
 
@@ -862,7 +860,7 @@
 
 
 <nav class="pagination">
-  <a class="extend prev" rel="prev" href="/page/5/"><svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="angle-left" class="svg-inline--fa fa-angle-left fa-w-8 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path></svg></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/7/"><svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="angle-right" class="svg-inline--fa fa-angle-right fa-w-8 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></a></nav>
+  <a class="extend prev" rel="prev" href="/page/5/"><svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="angle-left" class="svg-inline--fa fa-angle-left fa-w-8 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path></svg></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/7/"><svg aria-hidden="true" focusable="false" data-prefix="fa" data-icon="angle-right" class="svg-inline--fa fa-angle-right fa-w-8 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></a></nav>
 
         </div>
         
